@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>天气预报接口调用</h1>
+
+<p id="demo"> AJAX 调用</p>
+
+<div id="d1"></div>
+<script type="text/javascript">
+jsonp = function ( url , data ) {
+            // debugger;
+            //所有axios的函数都是支持promise的，所以
+            return new Promise (
+                function ( resolve , reject ) {
+                    // debugger;
+                    //Promise中的代码和不用promise时是完全一样的
+                    var script = null;
+                    var ms = new Date().getTime();
+                    var r = parseInt( Math.random () * 9000 + 1000 );
+                    var fname = `doit${ms}${r}`;
+
+                    // script = document.createElement( "script" );
+                    // script.src = `${url}?${data}&&callback=${fname}`;
+                    // document.head.appendChild( script );
+
+                    window[fname] = function ( res ) {
+                            // debugger;
+                        //要对res做什么处理，应该下一个.then说了算！
+                        //这里只负责开门，并传出服务端返回结果
+                        resolve ( res );
+                        //删除本次临时使用的script和函数
+                        document.head.removeChild( script );
+                        delete window[fname];
+                    }
+                    script = document.createElement( "script" );
+                    script.src = `${url}?${data}&&callback=${fname}`;
+                    document.head.appendChild( script );
+                    // window[fname]();
+                }
+            )
+        },
+        jsonp(
+                // "http://www.tianqiapi.com/",
+                // "action=v1"
+                "http://pm25.in/api/querys/pm2_5.json?city=南京&token=7rMwJqMxrmuDRFsAxBqP"
+                // "action=v1"
+            ).then(res=>{
+                console.log(`处理1:`); 
+                console.log(res)
+                var d1 = document.getElementById("d1")
+                // var span = document.createElement("span");
+                // d1.innerHTML = res
+                for(var i = 0;i < res.length; i++){
+                    d1.appendChild(document.createElement("p"))
+                    d1.lastChild.innerHTML = (res[i].position_name+"+"+res[i].quality+"+++"+res[i].pm2_5+"+++"+res[i].aqi+"+++"+res[i].pm2_5_24h)
+                }
+                // d1.appendChild(span);
+            });
+
+
+</script>
+
+</body>
+</html>

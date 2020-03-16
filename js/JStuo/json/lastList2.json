@@ -1,0 +1,17 @@
+{
+    "msg": "查询成功",
+    "data": {
+        "enterpriseId": "124186",
+        "isIndustryInternet": "ZENO接口V1.2.docx",
+        "benchmarking": "ZENO接口V1.2.docx",
+        "cloudBusiness": "ant_1.2.8.zip",
+        "isFilePercent": "100",
+        "benchFilePercent": "100",
+        "cloudFilePercent": "100",
+        "createTime": "2019-12-05 02:08:00",
+        "updateTime": "2019-12-04 18:16:00"
+    },
+    "auth": null,
+    "success": true,
+    "status": 200
+}

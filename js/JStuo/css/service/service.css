@@ -1,0 +1,346 @@
+/*
+顶部样式
+*/
+.content_main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.content_main .content_top{
+    width:100vw;
+    height:60px; 
+    background: #041526;
+}
+.content_main .content_top img{
+    width:180px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.content_main .content_menu {
+    width: 200px;
+    height: calc(100vh - 56px);
+    float: left;
+    background: #032341;
+}
+.content_main .content_menu>a div {
+    cursor: pointer;
+    text-align: center;
+    line-height:50px;
+    font-size: 14px;
+}
+.content_main .content_menu>a div.content_menu_active{
+    color: white;
+    background-color:#1f8dfb; 
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.content_main .content_menu>a div.content_menu_active_1{
+    color: #9bb5cf;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.content_main .content_menu>a div:hover{
+    background-color:#1f8dfb;
+    color: white;
+}
+.child_app {
+    float: left;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 107px);
+    box-sizing: border-box;
+    position: relative;
+}
+.left_content {
+    width: calc(100vw - 200px);
+    height: calc(100vh - 87px);
+    background-color:#e1e9f0;
+}
+/*
+tab切换栏
+*/
+.child_app .tab_panel {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.child_app .left_cntent{
+    background: white;
+    width:100%;
+    height:100%;
+}
+.child_app .tab_panel>div {
+    float: left;
+    width: calc(100% / 10);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0f68b3;
+    color: white;
+}
+.child_app .tab_panel>div span {
+    color: white;
+    position: relative;
+    top: -8px;
+    right: 5px;
+    float: right;
+}
+.child_app .tab_panel>div.tab_panel_active {
+    color: yellow;
+}
+/*
+切换内容
+*/
+.child_app .tab_content {
+    width: 100%;
+    height: calc(100% - 100px);
+}
+.child_app .tab_content>div {
+    width: 100%;
+    height: 100%;
+}
+.child_app .tab_content .tab_content_hid {
+    display: none;
+}
+.child_app .tab_content>div .tool-bar {
+    margin-top: 20px;
+}
+.child_app .tab_content>div .tool-bar span {
+    cursor: pointer;
+    margin-right: 20px;
+}
+/*  
+模糊查询
+*/
+
+.child_app .fuzzy_query {
+    width: 1100px !important;
+    height: 40px;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 999;
+    display: flex;
+}
+.child_app .words_1{
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.child_app .fuzzy_query .second {
+    margin-left: 10px;
+    position: relative;
+}
+.child_app .fuzzy_query .second form div select {
+    height:150px;
+}
+/* .child_app .fuzzy_query {
+    width: calc(100% - 20px);
+    height: 40px;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    background: white;
+    padding-top:10px;
+}
+.child_app .words_1{
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.child_app .words_2{
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 270px;
+}
+.child_app .words_3{
+    line-height: 40px;
+    font-size: 14px;
+    margin-left: 270px;
+}
+
+.child_app .fuzzy_query .second {
+    margin-left: 10px;
+    position: relative;
+}
+
+.child_app .fuzzy_query .second select {
+    width:252px;
+    height:150px;
+    margin:0px;
+    outline:none;
+    border:1px solid #e6e6e6;
+    top: 38px; 
+    position:absolute;
+}
+
+.child_app .fuzzy_query .second select option{
+    width:250px;
+    height:30px;
+    text-indent: 10px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+
+.child_app .fuzzy_query .second select option:hover{
+    background-color: #eeeeee
+}
+
+.child_app .fuzzy_query .second input {
+    width:250px;
+    outline:none;
+    border:0pt;
+    position:absolute;
+    line-height:38px;
+    height:38px;
+    border:1px solid #e6e6e6; 
+    text-indent: 10px;
+} */
+
+
+.child_app .fuzzy_query .second ul {
+    position:absolute;
+    top:27px;
+    border:1px solid #999;
+    left:8px;
+    width:125px;
+    line-height:16px;
+}
+
+
+.child_app .fuzzy_query .ul li {
+    list-style:none;
+    width:161px;
+    margin-left:-40px;
+    font-family:微软雅黑;
+    padding-left:4px;
+}
+.child_app .fuzzy_query .blue {
+    background:#1e91ff;
+}
+#test-search {
+    /* position: absolute;
+    margin-left: 1000px; */
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top:3px;
+}
+.layui-tab {
+    width: 100%;
+    height: calc(100% - 70px);
+}
+.layui-tab-content {
+    padding: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 41px);
+}
+.layui-tab-item {
+    width: 100%;
+    height: calc(100vh - 135px);
+    background: white;
+    padding:10px 10px 10px 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+/*
+遮罩
+*/
+#testImg {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+#testImg>div {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    height: calc(100% - 80px);
+    margin-top: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.btn_style{
+    color: #1e91ff;
+}
+.btn_style:hover{
+    background: #1e91ff;
+    color: white;
+}
+.deleteHover:hover{
+    background: transparent ;
+ 
+}
+.expert{
+    background: white;
+}
+.margin_left{
+    margin-left: 10px;
+}
+.content_menu .icon_1{
+    width:27px;
+    height:20px;
+    background:  url(../../images/icon/diagnosis-light.png) no-repeat 0 1px/60%;
+}
+.content_menu .icon_2{
+    width:27px;
+    height:20px;
+    background:  url(../../images/icon/expert.png) no-repeat 0 1px/60%;
+}
+.content_menu .icon_3{
+    width:27px;
+    height:20px;
+    background:  url(../../images/icon/resultReport.png) no-repeat 0 1px/60%;
+}
+.content_main .content_menu>a div:hover .icon_3{
+    background: url(../../images/icon/resultReport-light.png) no-repeat 0 1px/60%;
+
+}
+.content_main .content_menu>a div:hover .icon_2{
+    background: url(../../images/icon/expert-light.png) no-repeat 0 1px/60%;
+
+}
+.content_main .content_menu>a div:hover .icon_1{
+    background: url(../../images/icon/diagnosis-light.png) no-repeat 0 1px/60%;
+
+}
+/* 表格样式 */
+.layui-table[lay-even] tr:nth-child(even) {
+    background-color: #f2f8ff;
+}
+.layui-table th{
+    background-color: #e1ebf5;
+    font-weight: bold;
+}
+.layui-table-view{
+    border:0px solid transparent;
+}
+/* tab背景 */
+.layui-table-header{
+    background-color: #e1ebf5;
+}
+.layui-tab-title .layui-this{
+    background-color: #cce6ff;
+    color: #0f68b3; 
+}
+/* .layui-tab-title li {
+    border-left: 1px solid 
+} */
+/* 分页按钮颜色 */
+.layui-laypage-em {
+    background-color: #1E9FFF!important;
+}
+.layui-form-select dl dd.layui-this { 
+    background-color:#1E9FFF;
+}
+.layui-form-select dl dd:hover{
+    background-color:#1E9FFF;
+}

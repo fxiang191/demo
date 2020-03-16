@@ -1,0 +1,14 @@
+{
+  "msg":"试卷未全部完成，继续填写自评信息按钮",
+  "auth":"1",
+  "success":true,
+  "code":200,
+  "data":[
+    {
+    "papername":"工业互联网",
+    "enterpriseid":"5",
+    "paperid":"1",
+    "status":0
+    }
+  ]
+}

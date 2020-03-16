@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <style>
+    *{margin: 0;padding: 0;}
+    .myDaohanglan{
+        width: 100%;height: 50px;background-color: #333333;line-height: 48px;
+    }
+    /* 导航栏 */
+    .myDaohanglan > div {width: 1200px;margin: 0 auto;}
+    .myDaohanglan > div > ul {display: flex;justify-content: space-around;list-style: none;}
+    .myLiClass{background-color: #1f8dfb;width: 200px;text-align: center;}
+    .myDaohanglan > div > ul > li:last-child {background-color: red;width: 200px;text-align: center;display: flex;}
+    .myDaohanglan > div > ul > li:last-child > div:first-child {width: 50%;}
+    .myDaohanglan > div > ul > li:last-child > div:first-child > img {width: 26px;height: 26px;background-color: sienna;}
+    .myDaohanglan > div > ul > li:last-child > div:first-child > span {margin-left: 8px;font-family: YaHei Regular;font-size: 14px;color: #fff}
+    .myDaohanglan > div > ul > li:last-child > div:last-child {width: 50%;font-family: YaHei Regular;font-size: 14px;color: #fff;margin-left: 24px;}
+    .myAclass{color:rgb(255, 245, 245);font-weight: bold;font-size: 18px;text-decoration: none;}
+    /* 试卷title  */
+    .myShijuanTitle{width:100%;height:50px;line-height:50px;}
+    .myShijuanTitle > div {width:1200px;margin: 0 auto;display: flex;font-size: 16px;}
+    .myShijuanTitle > div > div:first-child {width:3px;background: #1f8dfb;height:20px;margin-top:15px;margin-right:16px;}
+    .myShijuanTitle > div > div:last-child > span {color:#e0e0e0;}
+    .myShijuanTitle > div > div:last-child > span > span {color: #1f8dfb;}
+    /* 试卷内容区域 */
+    /* 步骤导航 */
+    .container{}
+    .myShijuan{width: 1198px;margin: 0 auto 70px;border: 1px solid #e0e0e0;padding: 50px 0px;margin-bottom: 40px;}
+    .myShijuanBuzhou{width:100%;height:80px;display: flex;justify-content: center;margin-bottom:60px;}
+    .myHrClass {color:#e0e0e0 ;width: 1170px;margin: 0 auto;}
+    /* 正文 */
+    .myShijuanZhengwen {width: 1170px;margin: 0 auto;}
+    .myShijuanZhengwen > div:first-child {font-size:16px;height: 30px;line-height: 30px;margin-top: 5px;font-weight: bold;}
+    .myShijuanZhengwen > div:nth-child(2) {padding-left:8px;height: 54px;line-height: 54px;margin-top: 5px;background-color: rgb(255, 245, 245);color: #333333;font-size: 14px;}
+    .myShijuanZhengwen > div:last-child {height: 30px;line-height: 30px;margin-top: 5px;color: #333333;font-size:16px;}
+    .myShijuanZhengwen > div:last-child > span {color: red;}
+    /* 考试试题部分 */
+    .myShijuanNeirong{width: 1170px;margin: 0 auto;margin-top: 30px;}
+    .myLabelClass {width:80% !important;font-size: 14px;color: rgb(51,51,51);}
+    .myDivClass01 {width: 45%;}
+    .myDivClass02 {width: 55%!important;}
+    .myDivClass03 {margin-top:24px;font-size: 14px;color: rgb(51,51,51);}
+    .myDivClass04 {margin-top:16px;font-size: 14px;color: red;}
+    .myInputClass {font-size: 14px;color: rgb(51,51,51);border-top: 0;border-left: 0;border-right: 0;border-bottom: 1px solid #000;width: 80px;}
+    .myTextareaClass {margin-top: 16px;font-size: 14px;color: rgb(51,51,51);width: 100% !important;}
+    /* 按钮 */
+    .myBtnClass {margin-top: 40px;}
+    .myBtnClass > div {margin-left: 40%;}
+    .myBtnClass > div >button:first-child {width: 110px;height: 40px;}
+    .myBtnClass > div >button:last-child {width: 110px;height: 40px;}
+    </style>
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 导航栏 -->
+    <div class="myDaohanglan">
+        <div>
+            <ul>
+                <li class="myLiClass">
+                    <a class="myAclass" href="">企业报名</a>
+                </li>
+                <li class="myLiClass">
+                    <a class="myAclass" href="">企业自评估</a>
+                </li>
+                <li class="myLiClass">
+                    <a class="myAclass" href="">职能部门推荐/遴选</a>
+                </li>
+                <li class="myLiClass">
+                    <a class="myAclass" href="">在线诊断服务</a>
+                </li>
+                <li class="myLiClass">
+                    <a class="myAclass" href="">查看诊断报告</a>
+                </li>
+                <li>
+                    <div>
+                        <img>
+                        <span>zhzy01</span> 
+                    </div>
+                    <div>
+                        退出登录 
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 试卷title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>请输入工业互联网成熟度争端自评估信息
+                <span>（工7步,当前第
+                    <span>2</span>步）
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 试卷内容区域 -->
+    <div class="container">
+        <!-- 步骤 -->
+        <div class="myShijuan">
+            <div class="myShijuanBuzhou">
+                <img src="./images/1_2.png" alt="">
+            </div>
+            <div>
+                <hr class="myHrClass">
+            </div>
+            <!-- 正文 -->
+            <div class="myShijuanZhengwen">
+                <div>请选择企业自评估项</div>
+                <div>
+                    <img src="./images/gantanhao.png">
+                    企业自评估结果将作为职能部门进行推荐/遴选依据。若遴选不通过，则需要等待下次申报时，才能重新申报。为了避免遴选不通过，请正确填写企业自评估信息
+                </div>
+                <div><span>*</span>平台基础建设能力-边缘接入能力</div>
+            </div>
+            <!-- 考试试题部分 -->
+            <form id="form1" class="layui-form" action="" lay-filter="example">
+                <div class="myShijuanNeirong">
+                    <!-- 第一行 -->
+                    <div class="layui-form-item">
+                        <div class="myDivClass01">
+                            <label class="layui-form-label myLabelClass">是否部署工业网络：</label>
+                        </div>
+                        <div class="layui-input-inline myDivClass02">
+							<select name="qylx" id='enterpriseType' lay-verType="tips" lay-verify="required"
+								lay-filter="aihao">
+								<option value=""></option>
+								<option value="">是</option>
+								<option value="">否</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 第二行 -->
+                    <div class="layui-form-item">
+                        <div class="myDivClass01">
+                            <label class="layui-form-label myLabelClass">工业网络是否可实现现场级、车间级、工厂级网络的互联互通：</label>
+                        </div class="myDivClass01">
+                        <div class="layui-input-inline myDivClass02">
+							<select name="qylx" id='enterpriseType' lay-verType="tips" lay-verify="required"
+								lay-filter="aihao">
+								<option value=""></option>
+								<option value="">是</option>
+								<option value="">否</option>
+                            </select>
+                            <div class="myDivClass03">
+                                兼容
+                                <input class="myInputClass" type="text">类工业通信协议,
+                                <input class="myInputClass" type="text">类工业通信网络和通用网络协议
+                            </div>
+                            <div class="myDivClass04">提示：将兼容的协议或网络名称作为统计标准
+                            </div>
+                            <div class="myDivClass03">
+                                可采集工业数据种类：
+                                <input class="myInputClass" type="text">类
+                            </div>
+                            <div class="myDivClass04">提示：生产装备、装置、传感器、控制系统和工业产品等各类工业数据，将设备型号作为设备类型 的统计标准
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第三行 -->
+                    <div class="layui-form-item">
+                        <div  class="myDivClass01">
+                            <label class="layui-form-label myLabelClass">边缘层是否具备数据预处理能力：</label>
+                        </div>
+                        <div class="layui-input-inline myDivClass02">
+							<select name="qylx" id='enterpriseType' lay-verType="tips" lay-verify="required"
+								lay-filter="aihao">
+								<option value=""></option>
+								<option value="">是</option>
+								<option value="">否</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 第四行 -->
+                    <div class="layui-form-item">
+                        <div  class="myDivClass01">
+                            <label class="layui-form-label myLabelClass">边缘层是否具备能加载边缘应用：</label>
+                        </div>
+                        <div class="layui-input-inline myDivClass02">
+							<select name="qylx" id='enterpriseType' lay-verType="tips" lay-verify="required"
+								lay-filter="aihao">
+								<option value=""></option>
+								<option value="">是</option>
+								<option value="">否</option>
+                            </select>
+                            <div class="myDivClass03">
+                                能加载
+                                <input class="myInputClass" type="text">边缘应用
+                            </div>
+
+                            <!-- 文本域 -->
+                            <div class="layui-input-inline myTextareaClass">
+                                <textarea placeholder="简要说明边缘应用可提供的技术能力（1~200位字符）" lay-verType="tips" class="layui-textarea"
+                                    lay-verify="qycp" name="qyzycp"></textarea>
+                                    <div class="myDivClass03">
+                                        适配主流
+                                        <input class="myInputClass" type="text">类工业控制系统 
+                                    </div>
+                                    <div class="myDivClass04">提示：将适配的工控系统名称作为统计标准
+                                    </div>
+                            </div>
+
+                            <!-- 文本域 -->
+                            <div class="layui-input-inline myTextareaClass">
+                                <textarea placeholder="简要说明工控系统可提供哪些设备管理操作,如参数配置、功能设定、维护等（1~200位字符）" lay-verType="tips" class="layui-textarea"
+                                    lay-verify="qycp" name="qyzycp"></textarea>
+                            </div>
+                        </div>                        
+                    </div>
+                    <!-- 第五行 -->
+                    <!-- 按钮 -->
+                    <div  class="layui-form-item myBtnClass">
+                        <div>
+                            <button type="button" lay-submit class="layui-btn layui-btn-normal">上一步</button style="width: 110px;height: 40px;">
+                            <button type="button" lay-submit class="layui-btn layui-btn-normal">下一步</button style="width: 110px;height: 40px;">
+                        </div>
+                    </div>
+                    
+                </div>
+                <input type="text" class="">
+                <button class="layui-btn test" lay-data="{url: '/b/', accept: 'file'}">上传文件</button>
+            </form>
+        </div>
+    </div>
+
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.js"></script>
+<script type="text/javascript" src="./layui/layui.all.js"></script>
+<script type="text/javascript">
+        layui.use(['form','layedit','laydate','upload'], function () {
+            var form = layui.form
+                , layer = layui.layer
+                , layedit = layui.layedit
+                , laydate = layui.laydate,
+                // 文件上传
+                upload = layui.upload;
+
+         //监听提交
+            form.on('submit(formDemo)', function(data){
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });  
+                form.render();
+                // 文件上传
+                // upload.render({
+                //     elem: '.test'
+                //     ,done: function(res, index, upload){
+                //         //获取当前触发上传的元素，一般用于 elem 绑定 class 的情况，注意：此乃 layui 2.1.0 新增
+                //         var item = this.item;
+                //     }
+                //     })
+        })
+
+</script>
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

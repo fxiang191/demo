@@ -1,0 +1,354 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+        <!-- 方祥 CSS -->
+        <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+
+        <!-- 页头  页脚样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+    /* layui改写 */
+    .layui-form-select dl dd.layui-this {
+    background-color: #1E9FFF!important;
+    }
+
+    /* seven样式改动 */
+      /* 文件上传按钮 */
+  .myBtn01{
+      background-color:rgb(255, 255, 255)!important;color:#999999!important;border:1px solid rgba(228, 228, 228, 1)!important;
+  }
+  .myBtn02{
+      background-color: #1f8dfb!important;
+      color: rgb(255, 245, 245)!important;
+  }
+    /* 单选按钮样式 */
+  .layui-form-radio>i:hover, .layui-form-radioed>i {
+    color: #1f8dfb;
+  }
+  .spanUpload{
+        display: inline-block;
+        width: 390px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+  }
+  .del{
+        cursor: pointer;
+        display: none;
+        margin-right: 20px;
+    }
+
+</style>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 页头 -->
+    <script src="../js/public/header.js"></script>
+
+    <!-- 导航栏 -->
+    <script src="../js/public/nav.js"></script>
+    <!-- 试卷title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>工业互联网平台建设自评估信息
+                <span>（共7步,当前第
+                    <span>7</span>步）
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 试卷内容区域 -->
+    <div class="container">
+        <!-- 步骤 -->
+        <div class="myShijuan">
+            <div class="myShijuanBuzhou">
+                <img src="../images/Industrial/1_2.png" alt="">
+            </div>
+            <div>
+                <hr class="myHrClass">
+            </div>
+            <!-- 正文 -->
+            <div class="myShijuanZhengwen">
+                <div>请选择企业自评估项</div>
+                <div>
+                    <img src="../images/Industrial/gantanhao.png">
+                    企业自评估结果将作为职能部门进行推荐/遴选依据。若遴选不通过，则需要等待下次申报时，才能重新申报。为了避免遴选不通过，请正确填写企业自评估信息
+                </div>
+                <div><span></span> 企业以往申报信息（不必申报成功） </div>
+            </div>
+            <!-- 考试试题部分 -->
+            <form id="form1" class="layui-form" action="" lay-filter="example">
+                <div class="myShijuanNeirong oneClass01">
+                    <input type="hidden" name="enterpriseId" id="enterpriseId" />
+                    <!-- 第一行 -->
+                    <div class="layui-form-item">
+                      <div class="myDivClass01 myDivClass01Four">
+                          <label class="layui-form-label myLabelClass">是否具备工业设备数据边缘计算功能：</label>
+                      </div>
+                        <div class="layui-input-block" id="IsPurchased">
+                          <input type="radio" name="status" value="1" title="是" lay-filter="radioChoose">
+                          <input type="radio" name="status" value="0" title="否" lay-filter="radioChoose" checked>
+                        </div>
+                    </div>
+                    <!-- 点击是按钮出现 -->
+                    <div class="layui-form-item isShow" style="display:none;">
+                      <div class="myDivClass01">
+                          <label class="layui-form-label myLabelClass myLabelClassSix"><span style="color: red;">*</span>上传申报附件：</label>
+                      </div>
+                      <div>
+                          <input type="hidden" name="isIndustryInternet" id="uploadUrl" />
+                          <div class="layui-upload">
+                              <button type="button" class="layui-btn layui-btn-normal" id="chooseFile">选择文件</button>
+                              <span class="uploadName spanUpload" style="padding: 0 10px;color: #999;"></span>
+                              <img class="del" src="../images/Industrial/del.png">
+                              <button type="button" class="layui-btn" id="uploadFile">开始上传</button>
+                          </div>
+                          <div lay-filter="progressBar" lay-showPercent="yes" class="layui-progress layui-progress-big" style="width: 630px;float: right;margin: 10px 80px 10px 0;display: none;">
+                              <div class="layui-progress-bar layui-bg-blue" lay-percent="0%"></div>
+                          </div>
+                      </div>
+                      <div style="margin-left: 40%;width: 60%;" class="myDivClass04">
+                        支持文件格式：.zip .pdf  word Excel 图片 ，只支持上传一个文件，单 个文件不能超过20M。若有多个文件，请先压缩.zip格式，再上传。
+                      </div>
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div  class="layui-form-item myBtnClass">
+                        <div>
+                            <button style="width: 110px;height: 40px;" type="button" class="layui-btn layui-btn-normal backSix">上一步</button>
+                            <button style="width: 110px;height: 40px;" type="button" lay-submit  lay-filter="btnSubmit" class="layui-btn layui-btn-normal">提交</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 页脚 -->
+	<script src="../js/public/foot.js"></script>
+
+<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+
+<script language="JavaScript">
+    javascript:window.history.forward(1);
+</script>
+
+<script type="text/javascript">
+// 监听浏览器关闭
+// window.onbeforeunload = onbeforeunload_handler;
+//     function onbeforeunload_handler(){
+//         var warning="确认退出?";
+//         return warning;
+//     }
+    //返回按钮
+    $('.backSix').click(function(){
+      window.location.href = './industrialSix.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1'
+    })
+
+
+    layui.use(['form','upload'], function () {
+        var form = layui.form
+        ,layer = layui.layer
+        ,upload = layui.upload
+        ,element = layui.element
+        element.init();
+        // 判断是否上传
+        var isUpload = false
+
+        $('#enterpriseId').val(getUrlParams('enterpriseId'))
+
+        // radio 切换
+        form.on('radio(radioChoose)', function (data) {
+            if ($('#IsPurchased input[name="status"]:checked').val() == "1") {
+                $(".isShow").show();
+            } else {
+                $(".isShow").hide();
+                $('#uploadUrl').val('')
+                $('.uploadName').html('')
+                element.progress('progressBar', '0%');
+                $('.layui-progress-big').hide()
+                $('.del').hide()
+
+                $('#uploadFile').attr('disabled', 'disabled')
+            }
+            form.render();
+        });
+
+        // 文件删除
+        $('.del').click(function(){
+            var myDel = $('.del').attr('dele')
+            $.ajax({
+            type : 'get',
+            url : ajaxUrl + "/files/huawei/deleteFile?fileNames=" + myDel,
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success : function(res) {
+                if (res.code == 200) {
+                        layer.msg('删除成功');
+                        isUpload =false;
+                        $('.del').hide()
+                        $('.del').removeAttr('dele')
+                        $('#uploadUrl').val('')
+                        $('.uploadName').html('')
+                        element.progress('progressBar', '0%');
+                        $('.layui-progress-big').hide()
+                } else {
+                    layer.msg(res.msg);
+                    isUpload = true;
+                    }
+                },
+                error : function(err) {
+                    layer.msg('请求错误');
+                    isUpload = true;
+                }
+            })
+        })
+
+
+        // 文件上传
+        upload.render({
+            elem: '#chooseFile'
+            ,url: ajaxUrl + 'files/huawei/1'
+            ,auto: false
+            ,size: 20 * 1024
+            ,accept: 'file'
+            ,exts: 'zip|jpg|png|jpeg|PDF|doc|docx|xls|xlsx'
+            ,bindAction: '#uploadFile'
+            ,progress: function (n, percent) {
+                element.progress('progressBar',n  + '%');
+            }
+            ,choose: function(obj){
+                element.progress('progressBar', '0%');
+                isUpload = false
+                obj.preview(function(index, file, result){
+                    $('.layui-upload-file').attr('type', 'hidden');
+                    $('.layui-upload-file').attr('type', 'file');
+                    $('.uploadName').html(file.name)
+                    $('.uploadName').attr('title',file.name)
+                    $('.layui-progress-big').show()
+
+                    $('#uploadFile').attr('disabled', false)
+                });
+            }
+            ,done: function(res){
+                if(res.code == 200){
+                    layer.msg('上传成功');
+                    isUpload = true;
+                    $('#uploadUrl').val(res.data)
+                    $('.uploadName').html(res.data.substring(36))
+                    $('.del').show()
+                    $('.del').attr('dele',res.data)
+
+                }else{
+                    layer.msg(res.msg);
+                    element.progress('progressBar', '0%');
+                }
+            }
+        });
+
+        //监听提交
+        form.on('submit(btnSubmit)', function(data){
+            var newData = data.field
+            delete newData.file
+            delete newData.status
+            if ($('#IsPurchased input[name="status"]:checked').val() == 1) {
+                if (!isUpload) {
+                    layer.msg('请上传申报附件');
+                    return
+                }
+            }
+            $.ajax({
+                type : 'post',
+                url : ajaxUrl + "report/saveMaturityInfo",
+                data : newData,
+                dataType: 'json',
+                xhrFields: {
+                withCredentials: true
+                },
+                crossDomain: true,
+                success : function(res) {
+                    if (res.code == 200) {
+                        // 跳到雷达图
+                        window.location.replace('./companySelfEvaluationResult.html?type=1&nav=1')
+                    } else if(res.code == 502){
+                      window.open('./zipingWeikaishi.html?nav=1','_self')
+                    } else {
+                        layer.msg(res.msg);
+                    }
+                },
+                error : function(err) {
+                    layer.msg('请求错误');
+                }
+            })
+            return false;
+        });  
+    })
+</script>
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

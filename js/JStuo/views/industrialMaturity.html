@@ -1,0 +1,425 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--禁止缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+    <meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+    <meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/enroll.css">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/industrialMaturity.css">
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+</head>
+<style>
+    #pageTwo {
+
+        display: none;
+    }
+
+    .layui-upload-choose {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+    }
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+<body>
+
+    <script src="../js/public/header.js"></script>
+    <script src="../js/public/nav.js"></script>
+    <!-- banner -->
+    <!-- <div class="toptable">
+        <div class="main">
+            <div class="onetable">
+                <div><a href="./enroll.html"><span style="color:white">企业报名</span></a></div>
+                <div class="active">企业自评估</div>
+                <div>职能部门推荐/遴选</div>
+                <div>在线诊断服务</div>
+                <div>查看诊断报告</div>
+            </div>
+            <div class="userback">
+                <div class="header_img"></div>
+                <div class="username">1111111</div>
+                <div class="closeback">退出登录</div>
+            </div>
+        </div>
+    </div> -->
+    <!-- container begin -->
+    <div class="container">
+        <div class="cont_box" style="margin-bottom:50px">
+            <div class="srjbxx">
+                <img id="imgsrc" src="../images/enroll/0_2.png" alt="">
+            </div>
+
+            <!-- <div class="container"> -->
+            <div style="width:1200px;margin: 0 auto;">
+
+
+                <!-- 企业自评估信息 -->
+
+                <div class="title_sm" style="margin-bottom: 10px"><span class="line_blue">&nbsp|</span>企业自评估信息</div>
+                <div class="common_margin">
+                    <div class="gyhljs">工业互联网平台建设描述</div>
+                    <div id='platformDescription' class="js_content"></div>
+                    <div class="gyhljs">平台基础建设能力</div>
+                    <div class="zpginformatin_one">
+                        <!-- one -->
+                        <div class="number_one dis_flex">
+                            <div class="width_15">
+                                <div>边缘接入能力</div>
+                            </div>
+                            <div class="width_85">
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否部署工业网络：</div>
+                                    <div id="a1" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">工业网络是否可实现现场级、车间级、工厂级网络的互联互通：</div>
+                                    <div id='a2' class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black">兼容<span id='a3'></span>类工业通信协议，<span
+                                        id='a4'></span>类工业通信网络和通用网络协议 </div>
+
+                                <div class="height_45_bottom line_h_45_black">可采集工业数据种类：<span id='a5'></span>类
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">边缘层是否具备数据预处理能力：</div>
+                                    <div id='a6' class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex bottom_line_none">
+                                    <div class="width_80 line_h_45_black">边缘层是否具备能加载边缘应用：</div>
+                                    <div id='a7' class="width_20 line_h_45_center "></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black border_top hide1">能加载<span
+                                        id='a8'></span>类边缘应用</div>
+
+                                <div id='a9' class="change_h_45_bottom hide1">
+
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black">适配主流<span id='a10'></span>类工业控制系统
+                                </div>
+                                <div id='a11' class="change_h_45_bottom bottom_line_none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- two -->
+                    <div class="zpginformatin_one">
+                        <div class="number_one dis_flex">
+                            <div class="width_15 ">
+                                <div>基础设施服务能力</div>
+                            </div>
+                            <div class="width_85">
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否具备稳定可靠的数据存储与计算基础设施：</div>
+                                    <div id='b1' class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否具有完整的云计算架构：</div>
+                                    <div id="b2" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black hide3">提供具体的云计算架构图及可佐证的具备完整架构的技术方案和应用场景案例
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp
+                                    文件名称：<div id="b3"
+                                        style="float: right;width: 370px;height:100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color: blue;cursor: pointer; ">
+                                    </div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">具有架构类型</div>
+                                    <div id="b4" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">云架构是否能开放共享：</div>
+                                    <div id="b5" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black hide4">提供的数据库类型：<span id='b6'></span>类
+                                </div>
+                                <div id="b11" class="change_h_45_bottom hide4">
+
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否能对计算、存储、网络资源状态进行管控：</div>
+                                    <div id="b7" class="width_20 line_h_45_center"></div>
+                                </div>
+                                <div id="b8" class="change_h_45_bottom hide5">
+
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否对异常状态进行故障告警：</div>
+                                    <div id="b9" class="width_20 line_h_45_center"></div>
+                                </div>
+                                <div id="b10" class="change_h_45_bottom bottom_line_none hide6">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- three -->
+
+                    <div class="zpginformatin_one">
+                        <div class="number_one dis_flex ">
+                            <div class="width_15 ">
+                                <div>应用服务能力</div>
+                            </div>
+                            <div class="width_85">
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否能对工业数据进行处理和建模分析：</div>
+                                    <div id="c1" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">面向企业设计、生产、管理和服务等核心环节是否拥有较为完备的工业软件服务：</div>
+                                    <div id="c2" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否提供工业软件集成适配接口：</div>
+                                    <div id="c3" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否提供成熟工业软件的云化：</div>
+                                    <div id="c4" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex ">
+                                    <div class="width_80 line_h_45_black">是否提供多类机理模型：</div>
+                                    <div id="c5" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black hide7">提供<span id='c6'></span>类工业微服务组件
+                                </div>
+                                <div id="c7" class="change_h_45_bottom hide7">
+
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否多个工业 APP：</div>
+                                    <div id="c8" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex">
+                                    <div class="width_80 line_h_45_black">是否建有应用市场：</div>
+                                    <div id="c9" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex ">
+                                    <div class="width_80 line_h_45_black">是否建有开发者社区：</div>
+                                    <div id="c10" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex bottom_line_none">
+                                    <div class="width_80 line_h_45_black">是否建有开源社区：</div>
+                                    <div id="c11" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex border_top hide8">
+                                    <div class="width_80 line_h_45_black" style="width:60%">具备管理功能：</div>
+                                    <div id="c12" class="width_20 line_h_45_center" style="width:40%"></div>
+                                </div>
+
+                                <div class="height_45_bottom dis_flex hide8">
+                                    <div class="width_80 line_h_45_black" style="width:60%">应用新技术：</div>
+                                    <div id="c13" class="width_20 line_h_45_center" style="width:40%"></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black hide8">基于新技术的业务功能数量：<span id='c14'></span>个
+                                </div>
+                                <div id="c15" class="change_h_45_bottom bottom_line_none hide8">
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 333333333333333333333333333333333333333333333333333333333333333 -->
+
+
+                    <div class="gyhljs">平台服务能力</div>
+                    <div class="zpginformatin_one">
+                        <!-- one -->
+                        <div class="number_one dis_flex">
+                            <div class="width_15">
+                                <div>设备接入能力 </div>
+                            </div>
+                            <div class="width_85">
+
+                                <div class="height_45_bottom line_h_45_black">可连接的工业设备种类：<span id='d1'></span>类<span
+                                        id='d2'></span>个 </div>
+
+                                <div class="height_45_bottom line_h_45_black">设备数据采集点总数：<span id='d3'></span>个</div>
+
+                                <div class="height_45_bottom line_h_45_black">可管理的工业设备：<span id='d4'></span>类，合计<span
+                                        id='d5'></span>台</div>
+
+                                <div class="height_45_bottom dis_flex bottom_line_none">
+                                    <div class="width_80 line_h_45_black">是否具备工业设备数据边缘计算功能：</div>
+                                    <div id="d6" class="width_20 line_h_45_center"></div>
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black border_top" style="overflow: hidden">
+                                    其他：<span id='d7'></span></div>
+
+                                <div id="d8" class="change_h_45_bottom bottom_line_none">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- two -->
+                    <div class="zpginformatin_one">
+                        <div class="number_one dis_flex ">
+                            <div class="width_15">
+                                <div>行业软件部署能力 </div>
+                            </div>
+                            <div class="width_85">
+
+                                <div class="height_45_bottom line_h_45_black">云化工业软件数量：<span id='e1'></span>类，<span
+                                        id='e2'></span>个 </div>
+
+                                <div class="height_45_bottom line_h_45_black">工业 APP 数量：<span id='e3'></span>类，<span
+                                        id='e4'></span>个</div>
+
+                                <div class="height_45_bottom line_h_45_black">工业软件和 APP 订阅企业数量：<span
+                                        id='e5'></span>类，<span id='e6'></span>个 </div>
+
+                                <div class="height_45_bottom line_h_45_black">工业软件和 APP 订阅用户数量：<span
+                                        id='e7'></span>类，<span id='e8'></span>个</div>
+
+                                <div id="e9" class="change_h_45_bottom bottom_line_none">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- three -->
+
+                    <div class="zpginformatin_one">
+                        <div class="number_one dis_flex ">
+                            <div class="width_15">
+                                <div>机理 </div>
+                            </div>
+                            <div class="width_85">
+                                <div class="height_45_bottom line_h_45_black">工业机理模型：<span id='f1'></span>类，<span
+                                        id='f2'></span>个
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black">数据分析算法：<span id='f3'></span>个</div>
+
+                                <div class="height_45_bottom line_h_45_black">微服务组件数量：<span id='f4'></span>类，<span
+                                        id='f5'></span>个
+                                </div>
+
+                                <div class="height_45_bottom line_h_45_black">行业机理模型月平均调用次数：<span id='f6'></span>次</div>
+
+                                <div class="height_45_bottom line_h_45_black">数据分析算法平均调用次数：<span id='f7'></span>次</div>
+
+                                <div class="height_45_bottom line_h_45_black">微服务组件月平均调用次数：<span id='f8'></span>次</div>
+
+                                <div id="f9" class="change_h_45_bottom bottom_line_none">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- four -->
+                    <div class="zpginformatin_one">
+                        <div class="number_one dis_flex ">
+                            <div class="width_15">
+                                <div>行业用户覆盖能力</div>
+                            </div>
+                            <div class="width_85">
+
+                                <div class="height_45_bottom line_h_45_black bottom_line_none">平台用户总数：<span id='g1'>/</span>个</div>
+
+                                <div class="height_45_bottom line_h_45_black bottom_line_none border_top">平台活跃用户数：<span id='g2'>/</span>个</div>
+
+                                <div class="height_45_bottom line_h_45_black bottom_line_none border_top">平台服务的企业用户数：<span id='g3'>/</span>个</div>
+
+                                <div class="height_45_bottom line_h_45_black bottom_line_none hide9 border_top" style="overflow: hidden">
+                                    提供合同 <span style="margin-left:200px;">文件名称：</span><span id='g4'
+                                        style="color:blue ;cursor: pointer; "></span> </div>
+
+                                <div id="g5" class="change_h_45_bottom bottom_line_none border_top hide10">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- 企业往年申报信息 -->
+
+                <div class="title_wnsb"><span class="line_blue">&nbsp|</span>企业往年申报信息</div>
+                <div class="qywn_content" style="height: 150px;">
+                    <div style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" class="qywn_content_list">以往是否申报过省工业互联网平台项目申报：<span id="torf1"
+                            style="margin-left:50px;"></span><span id="torf01" style="margin-left:70px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%;height:80px;display: flex;justify-content: center; ">
+        <a href="./zipingWeikaishi.html?nav=1" class="layui-btn layui-btn-normal" style="font-size: 16px;">返回企业自评估</a>
+    </div>
+    <!-- container end -->
+    <script src="../js/public/foot.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/layui/layui.all.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/industrialMaturity.js"></script>
+    <script>
+           base.requestJson({ type: "GET", url: base.interfaceObj.changeAdress.changeZpg, data: {} },
+            function (res) {
+                var adress = res.auth
+                // console.log(adress)
+                if (adress == "0") {
+                    $("#imgsrc").attr("src", "../images/enroll/0_2.png")
+                } else if (adress == "1") {
+                    $("#imgsrc").attr("src", "../images/enroll/0_1.png")
+                } else if (adress == "2") {
+                    $("#imgsrc").attr("src", "../images/enroll/0_3.png")
+                } else {
+                    $("#imgsrc").attr("src", "../images/enroll/0_2.png")
+                }
+            }
+        )
+
+    </script>
+
+
+</body>
+
+</html>

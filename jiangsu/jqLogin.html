@@ -1,0 +1,315 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border:1px solid #000;width: 600px;padding: 30px;">
+        <div class="login-panel-title" style= "width: 400px;position: relative;">
+            <div>
+                <span style="font-weight: 700;
+                font-size: 24px;font-family: Avenir,Helvetica,Arial,sans-serif;color: #1f8dfb;">欢迎登录</span>
+            </div>
+            <div style="position: absolute;bottom: 0;right: 0;">
+                <span @click="goRegister()" style="font-size: 14px;">没有账号？</span>
+                <span  style="font-size: 14px;color: #1f8dfb;"><a>立即注册</a></span>
+            </div>
+        </div>
+
+        <div class="login-panel-tab" style= "width: 400px;margin-top: 30px;">
+            <div><input style="width: 100%;color: #606266;
+                display: inline-block; 
+                font-size: inherit;
+                height: 40px;
+                line-height: 40px;
+                outline: 0;
+                padding: 0 15px;
+                border-radius: 4px;
+                border: 1px solid #dcdfe6;" type="text" placeholder="用户名/手机号"></div>
+            <div style="position: relative;margin-top: 15px;"><span></span><input style="width: 100%;" type="text" placeholder="请输入您的密码"></div>
+        </div>
+
+        <div style= "width: 400px;">
+            <div style="position: relative;"><span style="display:block;position:absolute;">+86 (中国大陆)</span><input  style="width: calc(100% - 105px); padding-left:105px ;" type="text" placeholder="请输入您的手机号"></div>
+            <div><input  style="width: 100%;" type="text" placeholder="请输入短信验证码"><button>获取短信验证码</button></div>
+        </div>
+        <div>手机验证码登录</div>
+        <div style= "width: 400px;border: 1px solid #000;border-radius: 5px;text-align: center;">登录</div>
+        <div style="display: flex;justify-content: space-between;">
+            <div><label><input type="checkbox"></input>记住密码</label></div>
+            <div>忘记密码 ?</div>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <style>
+        /* 样式改写 */
+        .layui-form-checkbox[lay-skin=primary]:hover i {
+        border-color: #1f8dfb;
+        color: #fff;
+        }
+        .layui-form-checked[lay-skin=primary] i {
+            border-color: #1f8dfd!important;
+            background-color: #1f8dfb;
+            color: #fff;
+        }
+        /* 复用样式 */
+        .myFuyong{
+            font-size: 14px;color: #1f8dfb;cursor: pointer;  
+        }
+        a:hover {
+                    color: #1f8dfb;
+                }
+        /* 最外层盒子 */
+        .myBox01{
+            border:1px solid #c6c6c6;
+            width: 600px;height: 400px;
+            margin: 0 auto;translate: -50%
+            ;border-radius: 10px;
+            background-color: 	#fffcfc;
+        }
+        .myBox02{
+            margin-left: 90px;margin-top: 50px;
+        }
+        /* 登录title */
+        .myDenglu{
+            width: 400px;position: relative;
+        }
+        .myDenglu > div:first-child > span {
+            font-weight: 700;font-size: 24px;
+            font-family: Avenir,Helvetica,Arial,sans-serif;
+            color: #1f8dfb;
+        }
+        .myDenglu > div:last-child {
+            position: absolute;bottom: 0;right: 0;
+        }
+        .myDenglu > div:last-child > span:first-child {
+            font-size: 14px;
+        }
+        /* 账号登录 */
+        .myZhanghao{
+            width: 400px;margin-top: 30px;
+        }
+        .myZhanghao > input:last-child {
+            margin-top: 15px;
+        }
+        /* 账号登录切换 默认隐藏 */
+        #myZhanghao{
+            display: none;
+        }
+        /* 手机号登录  默认隐藏*/
+        .myShouji{
+            width: 400px;display: none;
+        }
+        .myShouji > div:first-child{
+            position: relative;
+        }
+        .myShouji > div:first-child > span {
+            display:block;position:absolute;
+            top: 9px;padding-left: 10px;
+        }
+        .myShouji > div:first-child > input {
+            margin-top: 30px;padding-left: 105px;
+        }
+        .myShouji > div:last-child {
+            display: flex;
+            justify-content: space-between;
+        }
+        .myShouji > div:last-child > input {
+            margin-top: 15px;
+        }
+        .myShouji > div:last-child > button {
+            margin-top: 15px;margin-left: 10px;
+        }
+        /* 登录切换 */
+        .myQiehuan{
+            margin-top: 5px;
+        }
+        /* 登录按钮 */
+        .myClassbtn{
+            width: 400px;
+        }
+        .myClassbtn > button {
+            margin-top: 30px;width: 100%;
+        }
+        /* 记住密码 */
+        .myJizhu{
+            width: 400px;margin-top: 15px;
+            display: flex;justify-content: space-between;
+        }
+        .myJizhu > div:last-child > a {
+            cursor: pointer;
+        }
+        /* 内容区域 */
+        .container{
+
+        }
+        .cont_box{
+            width: 1198px;margin: 0 auto 70px;border: 1px solid #e0e0e0;padding: 50px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="pageOne">
+        <div class="cont_box">
+
+<form class="layui-form" action="">
+    <div class="myBox01">
+        <div class="myBox02">
+            <!-- 登录 -->
+            <div class="login-panel-title myDenglu">
+                <div>
+                    <span>欢迎登录</span>
+                </div>
+                <div>
+                    <span>没有账号？</span>
+                    <span><a class="myFuyong">立即注册</a></span>
+                </div>
+            </div>
+            <!-- 账号 -->
+            <div class="myZhanghao">
+                <input type="text" name="title" required lay-verify="required" placeholder="用户名/手机号" autocomplete="off" class="layui-input">    
+                <input type="password" name="title" required lay-verify="required" placeholder="请输入您的密码" autocomplete="off" class="layui-input">    
+            </div>
+            <!-- 手机号 -->
+            <div class="myShouji">
+                <div>
+                    <span>+86 (中国大陆)</span>
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入您的手机号" autocomplete="off" class="layui-input">
+                </div>
+                <div>
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入短信验证码" autocomplete="off" class="layui-input">    
+                    <button type="button" class="layui-btn layui-btn-normal">获取短信验证码</button>
+                </div>               
+            </div>
+            <!-- 切换登录方式 -->
+            <div class="myQiehuan">
+                <span id="myShouji" class="myFuyong">手机验证码登录</span>
+                <span id="myZhanghao" class="myFuyong">密码登录</span>
+            </div>
+            <!-- 登录按钮 -->
+            <div class="myClassbtn">
+                <button type="button" lay-submit class="layui-btn layui-btn-normal">登录</button>
+            </div>
+            <!-- 记住密码 -->
+            <div class="myJizhu">
+                <div>
+                    <input type="checkbox" name="rememberPassword" title="记住密码" lay-skin="primary">
+                </div>
+                <div><a>忘记密码?</a></div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.js"></script>
+    <script type="text/javascript" src="./layui/layui.all.js"></script>
+    <script type="text/javascript">
+        layui.use(['form','layedit','laydate'], function () {
+            var form = layui.form
+                , layer = layui.layer
+                , layedit = layui.layedit
+                , laydate = layui.laydate;
+
+         //监听提交
+            form.on('submit(formDemo)', function(data){
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+            form.on('input[name="rememberPassword"]',function(data){
+                // console.log(JSON.stringify(data.field))
+                console.log(data.field)
+                 //将选中取消                    
+//                  $(this).prop("checked", false); 
+//                  form.render('checkbox'); 
+//                  layer.msg("message", {
+//                      time : 3000,
+//                      icon : 10 
+               
+           });
+  
+                form.render();
+        })
+    </script>
+    <script type="text/javascript">    
+        $("#myShouji").click(function(){
+            $('.myShouji').show()
+            $('.myZhanghao').hide()
+            $(this).hide()
+            $("#myZhanghao").show()
+        })
+        $("#myZhanghao").click(function(){
+            $('.myZhanghao').show()
+            $('.myShouji').hide()
+            $(this).hide()
+            $('#myShouji').show()
+        })
+        // $('.myJizhu > div:first-child').on("change", function (){ 
+        //     console.log($(".myJizhu > div:first-child[type='checkbox']"))
+        // })
+</script>
+
+        <!-- 百度统计代码 -->
+		<script>
+			/*制造云全站*/
+			var _hmt = _hmt || [];
+			(function () {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script>
+			/*江苏诊断平台*/
+			var _hmt = _hmt || [];
+			(function () {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script>
+			/*判断入口*/
+			function checkIsIEView() {
+				try {
+					var status = window.external.isIEViewer();
+					if (status == 1) {
+						return true;
+					} else {
+						return false;
+					}
+				} catch (e) {
+					return false;
+				}
+			}
+			/*PC客户端/PC网页端*/
+			var isOn = checkIsIEView();
+			if (isOn) {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			} else {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			}
+		</script>
+</body>
+</html>

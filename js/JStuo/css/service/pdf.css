@@ -1,0 +1,789 @@
+body, html {
+    background-color: white;
+    font-family: "SimSun";
+    -webkit-font-smoothing: none;
+    padding: 0;
+    margin: 0;
+}
+.testView {
+    width: 780px;
+    height: 100%;
+    margin: 10px auto;
+}
+.testView .pdf_page {
+    width: 100%;
+    height: 1109px;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: white !important;
+    overflow: hidden;
+}
+.testView .pdf_page.pdf_bg {
+    background: url("../../images/service/index.png") no-repeat;
+    background-size: 100% 100%;
+    background-position-y: -50px;
+}
+.testView .pdf_page.pdf_ct{
+    background: url("../../images/service/catalogue.png") no-repeat;
+    background-size: 100% 100%;
+    background-position-y: -55px;
+}
+.testView .pdf_page .pdf_logo {
+    float: right;
+    width: 114px;
+    height: 38px;
+    background: url("../../images/service/logo.png") no-repeat;
+    background-size: 100% 100%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.testView .pdf_page h1 {
+    font-size: 54px;
+}
+.testView .pdf_page h2 {
+    font-size: 26px;
+}
+.testView .pdf_page .marginTop1 {
+    position: relative;
+    left: 0;
+    padding: 0 20px;
+    top: 70px;
+}
+.testView .pdf_page .marginTop1 span, .testView .pdf_page .marginTop2 span{
+    display: inline-block;
+}
+.testView .pdf_page .marginTop2 {
+    position: relative;
+    top: 83px;
+    padding: 0 20px;
+    left: 0;
+    font-size: 44px !important;
+}
+.testView .pdf_page .marginTop3 {
+    position: absolute;
+    bottom: 130px;
+    margin-left: 270px;
+}
+.testView .pdf_page .marginTop4 {
+    position: absolute;
+    bottom: 90px;
+    margin-left: 335px;
+}
+.testView .pdf_page .pdf_catalogue {
+    width: calc(100% - 100px);
+    margin-left: 60px;
+    height: 450px;
+    position: relative;
+    top: 200px;
+    clear: both;
+}
+.testView .pdf_page .pdf_catalogue>div {
+    float: left;
+    width: 160px;
+    margin-right: 10px;
+    height: 215px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.testView .pdf_page .pdf_catalogue>div .pdf_catalogue_title {
+    color: #3093d0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+}
+.testView .pdf_page .pdf_catalogue>div .pdf_catalogue_info {
+    font-size: 12px;
+    line-height: 24px;
+}
+.testView .pdf_page .pdf_catalogue>div .pdf_catalogue_info .pdf_catalogue_index {
+    color: #3093d0;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.testView .pdf_page .pdf_catalogue>div .pdf_catalogue_info .pdf_catalogue_txt {
+    color: #4c5b99;
+    font-weight: normal;
+}
+.testView .pdf_page .pdf_tab {
+    position: relative;
+    top: 80px;
+    color: white;
+    text-indent: 15px;
+    width: 244px;
+    height: 26px;
+    line-height: 26px;
+    background: url(../../images/service/tab.png) no-repeat;
+    background-size: 100% 100%;
+}
+.testView .pdf_page .pdf_bottom {
+    background: url("../../images/service/bottom.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+}
+.testView .pdf_page .pdf_title {
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+    top: 110px;
+    left: 45px;
+}
+.testView .pdf_page .pdf_subtitle {
+    color: #9a9c9e;
+    font-size: 12px;
+    position: relative;
+    top: 150px;
+    margin-left: 60px;
+}
+.testView .pdf_page #diagnointro_introduce{
+    height: 860px;
+    /* display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 27;*/
+    overflow: hidden;
+}
+.testView .pdf_page #companydetail_introduce{
+    height: 510px;
+    /* display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 15;*/
+    overflow: hidden
+}
+.testView .pdf_page #summary_introduce{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+    top: 125px;
+    max-height: 160px;
+    overflow: hidden;
+}
+.testView .pdf_page .pdf_txt {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    position: relative;
+    top: 140px;
+    height: auto;
+    color: #333333;
+    font-size: 14px;
+    line-height: 22px;
+}
+.testView .pdf_page.pdf_flow {
+    background: url("../../images/service/pic.png") no-repeat;
+    /*    background-size: 100% 100%;*/
+    background-position-y: 25px;
+}
+.testView .pdf_page .pdf_pic {
+    position: relative;
+    top: 125px;
+    left: 55px;
+    margin-bottom: 10px;
+}
+.testView .pdf_page .pdf_timeline {
+    position: relative;
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 210px;
+    top: 150px;
+    clear: both;
+}
+.testView .pdf_page .pdf_timeline>div {
+    float: left;
+    width: 110px;
+    height: 100%;
+}
+.testView .pdf_page .pdf_timeline>div img {
+    width: 109px;
+    height: 50px;
+}
+.testView .pdf_page .pdf_timeline>div .timeline_up {
+    position: relative;
+    top: 58px;
+}
+.testView .pdf_page .pdf_timeline>div .timeline_down {
+    position: relative;
+    top: 80px;
+}
+.testView .pdf_page .pdf_timeline>div .pdf_timeline_txt {
+    width: 100%;
+    text-align: center;
+    color: #59cbfb;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+}
+.testView .pdf_page .pdf_timeline>div .pdf_label1 {
+    top: -25px;
+   /* display: flex;
+    justify-content: center;
+    align-items: flex-end;*/
+    position: absolute;
+    width: 109px;
+    height: 80px;
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.testView .pdf_page .pdf_timeline>div .pdf_label1>div{
+    position: absolute;
+    bottom:0;
+    width: 100%
+}
+.testView .pdf_page .pdf_timeline>div .pdf_value1 {
+    top: 65px;
+}
+.testView .pdf_page .pdf_timeline>div .pdf_label2 {
+    top: 85px;
+    color: #4084c5;
+    width: 109px;
+    height: 85px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.testView .pdf_page .pdf_timeline>div .pdf_value2 {
+    top: 75px;
+    color: #4084c5;
+}
+.testView .pdf_page .pdf_count {
+    position: relative;
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 120px;
+    top: 205px;
+}
+.testView .pdf_page .pdf_count>div {
+    float: left;
+    width: 20%;
+    height: calc(50% - 10px);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border-left: 2px solid #3e84c5;
+}
+.testView .pdf_page .pdf_count>div .pdf_val {
+    color: #3093d0;
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.testView .pdf_page .pdf_count>div .pdf_lab {
+    color: #787a77;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.testView .pdf_page .pdf_level {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 200px;
+    position: relative;
+    top: 135px;
+    clear: both;
+}
+.testView .pdf_page .pdf_level>div {
+    height: 100%;
+    float: left;
+    width: 50%;
+}
+.testView .pdf_page .pdf_level>div:first-child {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    color: #6a6970;
+    font-size: 14px;
+    line-height: 24px;
+}
+.testView .pdf_page .pdf_level>div #pdf_level_num {
+    color: #3e99da;
+}
+.testView .pdf_page .pdf_opacity_bg {
+    position: relative;
+    width: 660px;
+    margin-left: 60px;
+    height: 230px;
+    top: 120px;
+    background: url("../../images/service/bg.png") no-repeat;
+    background-size: 100% 100%;
+    clear: both;
+    min-height: 210px;
+}
+.testView .pdf_page .pdf_opacity_bg>div {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #0C0C0C;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info .radar_tab {
+    width: calc(100% - 15px);
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #90d9f2;
+    font-size: 14px;
+    font-weight: bold;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info .radar_tab>div {
+    float: left;
+    /* width: calc(100% / 3);*/
+    text-align: center;
+    color: #3b9ade;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info  .radar_one{
+    width: 60%;
+    text-overflow: clip !important;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info  .radar_two{
+    width: 20%;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info .radar_three{
+    width: 20%;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info .radar_list {
+    width: calc(100% - 15px);
+    height: auto;
+    line-height: 40px;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info .radar_list>div {
+    height: 35px;
+    line-height: 35px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8f6fb;
+}
+.testView .pdf_page .pdf_opacity_bg .radAr_info .radar_list>div>div {
+    float: left;
+    /*width: calc(100% / 3);*/
+    text-align: center;
+    color: BLACK;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.testView .pdf_page .pdf_radar_info {
+    position: relative;
+   /* width: calc(100% - 120px);*/
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 400px;
+    top: 150px;
+    clear: both;
+}
+.testView .pdf_page .pdf_radar_info>div {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.testView .pdf_page .pdf_radar_info>div .radar_title{
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    color: #315383;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.testView .pdf_page .pdf_radar_info>div .radar_title img{
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+.testView .pdf_page .pdf_radar_info>div .radar_content{
+    width: 348px;
+}
+.testView .pdf_page .pdf_radar_info>div .radar_content>div {
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+}
+.testView .pdf_page .radar_title_icon1 {
+    width: 55px;
+    height: 23px;
+    background: url("../../images/service/icon1.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 23px;
+}
+.testView .pdf_page .radar_title_icon2 {
+    width: 55px;
+    height: 23px;
+    background: url("../../images/service/icon2.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 23px;
+}
+.testView .pdf_page .radar_content_txt {
+    font-size: 12px;
+    line-height: 20px;
+    color: BLACK;
+    margin-top: 5px;
+    /*display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 13;*/
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-family: SimSun;
+    height: 180px
+}
+.testView .pdf_page.pdf_over {
+    background: url("../../images/service/over.png") no-repeat;
+    background-size: 100% 100%;
+}
+.testView .pdf_page .padf_coreproblem {
+    width: 620px;
+    margin-left: 80px;
+    position: relative;
+    top: 140px;
+    height: 350px;
+    clear: both;
+}
+.testView .pdf_page .padf_coreproblem>div {
+    height: 85px;
+    line-height: 101px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.testView .pdf_page .padf_coreproblem>div.pdf_circle1 {
+    background: url("../../images/service/circle_bg1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.testView .pdf_page .padf_coreproblem>div.pdf_circle2 {
+    background: url("../../images/service/circle_bg2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.testView .pdf_page .padf_coreproblem>div .pdf_circle_index {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    float: left;
+    width: 85px;
+    text-align: center;
+    height: 85px;
+    line-height: 85px;
+}
+.testView .pdf_page .padf_coreproblem>div .pdf_circle_txt {
+    margin-left: 130px;
+    font-size: 12px;
+    color: #7b8389;
+    height: 51px;
+    padding-top: 16px;
+   /* position: relative;
+    top: -85px;
+    display: flex;
+    justify-content: left;
+    align-items: center;*/
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    display: table;
+}
+.testView .pdf_page .padf_coreproblem>div .pdf_circle_txt>span{
+    display: table-cell;
+    vertical-align: middle
+}
+.testView .pdf_page #pdf_advise {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 860px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #7b8389;
+    position: relative;
+    top: 135px;
+    word-break: break-all;
+    word-wrap: break-word;
+    /*  display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 28;*/
+    overflow: hidden;
+}
+.testView .pdf_page .pdf_list_header {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    top: 70px;
+    clear: both;
+}
+.testView .pdf_page .pdf_list_header>div{
+    float: left;
+}
+.testView .pdf_page .pdf_list_header> .pdf_clos1>div, .testView .pdf_page .pdf_list_header> .pdf_clos2>div{
+    border-radius: 10px;
+    background-color: #3b9ade;
+    height: 100%;
+    width: calc(100% - 10px);
+}
+.testView .pdf_page .pdf_list_header> .pdf_clos3>div{
+    border-radius: 10px;
+    background-color: #3b9ade;
+    height: 100%;
+    width: 100%;
+}
+.testView .pdf_page .pdf_list_body {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    position: relative;
+    top: 70px;
+    height: calc(100% - 255px);
+    clear: both;
+}
+.testView .pdf_page .pdf_list_body>div {
+    width: 100%;
+    height: 145px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #7b8389;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.testView .pdf_page .pdf_list_body>div>div {
+    float: left;
+    border-radius: 10px;
+    background-color: #e8f6fb;
+    margin-right: 10px;
+    height: 100%;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    text-align: center;
+    word-break: break-all;
+    word-wrap: break-word;
+    display: table;
+    /*  display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 8;
+      overflow: hidden;*/
+}
+.testView .pdf_page .pdf_list_body>div>div>span{
+    height: auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+}
+.testView .pdf_page .pdf_woman {
+    width: 660px;
+    margin-left: 60px;
+    position: relative;
+    top: 140px;
+    height: 345px;
+    clear: both;
+    background: url("../../images/service/woman.png") no-repeat;
+    background-size: 100% 100%;
+}
+.testView .pdf_page .pdf_woman_list {
+    width: 660px;
+    margin-left: 60px;
+    position: relative;
+    top: 185px;
+    height: 330px;
+    clear: both;
+}
+.testView .pdf_page .pdf_woman_list .pdf_woman_header {
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    color: #3b9ade;
+    border-bottom: 1px solid #3b9ade;
+    font-size: 14px;
+    font-weight: bold;
+}
+.testView .pdf_page .pdf_woman_list .pdf_woman_header>div {
+    float: left;
+    height: 100%;
+    text-align: center;
+    width: 220px;
+}
+.testView .pdf_page .pdf_woman_body {
+    width: 660px;
+    height: calc(100% - 30px);
+    font-size: 14px;
+}
+.testView .pdf_page .pdf_woman_body>div {
+    width: 660px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid gainsboro;
+}
+.testView .pdf_page .pdf_woman_body>div>div {
+    float: left;
+    height: 100%;
+    text-align: center;
+    width: 220px;
+}
+.testView .pdf_page .pdf_woman_body>div>div span {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    background-color: #3b9ade;
+    position: relative;
+    top: 3px;
+    border-radius: 5px;
+    width: 220px;
+}
+.testView .pdf_page .radar_content {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    height: 100%;
+    margin-top: 40px;
+}
+.testView .pdf_page .radar_content .radar_title {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    color: #315383;
+    font-size: 14px;
+}
+.testView .pdf_page .radar_content .radar_title img {
+    position: relative;
+    top: 2px;
+}
+.testView .pdf_page .radar_content .radar_body {
+    width: 100%;
+    height: calc(100% - 40px);
+    clear: both;
+}
+.testView .pdf_page .radar_content .radar_body>div {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+/*.testView .pdf_page .pdf_list_body {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    height: 75px;
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 70px;
+    clear: both;
+}*/
+#chart1 {
+    width: calc(100% - 120px);
+    margin-left: 60px;
+    position: relative;
+    top: 170px;
+    height: 260px;
+}
+#chart4 {
+    margin-left: 286px;
+    width: calc(100% - 286px);
+    position: relative;
+    top: 25px;
+    height: calc(100% - 25px);
+}
+.pdf_clos1 {
+    width: 79px;
+    display: table;
+}
+.pdf_clos1>div {
+    width: 79px;
+    display: table;
+    height: 100%;
+    text-align: center;
+}
+.pdf_clos1 span {
+    /*position: relative;
+    top: 58px;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+.pdf_clos2 {
+    width: 231px;
+}
+.pdf_clos2>div, .pdf_clos3>div {
+    display: table;
+    height: 100%;
+}
+.pdf_clos2 span, .pdf_clos3 span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.pdf_clos3 {
+    width: 231px;
+    margin-right: 0px !important;
+}
+.darkBlue {
+    color: #325383;
+}
+.darkBlue2 {
+    color: #4d9fd8;
+    font-weight: bold;
+}
+#pdfView {
+    position: fixed;
+    z-index: 999;
+    top: 20px;
+    left: 1400px;
+    cursor: pointer;
+    color: white;
+    background-color: #1E9FFF;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+.pdf_pageSize {
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    bottom: 20px;
+    font-size: 14px;
+    color: #325383;
+}
+.pdf_service_flow {
+    position: absolute;
+    width: 270px;
+    height: 860px;
+    top: 285px;
+    left: 430px;
+    text-align: center;
+}
+.pdf_service_flow .pdf_service_flow_title {
+    color: #62a3d7;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.pdf_service_flow .pdf_service_flow_content {
+    color: #a0a1a3;
+    height: 28px;
+    line-height: 28px;
+    margin-left: -10px;
+    font-size: 14px;
+}
+.pdf_service_flow .pdf_service_flow_content span {
+    margin-left: 20px;
+}
+.highcharts-credits, .highcharts-button-symbol {
+    display: none;
+}
+.common_color{
+  color: #666666 !important;
+}
+.page-break_line{
+   border: 1px solid gray !important; 
+}

@@ -1,0 +1,1461 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--禁止缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+    <meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+    <meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/enterpriseApplicationForm.css">
+
+    <style>
+        .button_0 {
+            position: absolute;
+            right: 12vw;
+            top: 70px;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+
+
+    <form id="pdf_url" style="width:1200px;margin: 0 auto;" method="POST" action="">
+        <input name="submit" class="layui-btn layui-btn-normal button_0" type="submit" value="导出pdf">
+        <input id="input_0" name="html" type="text" style=" display:none;" />
+        <input id="pdfname" name="pdfname" type="text" value="两化融合深度诊断申报表" style=" display:none;" />
+        <div>
+            <div
+                style="width:100%;font-size:25px;font-weight:bold;text-align: center; line-height: 50px;margin: 50px 0 ;">
+                两化融合深度诊断企业申报表</div>
+
+            <!-- 企业基本信息 -->
+
+            <div class="title_sm margin_auto"><span class="line_blue">&nbsp| </span>企业基本信息</div>
+            <div class="jbinformatin_one">
+                <div class="height_90 dis_flex">
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业名称：</div>
+                        <div id="qymc" class="width_40 change_line textOVerThree"></div>
+                    </div>
+                    <div class="width_50_line_l">
+                        <div class="height_50 dis_flex">
+                            <div class="width_40 color_blue line_h_45">统一社会信用代码：</div>
+                            <div id='tyshxxydm' class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">企业成立时间：</div>
+                            <div id='qyclsj' class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue .line_h_45 line_h_45">企业总资产（万元）：</div>
+                        <div id='qyzzc' class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业所属行业：</div>
+                        <div id="qysshy" class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue .line_h_45 line_h_45">企业负债率（%）：</div>
+                        <div id='qyfzl' class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">业务类型：</div>
+                        <div id='ywlx' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+
+
+                <div class="height_90 dis_flex border_top">
+                    <div class="width_50">
+                        <div class="height_50 dis_flex">
+                            <div class="width_60 color_blue line_h_45">企业总人数：</div>
+                            <div id="qyzrs" class="width_40 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_60 color_blue line_h_45">企业类型：</div>
+                            <div id='qylx' class="width_40 line_h_45_black"></div>
+                        </div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业主要产品：</div>
+                        <div id="qyzycp" class="width_60 change_line textOVerThree"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业信用等级：</div>
+                        <div id="qyxydj" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业是否是上市公司：</div>
+                        <div id="sex1" class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业是否在近三年连续保持盈利：</div>
+                        <div id="sex3" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业制造类型：</div>
+                        <div id="sex2" class="width_60 line_h_45_black "></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业营业收入位列江苏省同行业中的站位水平（%）：</div>
+                        <div id="qythysp" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业年营业额：</div>
+                        <div id='qynyye' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业是否有明确的企业发展战略：</div>
+                        <div id="sex5" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业上年税金（万元）：</div>
+                        <div id='qysnsj' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业研发创新费用占到总体收入的百分比（%）：</div>
+                        <div id='qyyfzb' class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业上年利润（万元）：</div>
+                        <div id='qysnlr' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_135 dis_flex border_top'>
+                    <div class="width_30 color_blue line_h_45">企业营业执照：</div>
+                    <div class="width_70" style="padding:10px;box-sizing:border-box ">
+                        <img id="imgurl" src="" style="height: 110px;max-width:700px; " alt="营业执照">
+                    </div>
+                </div>
+
+                <div class='height_135 dis_flex border_top'>
+                    <div class="width_30 color_blue line_h_45">企业财务报告：</div>
+                    <!-- file -->
+                    <div id="other_file" class="width_70" style="padding: 20px; box-sizing: border-box; display: none">
+                        <span id="bgfile" style="cursor: pointer; "></span>
+                    </div>
+
+                    <!-- img -->
+                    <div id="img_file" class="width_70" style="padding:10px;box-sizing:border-box;display: none">
+                        <img id="imgurl_0" src="" style="height: 110px;max-width:700px; " alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 企业联系信息 -->
+
+            <div class="title_sm" style="margin-bottom: 0"><span class="line_blue">&nbsp| </span>企业联系信息</div>
+            <div class="jbinformatin_two">
+
+                <div class='height_180 '>
+                    <div class="width_50" style="float: left">
+                        <div class="height_50 dis_flex">
+                            <div class="width_60 color_blue line_h_45">法人代表：</div>
+                            <div id="frdb" class="width_40 change_line textOVerThree"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_60 color_blue line_h_45">联系人姓名：</div>
+                            <div id="lxrxm" class="width_40 change_line textOVerThree"></div>
+                        </div>
+
+                    </div>
+                    <div class="width_50_line_l" style="float: right">
+                        <div class="height_25 dis_flex">
+                            <div class="width_40 color_blue line_h_45">所属辖区：</div>
+                            <div id="ssxq" class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50 border_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">企业详细地址：</div>
+                            <div id="qyxxdz" class="width_60 change_line textOVerThree"></div>
+                        </div>
+                        <div class="height_25 border_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">法人代表联系电话：</div>
+                            <div id="dblxdh" class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="height_90 dis_flex border_top">
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">部门：</div>
+                        <div id="bm" class="width_40 change_line textOVerThree"></div>
+                    </div>
+                    <div class="width_50_line_l ">
+                        <div class="height_50 dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人手机号码：</div>
+                            <div id="lxrsjhm" class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人固定电话：</div>
+                            <div id="lxrgddh" class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="height_90 dis_flex border_top">
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">职务：</div>
+                        <div id="zw" class="width_40 change_line textOVerThree"></div>
+                    </div>
+                    <div class="width_50_line_l">
+                        <div class="height_50 dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人电子邮箱：</div>
+                            <div id="lxrdzyx" class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人传真：</div>
+                            <div id="lxrcz" class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 企业自评估信息 -->
+
+            <div class="title_sm" style="margin-bottom: 10px"><span class="line_blue">&nbsp| </span>企业自评估信息</div>
+            <div id="paperone" class="common_margin">
+                <div class="shenbao">申报工业互联网平台建设</div>
+                <div class="gyhljs">工业互联网平台建设描述</div>
+                <div id='platformDescription' class="js_content"></div>
+                <div class="gyhljs">平台基础建设能力</div>
+                <div class="zpginformatin_one">
+                    <!-- one -->
+                    <div class="number_one dis_flex">
+                        <div class="width_15">
+                            <div>边缘接入能力</div>
+                        </div>
+                        <div class="width_85">
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否部署工业网络：</div>
+                                <div id="a1" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">工业网络是否可实现现场级、车间级、工厂级网络的互联互通：</div>
+                                <div id='a2' class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black">兼容<span id='a3'></span>类工业通信协议，<span
+                                    id='a4'></span>类工业通信网络和通用网络协议 </div>
+
+                            <div class="height_45_bottom line_h_45_black">可采集工业数据种类：<span id='a5'></span>类 </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">边缘层是否具备数据预处理能力：</div>
+                                <div id='a6' class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex bottom_line_none">
+                                <div class="width_80 line_h_45_black">边缘层是否具备能加载边缘应用：</div>
+                                <div id='a7' class="width_20 line_h_45_center "></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black border_top hide1">能加载<span id='a8'></span>类边缘应用
+                            </div>
+
+                            <div id='a9' class="change_h_45_bottom hide1">
+
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black">适配主流<span id='a10'></span>类工业控制系统 </div>
+                            <div id='a11' class="change_h_45_bottom bottom_line_none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- two -->
+                <div class="zpginformatin_one">
+                    <div class="number_one dis_flex">
+                        <div class="width_15 ">
+                            <div>基础设施服务能力</div>
+                        </div>
+                        <div class="width_85">
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否具备稳定可靠的数据存储与计算基础设施：</div>
+                                <div id='b1' class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否具有完整的云计算架构：</div>
+                                <div id="b2" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black hide3">提供具体的云计算架构图及可佐证的具备完整架构的技术方案和应用场景案例
+                                &nbsp&nbsp&nbsp&nbsp&nbsp
+                                文件名称：<div id="b3"
+                                    style="float: right;width: 370px;height:100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                </div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">具有架构类型</div>
+                                <div id="b4" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">云架构是否能开放共享：</div>
+                                <div id="b5" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black hide4">提供的数据库类型：<span id='b6'></span>类</div>
+                            <div id="b11" class="change_h_45_bottom hide4">
+
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否能对计算、存储、网络资源状态进行管控：</div>
+                                <div id="b7" class="width_20 line_h_45_center"></div>
+                            </div>
+                            <div id="b8" class="change_h_45_bottom hide5">
+
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否对异常状态进行故障告警：</div>
+                                <div id="b9" class="width_20 line_h_45_center"></div>
+                            </div>
+                            <div id="b10" class="change_h_45_bottom bottom_line_none hide6">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- three -->
+                <div class="zpginformatin_one">
+                    <div class="number_one dis_flex ">
+                        <div class="width_15 ">
+                            <div>应用服务能力</div>
+                        </div>
+                        <div class="width_85">
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否能对工业数据进行处理和建模分析：</div>
+                                <div id="c1" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">面向企业设计、生产、管理和服务等核心环节是否拥有较为完备的工业软件服务：</div>
+                                <div id="c2" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否提供工业软件集成适配接口：</div>
+                                <div id="c3" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否提供成熟工业软件的云化：</div>
+                                <div id="c4" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex ">
+                                <div class="width_80 line_h_45_black">是否提供多类机理模型：</div>
+                                <div id="c5" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black hide7">提供<span id='c6'></span>类工业微服务组件</div>
+                            <div id="c7" class="change_h_45_bottom hide7">
+
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否多个工业 APP：</div>
+                                <div id="c8" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex">
+                                <div class="width_80 line_h_45_black">是否建有应用市场：</div>
+                                <div id="c9" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex ">
+                                <div class="width_80 line_h_45_black">是否建有开发者社区：</div>
+                                <div id="c10" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex bottom_line_none">
+                                <div class="width_80 line_h_45_black">是否建有开源社区：</div>
+                                <div id="c11" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex border_top hide8">
+                                <div class="width_80 line_h_45_black" style="width:60%">具备管理功能：</div>
+                                <div id="c12" class="width_20 line_h_45_center" style="width:40%"></div>
+                            </div>
+
+                            <div class="height_45_bottom dis_flex hide8">
+                                <div class="width_80 line_h_45_black" style="width:60%">应用新技术：</div>
+                                <div id="c13" class="width_20 line_h_45_center" style="width:40%"></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black hide8">基于新技术的业务功能数量：<span id='c14'></span>个
+                            </div>
+                            <div id="c15" class="change_h_45_bottom bottom_line_none hide8">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 333333333333333333333333333333333333333333333333333333333333333 -->
+
+                <div class="gyhljs">平台服务能力</div>
+                <div class="zpginformatin_one">
+                    <!-- one -->
+                    <div class="number_one dis_flex">
+                        <div class="width_15">
+                            <div>设备接入能力 </div>
+                        </div>
+                        <div class="width_85">
+
+                            <div class="height_45_bottom line_h_45_black">可连接的工业设备种类：<span id='d1'></span>类<span
+                                    id='d2'></span>个 </div>
+
+                            <div class="height_45_bottom line_h_45_black">设备数据采集点总数：<span id='d3'></span>个</div>
+
+                            <div class="height_45_bottom line_h_45_black">可管理的工业设备：<span id='d4'></span>类，合计<span
+                                    id='d5'></span>台</div>
+
+                            <div class="height_45_bottom dis_flex bottom_line_none">
+                                <div class="width_80 line_h_45_black">是否具备工业设备数据边缘计算功能：</div>
+                                <div id="d6" class="width_20 line_h_45_center"></div>
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black border_top " style="overflow: hidden">
+                                其他：<span id='d7'></span></div>
+
+                            <div id="d8" class="change_h_45_bottom bottom_line_none ">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- two -->
+                <div class="zpginformatin_one">
+                    <div class="number_one dis_flex ">
+                        <div class="width_15">
+                            <div>行业软件部署能力 </div>
+                        </div>
+                        <div class="width_85">
+
+                            <div class="height_45_bottom line_h_45_black">云化工业软件数量：<span id='e1'></span>类，<span
+                                    id='e2'></span>个 </div>
+
+                            <div class="height_45_bottom line_h_45_black">工业 APP 数量：<span id='e3'></span>类，<span
+                                    id='e4'></span>个</div>
+
+                            <div class="height_45_bottom line_h_45_black">工业软件和 APP 订阅企业数量：<span id='e5'></span>类，<span
+                                    id='e6'></span>个 </div>
+
+                            <div class="height_45_bottom line_h_45_black">工业软件和 APP 订阅用户数量：<span id='e7'></span>类，<span
+                                    id='e8'></span>个</div>
+
+                            <div id="e9" class="change_h_45_bottom bottom_line_none">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- three -->
+
+                <div class="zpginformatin_one">
+                    <div class="number_one dis_flex ">
+                        <div class="width_15">
+                            <div>机理 </div>
+                        </div>
+                        <div class="width_85">
+                            <div class="height_45_bottom line_h_45_black">工业机理模型：<span id='f1'></span>类，<span
+                                    id='f2'></span>个
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black">数据分析算法：<span id='f3'></span>个</div>
+
+                            <div class="height_45_bottom line_h_45_black">微服务组件数量：<span id='f4'></span>类，<span
+                                    id='f5'></span>个
+                            </div>
+
+                            <div class="height_45_bottom line_h_45_black">行业机理模型月平均调用次数：<span id='f6'></span>次</div>
+
+                            <div class="height_45_bottom line_h_45_black">数据分析算法平均调用次数：<span id='f7'></span>次</div>
+
+                            <div class="height_45_bottom line_h_45_black">微服务组件月平均调用次数：<span id='f8'></span>次</div>
+
+                            <div id="f9" class="change_h_45_bottom bottom_line_none">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- four -->
+                <div class="zpginformatin_one">
+                    <div class="number_one dis_flex ">
+                        <div class="width_15">
+                            <div>行业用户覆盖能力</div>
+                        </div>
+                        <div class="width_85">
+
+                            <div class="height_45_bottom line_h_45_black bottom_line_none">平台用户总数：<span id='g1'>/</span>个</div>
+
+                            <div class="height_45_bottom line_h_45_black bottom_line_none border_top">平台活跃用户数：<span id='g2'>/</span>个</div>
+
+                            <div class="height_45_bottom line_h_45_black bottom_line_none border_top">平台服务的企业用户数：<span id='g3'>/</span>个</div>
+
+                            <div class="height_45_bottom line_h_45_black bottom_line_none border_top hide9" style="overflow: hidden">
+                                提供合同<span style="margin-left:200px;">文件名称：</span><span id='g4'></span> </div>
+
+                            <div id="g5" class="change_h_45_bottom bottom_line_none border_top hide10">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="papertwo" class="common_margin">
+                <div class="shenbao" style="margin-top: 30px;">申报工业互联网标杆工厂建设</div>
+                <div class="gyhljs">工业互联网标杆工厂建设描述</div>
+                <div id="h1" class="js_content"></div>
+                <div class="gyhljs">项目类型信息</div>
+                <div>
+                    <div class="zpginformatin_two dis_flex">
+                        <div class="width_15">
+                            <div>制造系统要素条件</div>
+                        </div>
+                        <div class='width_85 dis_flex'>
+                            <div class="width_18_bottom " style="width:20%">
+                                <div class="height_45_bottom line_h_45_center">生产现场优化</div>
+                                <div class="height_45_bottom line_h_45_center">生产管理优化</div>
+                                <div class="height_45_bottom line_h_45_center bottom_line_none">经营管理优化</div>
+                            </div>
+                            <div class="width_82_01 border_left" style="width:80%">
+                                <div id="h2" class="height_45_bottom line_h_45_black"></div>
+                                <div id="h3" class="height_45_bottom line_h_45_black"></div>
+                                <div id="h4" class="height_45_bottom line_h_45_black bottom_line_none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="zpginformatin_two dis_flex">
+                        <div class="width_15">
+                            <div>全流程优化要素条件</div>
+                        </div>
+                        <div class='width_85 dis_flex'>
+                            <div class="width_18_bottom" style="width:20%">
+                                <div class="height_45_bottom line_h_45_center">产品全流程优化要素条件</div>
+                                <div class="height_45_bottom line_h_45_center">资产全流程优化要素条件</div>
+                                <div class="height_45_bottom line_h_45_center">商业全流程优化要素条件</div>
+                                <div class="height_45_bottom line_h_45_center bottom_line_none">跨链条优化要素条件</div>
+                            </div>
+                            <div class="width_82_01 border_left" style="width:80%">
+                                <div id="h5" class="height_45_bottom line_h_45_black"></div>
+                                <div id="h6" class="height_45_bottom line_h_45_black"></div>
+                                <div id="h7" class="height_45_bottom line_h_45_black"></div>
+                                <div id="h8" class="height_45_bottom line_h_45_black bottom_line_none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div id="paperthree" class="common_margin">
+                <div class="shenbao" style="margin-top: 30px;">申报企业上云</div>
+                <div class="gyhljs">企业上云描述</div>
+                <div id="j1" class="js_content"></div>
+                <div class="gyhljs">企业上云业务及应用</div>
+                <!-- <div> -->
+                <div class="dis_flex title_top">
+                    <div style="width:12%; text-align: center;">类</div>
+                    <div style="width:12%;text-align: center;">子类</div>
+                    <div style="width:12%;text-align: center;">域</div>
+                    <div style="width:12%;text-align: center;">子域</div>
+                    <div style="width:52%;text-align: center;">是否上云</div>
+                </div>
+                <div class="zpginformatin_two dis_flex">
+                    <div class="width_12">
+                        <div>业务上云</div>
+                    </div>
+
+                    <div class="width_88">
+                        <div class='width_88_100 dis_flex'>
+                            <div class="width_13 border_bottom">
+                                <div>工业APP应用</div>
+                            </div>
+
+                            <div class="width_87">
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16 border_bottom ">
+                                        <div>设计</div>
+                                    </div>
+
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>研发设计应用</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j2" class=" line_h_45_center border_bottom "></div>
+                                                <div id="j02" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>研发设计案例库</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j3" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j03" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  border_bottom">
+                                                <div>研发设计协同</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j4" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j04" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16  border_bottom">
+                                        <div>生产</div>
+                                    </div>
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>生产排产管理</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j5" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j05" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>制造执行系统</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j6" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j06" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16  border_bottom">
+                                        <div>供应链</div>
+                                    </div>
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>供应链关系管理</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j7" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j07" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>采购管理</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j8" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j08" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>物流管理</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j9" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j09" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>企业资源规划</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j10" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j010" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16  border_bottom">
+                                        <div>销售</div>
+                                    </div>
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>电商系统</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j11" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j011" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16  border_bottom">
+                                        <div>服务</div>
+                                    </div>
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>客户资源管理</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j12" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j012" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>客户服务</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j13" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j013" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>其他工业 APP 应用</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j14" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j014" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class='width_88_100 dis_flex'>
+                            <div class="width_13 ">
+                                <div>基础云服务</div>
+                            </div>
+
+                            <div class="width_87">
+
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>计算机资源</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j15" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j015" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>储存资源</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j16" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j016" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>数据库</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j17" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j017" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>管理工具</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j18" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j018" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16  ">
+                                        <div>安全</div>
+                                    </div>
+
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>数据安全</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j19" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j019" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>业务安全</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j20" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j020" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  border_bottom">
+                                                <div>网络安全</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j21" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j021" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>工业系统安全</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j22" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j022" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19 ">
+                                                <div>云灾备</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j23" class=" line_h_45_center"></div>
+                                                <div id="j023" class="change_h_45_bottom bottom_line_none border_top">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--上云二 -->
+                <div class="zpginformatin_two dis_flex">
+                    <div class="width_12">
+                        <div>数据和设备上云</div>
+                    </div>
+                    <div class="width_88">
+
+                        <div class='width_88_100 dis_flex'>
+                            <div class="width_13 border_bottom">
+                                <div>数据上云</div>
+                            </div>
+
+                            <div class="width_87">
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>基础数据</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j24" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j024" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>设计数据</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j25" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j025" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>生产数据</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j26" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j026" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>供应链数据</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j27" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j027" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>销售数据</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j28" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j028" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>服务数据</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j29" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j029" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class='width_88_100 dis_flex'>
+                            <div class="width_13 border_bottom">
+                                <div>设备接入</div>
+                            </div>
+
+                            <div class="width_87">
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>高能耗设备</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j30" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j030" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>通用动力设备</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j31" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j031" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>新能源设备</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j32" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j032" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>智能装备</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j33" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j033" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>其它设备</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j34" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j034" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class='width_88_100 dis_flex'>
+                            <div class="width_13 border_bottom">
+                                <div>边缘计算</div>
+                            </div>
+
+                            <div class="width_87">
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>数据处理</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j35" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j035" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_30_00  border_bottom">
+                                        <div>数据分析</div>
+                                    </div>
+                                    <div class="width_70_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_81_01_00 ">
+                                                <div id="j36" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j036" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class='width_88_100 dis_flex'>
+                            <div class="width_13 ">
+                                <div>设备服务</div>
+                            </div>
+
+                            <div class="width_87">
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16 bottom_line ">
+                                        <div>设备管理</div>
+                                    </div>
+
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>设备台账</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j37" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j037" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>设备点检</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j38" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j038" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  border_bottom">
+                                                <div>工单管理</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j39" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j039" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19 border_bottom">
+                                                <div>维修保养</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j40" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j040" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16 bottom_line ">
+                                        <div>数据监控</div>
+                                    </div>
+
+                                    <div class="width_84_01">
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19   bottom_line">
+                                                <div>实时数据</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j41" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j041" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>数据报表</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j42" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j042" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  bottom_line">
+                                                <div>信息追溯</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j43" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j043" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  border_bottom">
+                                                <div>组态画面</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j44" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j044" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19 border_bottom">
+                                                <div>异常报警</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j45" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j045" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="width_87_100 border_left dis_flex">
+                                    <div class="width_16  ">
+                                        <div>决策优化</div>
+                                    </div>
+
+                                    <div class="width_84_01">
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19  border_bottom">
+                                                <div>反向控制</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j46" class=" line_h_45_center border_bottom"></div>
+                                                <div id="j046" class="change_h_45_bottom ">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="width_81_01_100 border_left dis_flex">
+                                            <div class="width_19 ">
+                                                <div>执行优化</div>
+                                            </div>
+                                            <div class="width_81_01 border_left">
+                                                <div id="j47" class=" line_h_45_center "></div>
+                                                <div id="j047" class="change_h_45_bottom border_top bottom_line_none">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+            <!-- 企业往年申报信息 -->
+            <div class="title_wnsb"><span class="line_blue">&nbsp| </span>企业往年申报信息</div>
+            <div class="qywn_content">
+                <div style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" id="fileone" class="qywn_content_list">以往是否申报过省工业互联网平台项目申报：<span id="torf1"
+                        style="margin-left:50px;"></span><span id="torf01" style="margin-left:70px;"></span></div>
+                <div style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" id="filetwo" class="qywn_content_list">以往是否申报过省标杆工厂项目申报：<span id="torf2"
+                        style="margin-left:92px;"></span><span id="torf02" style="margin-left:70px;"></span></div>
+                <div style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" id="filethree" class="qywn_content_list">以往是否申报过省五星上云企业项目申报：<span id="torf3"
+                        style="margin-left:65px;"></span><span id="torf03" style="margin-left:70px;"></span></div>
+            </div>
+
+            <!-- 声明 -->
+
+            <div class="title_sm"><span class="line_blue">&nbsp| </span>声明</div>
+            <div class='qywn_content' style="height:300px;">
+                <div>单位用于申报及现场审核时所提供的所有材料，均真实、完整、准确； 我单位申请评定范围内涉及的活动均符合国家相关法律法规要求; 以上声明如有不符，我单位愿承担相应的责任。</div>
+                <div style="margin-top: 100px">法定代表人签章： <span style="margin-left: 320px">公章：</span><span
+                        style="margin-left: 300px">年&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp月&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日</span>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/layui/layui.all.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/ApplicationFormpdf/pdf.js"></script>
+
+</body>
+
+</html>

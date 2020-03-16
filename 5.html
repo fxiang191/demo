@@ -1,0 +1,45 @@
+<script>
+        // 大分类接口
+    function    getAll(){
+            // 判断那个大类进入发送不同请求 type ?1||2
+            // if()else{}
+            // 请求参数两个"key":"key_query_categories", "type":"1"
+            post(apiConfig('Home/HomeAll'), {"key":"key_query_categories", "type":"1"})
+            .then((res)=>{
+                    this.alls = res.data;
+                })
+            .catch((msg)=>{
+                })
+        }
+        // 资源接口
+    function     getAdd(){
+            // 根据按钮点击身份查询数据默认查询一个类所有
+            // 请求参数"key":"query_resource_category", "bcid":"129"
+            post(apiConfig('Home/HomeAdd'), {"key":"query_resource_category", "bcid":"18"})
+            .then((res)=>{
+                    this.adds = res.data;
+                })
+                
+            .catch((msg)=>{
+                })
+        }
+        // 资源列表接口
+    function     getAddlist(){
+            // 根据二级菜单点击查询 对应的类列表
+            // 请求参数{ "key":"query_resource_list", "bcid":"18", "cid":"171", "pageNum":"1", "pageSize":"10" }
+            post(apiConfig('Home/HomeAddlist'), {"key":"query_resource_list", "bcid":"18", "cid":"171", "pageNum":"1", "pageSize":"10"})
+            .then((res)=>{
+                    this.addLists = res.data.list;
+                })
+            .catch((msg)=>{
+                })
+        }
+    
+    function created(){
+        this.getAll();
+        // this.getAdd();
+        // this.getAddlist();
+        // this.btnStyle()
+    },
+
+</script>

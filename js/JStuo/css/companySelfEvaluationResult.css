@@ -1,0 +1,64 @@
+.company-self-evaluation-result-content{
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+}
+.company-self-evaluation-result-content #radarContentInfo{
+    position: absolute;
+    top: 125px;
+    right: 25px;
+    width: 300px;
+    line-height: 22px;
+}
+.company-self-evaluation-result-content .evaluation-result-title{
+    text-align: center
+}
+.company-self-evaluation-result-content .evaluation-result-title img{
+    position: relative;
+    top: -18px;
+    right: 10px;
+}
+.company-self-evaluation-result-content .evaluation-result-title .evaluation-result-title-info{
+    text-align: center;
+    display: inline-block;
+}
+.company-self-evaluation-result-content .evaluation-result-title .evaluation-result-title-info .evaluation-result-title-info-title{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+.company-self-evaluation-result-content .evaluation-result-title .evaluation-result-title-info .evaluation-result-title-info-tip{
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+.company-self-evaluation-result-message{
+    width: 1130px;
+    margin: 0 auto;
+}
+.company-self-evaluation-result-message textarea{
+    width: 1110px;
+    line-height: 30px;
+    padding: 10px;
+}
+.company-self-evaluation-result-btn-content{
+    text-align: center;
+    margin-top: 30px;
+}
+.company-self-evaluation-result-btn-content button{
+    width: 160px;
+    height: 45px;
+    background: inherit;
+    background-color: rgba(0, 153, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

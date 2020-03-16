@@ -1,0 +1,64 @@
+*{margin: 0;padding: 0;}
+.myDaohanglan{
+    width: 100%;height: 50px;background-color: #333333;line-height: 48px;
+}
+/* 导航栏 */
+.myDaohanglan > div {width: 1200px;margin: 0 auto;}
+.myDaohanglan > div > ul {display: flex;justify-content: space-between;list-style: none;}
+.myLiClass{width: 160px;height:50px;text-align: center;}
+.active {background-color: #1f8dfb;}
+.li:hover {background-color: #1f8dfb;color: #fff;}
+.myDaohanglan > div > ul > li:last-child {
+    /* background-color: red; */
+    width: 200px;text-align: center;display: flex;}
+.myDaohanglan > div > ul > li:last-child > div { position: relative; }
+.myDaohanglan > div > ul > li:last-child > div:first-child {width: 80%;}
+.myDaohanglan > div > ul > li:last-child > div:first-child > img {width: 26px;height: 26px;position: absolute; top: 11px;left: 0px;}
+.myDaohanglan > div > ul > li:last-child > div:first-child > span {margin-left: 8px;
+    font-family: YaHei Regular;font-size: 14px;color: #fff;
+    display: block;
+    margin-left: 24px;
+    width: 82px;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;
+    /* 超出部分文字以...显示 */
+
+}
+.myDaohanglan > div > ul > li:last-child > div:last-child {
+    background-color: rgb(16,19,26);
+    width: 50%;font-family: YaHei Regular;font-size: 14px;color: #fff;margin-left: 24px;}
+
+.myAclass{color:rgb(255, 245, 245);font-weight: bold;font-size: 18px;text-decoration: none;}
+/* 试卷title  */
+.myShijuanTitle{width:100%;height:50px;line-height:50px;}
+.myShijuanTitle > div {width:1200px;margin: 0 auto;display: flex;font-size: 20px;}
+.myShijuanTitle > div > div:first-child {width:3px;background: #1f8dfb;height:20px;margin-top:15px;margin-right:16px;}
+.myShijuanTitle > div > div:last-child > span {color:#e0e0e0;}
+.myShijuanTitle > div > div:last-child > span > span {color: #1f8dfb;}
+/* 试卷内容区域 */
+/* 步骤导航 */
+.container{}
+.myShijuan{width: 1198px;margin: 0 auto 70px;border: 1px solid #e0e0e0;padding: 50px 0px;margin-bottom: 40px;}
+.myShijuanBuzhou{width:100%;height:80px;display: flex;justify-content: center;margin-bottom:60px;}
+.myHrClass {color:#e0e0e0 ;width: 1170px;margin: 0 auto;}
+/* 正文 */
+.myShijuanZhengwen {width: 1170px;margin: 0 auto;}
+.myShijuanZhengwen > div:first-child {font-size:16px;height: 30px;line-height: 30px;margin-top: 5px;font-weight: bold;}
+.myShijuanZhengwen > div:nth-child(2) {border-radius: 5px;padding-left:8px;height: 54px;line-height: 54px;margin-top: 5px;background-color: rgb(255, 245, 245);color: #333333;font-size: 14px;}
+.myShijuanZhengwen > div:last-child {height: 30px;line-height: 30px;margin-top: 5px;color: rgb(51,51,51);font-size:16px;}
+.myShijuanZhengwen > div:last-child > span {color: red;}
+/* 考试试题部分 */
+.myShijuanNeirong{width: 1170px;margin: 0 auto;margin-top: 30px;}
+.myLabelClass {width:80% !important;font-size: 14px;color: rgb(51,51,51);}
+.myDivClass01 {width: 45%;}
+.myDivClass02 {width: 55%!important;}
+.myDivClass03 {margin-top:24px;font-size: 14px;color: rgb(51,51,51);}
+.myDivClass04 {margin-top:16px;font-size: 14px;color: red;}
+.myInputClass {font-size: 14px;color: rgb(51,51,51);border-top: 0;border-left: 0;border-right: 0;border-bottom: 1px solid #000;width: 80px;}
+.myTextareaClass {margin-top: 16px;font-size: 14px;color: rgb(51,51,51);width: 100% !important;}
+/* 按钮 */
+.myBtnClass {margin-top: 40px;}
+.myBtnClass > div {margin-left: 40%;}
+.myBtnClass > div >button:first-child {width: 110px;height: 40px;}
+.myBtnClass > div >button:last-child {width: 110px;height: 40px;}

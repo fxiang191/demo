@@ -1,0 +1,636 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <!-- 方祥 CSS -->
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+
+        <!-- 页头  页脚样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+    /* layui改写 */
+    .layui-form-select dl dd.layui-this {
+    background-color: #1E9FFF!important;
+    }
+    /* two改动 */
+    .mayMarginClass{
+      margin-left: 20px;margin-bottom: 30px;margin-top: 20px;
+    }
+    .mayTextareaTitleClass{
+      margin-top:10px;
+    }
+    </style>
+</head>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 页头 -->
+    <script src="../js/public/header.js"></script>
+
+    <!-- 导航栏 -->
+    <script src="../js/public/nav.js"></script>
+    <!-- 试卷title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>企业上云自评估信息
+                <span>（共6步,当前第
+                    <span>4</span>步）
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 试卷内容区域 -->
+    <div class="container">
+        <!-- 步骤 -->
+        <div class="myShijuan">
+            <div class="myShijuanBuzhou">
+                <img src="../images/Industrial/1_2.png" alt="">
+            </div>
+            <div>
+                <hr class="myHrClass">
+            </div>
+            <!-- 正文 -->
+            <div class="myShijuanZhengwen">
+                <div>请选择企业自评估项</div>
+                <div>
+                    <img src="../images/Industrial/gantanhao.png">
+                    企业自评估结果将作为职能部门进行推荐/遴选依据。若遴选不通过，则需要等待下次申报时，才能重新申报。为了避免遴选不通过，请正确填写企业自评估信息
+                </div>
+                <div>
+                  <span>*</span>企业上云业务及应用-数据和设备上云
+                </div>
+              </div>
+              <!-- 考试试题部分 -->
+              <form id="form1" class="layui-form" action="" lay-filter="example">
+              <div class="mayMarginClass myFontClass" style="padding-left: 14px;">数据上云 </div>
+              <div class="myShijuanNeirong">
+                  <input type="hidden" name="enterpriseId" id="enterpriseId" />
+                <!-- 第一行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">基础数据是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang01" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang01">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang01"
+                      lay-verify="required" name="j24"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第二行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">设计数据是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang02" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang02">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang02"
+                      lay-verify="required" name="j25"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第三行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">生产数据是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang03" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang03">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang03"
+                      lay-verify="required" name="j26"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第四行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">供应链数据是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang04" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang04">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang04"
+                      lay-verify="required" name="j27"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第五行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">销售数据是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang05" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang05">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang05"
+                      lay-verify="required" name="j28"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第六行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">服务数据是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang06" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang06">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang06"
+                      lay-verify="required" name="j29"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第二块 -->
+                <div class="mayMarginClass myFontClass">设备接入 </div>
+                <!-- 第一行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">高能耗设备是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang07" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang07">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang07"
+                      lay-verify="required" name="j30"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第二行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">通用动力设备是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang08" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang08">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang08"
+                      lay-verify="required" name="j31"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第三行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">新能源设备是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang09" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang09">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang09"
+                      lay-verify="required" name="j32"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第四行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">智能装备是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang10" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang10">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang10"
+                      lay-verify="required" name="j33"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第五行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">其他设备是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang11" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang11">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang11"
+                      lay-verify="required" name="j34"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第三块 -->
+                <div class="mayMarginClass myFontClass">边缘计算</div>
+                <!-- 第一行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">数据处理是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang12" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang12">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang12"
+                      lay-verify="required" name="j35"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第二行 -->
+                <div class="layui-form-item">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass">数据分析是否上云：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                      <select data-name="fang13" lay-verType="tips" lay-verify="required"
+                        lay-filter="filter">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                      </select>
+                  </div>
+                </div>
+                <!-- 文本域 -->
+                <div class="layui-form-item" id="fang13">
+                  <div class="myDivClass01">
+                      <label class="layui-form-label myLabelClass mayTextareaTitleClass">证明材料说明：</label>
+                  </div>
+                  <div class="layui-input-inline myDivClass02">
+                    <div class="layui-input-inline myTextareaClass" style="margin-bottom: 24px;">
+                      <textarea maxlength="200" placeholder="请输入证明材料说明（1~200位字符）" lay-verType="tips" class="layui-textarea fang13"
+                      lay-verify="required" name="j36"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 按钮 -->
+                <div  class="layui-form-item myBtnClass">
+                    <div>
+                        <button style="width: 110px;height: 40px;" type="button" class="layui-btn layui-btn-normal backThree">
+                          <!-- <a href="./qiyeYunThree.html?nav=1" style="color: #fff;"> -->
+                            上一步
+                          <!-- </a> -->
+                        </button>
+                        <button style="width: 110px;height: 40px;" type="button" lay-submit lay-filter="btnSubmit" class="layui-btn layui-btn-normal">下一步</button>
+                    </div>
+                </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 页脚 -->
+	<script src="../js/public/foot.js"></script>
+
+<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+
+<script language="JavaScript">
+  javascript:window.history.forward(1);
+</script>
+
+<script type="text/javascript">
+// 监听浏览器关闭
+// window.onbeforeunload = onbeforeunload_handler;
+//     function onbeforeunload_handler(){
+//         var warning="确认退出?";
+//         return warning;
+//     }
+    //返回按钮
+    $('.backThree').click(function(){
+      window.location.href = './qiyeYunThree.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1'
+    })
+    layui.use(['form'], function () {
+        var form = layui.form
+        ,layer = layui.layer
+
+        $('#enterpriseId').val(getUrlParams('enterpriseId'))
+
+        //  初始化查询
+        $.ajax({
+            type : 'get',
+            url : ajaxUrl + "report/searchPaperInfo?paperid=" + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId'),
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success : function(res) {
+                if (res.code == 200) {
+                    form.val("example", res.data);
+                    $("#form1").find("textarea").each(function(i, elem){
+                        var className = $(elem).attr('class').split(' ')
+                        if (elem.value == '') {
+                            $('select').each(function (i, elem) {
+                                if ($(elem)[0].dataset.name == className[1]) {
+                                    elem.value = ''
+                                }
+                            })
+                            $('.' + className[1]).removeAttr("lay-verify");
+                            $('.' + className[1]).val('');
+                            $('#' + className[1]).hide()
+                        } else if (elem.value == '0') {
+                            $('select').each(function (i, elem) {
+                                if ($(elem)[0].dataset.name == className[1]) {
+                                    elem.value = 0
+                                }
+                            })
+                            $('.' + className[1]).removeAttr("lay-verify");
+                            $('.' + className[1]).val('0');
+                            $('#' + className[1]).hide()
+                        } else {
+                            $('select').each(function (i, elem) {
+                                if ($(elem)[0].dataset.name == className[1]) {
+                                    elem.value = 1
+                                }
+                            })
+                            $('#' + className[1]).show()
+                            $('.' + className[1]).attr("lay-verify","required");
+                        }
+                        form.render('select')
+                    });
+                } else {
+                    layer.msg('请求错误');
+                }
+            },
+            error : function(err) {
+                layer.msg('请求错误');
+            }
+        })
+
+        // 下拉规则为空 定位
+        form.verify({
+          required:function (value,item) {
+            var msg="必填项不能为空";
+            value= $.trim(value);
+            var isEmpty=!value || value.length<1;
+          // 当前验证元素是select且为空时,将页面定位至layui渲染的select处，或自定义想定位的位置
+            if(item.tagName=='SELECT' && isEmpty){
+                $("html").animate({
+                    scrollTop:$(item).siblings(".layui-form-select").offset().top-74
+                },50);
+            }
+            if(isEmpty){
+                return msg;
+            }
+          }
+        })
+
+        //监听提交
+        form.on('submit(btnSubmit)', function(data){
+            $.ajax({
+                type : 'post',
+                url : ajaxUrl + "report/updateCloudInfo",
+                data : data.field,
+                dataType: 'json',
+                xhrFields: {
+                withCredentials: true
+                },
+                crossDomain: true,
+                success : function(res) {
+                    if (res.code == 200) {
+                      window.location.replace('./qiyeYunFive.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1')
+                    } else {
+                        layer.msg('请求错误');
+                    }
+                },
+                error : function(err) {
+                    layer.msg('请求错误');
+                }
+            })
+            return false;
+        });
+
+        //监听选择动态显示隐藏
+        form.on('select(filter)', function (data) {
+            if(data.value == 0){
+                $('.' + data.elem.dataset.name).removeAttr("lay-verify");
+                $('.' + data.elem.dataset.name).val('0');
+                $('#' + data.elem.dataset.name).hide()
+            }else{
+                $('.' + data.elem.dataset.name).val('');
+                $('#' + data.elem.dataset.name).show()
+                $('.' + data.elem.dataset.name).attr("lay-verify","required");
+            }
+        })
+    })
+</script>
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

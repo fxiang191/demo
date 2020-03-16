@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 判断删除节点 -->
+        <div v-if="Math.random() > 0.5">
+            Now you see me
+        </div>
+        <div v-else>
+            Now you don't
+        </div>
+        <!-- 切换登录方式 -->
+        <template v-if="loginType === 'username'">
+                <label>Username</label>
+                <input placeholder="Enter your username" key="username-input">
+              </template>
+              <template v-else>
+                <label>Email</label>
+                <input placeholder="Enter your email address" key="email-input">
+        </template>
+        <button @click="change">loginType</button>
+        <!-- 循环对象  出属性和下标 -->
+        <ul>
+            <li v-for="(val , uname) in name">{{val}}----{{uname}}</li>
+        </ul>
+        <!-- 循环遍历 过滤  -->
+        <li v-for="n in evenNumbers">{{ n }}
+            <!-- event事件按钮 -->
+            <button @click="bian(n)">打印</button>
+        </li>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+new Vue({
+    el:"#app",
+    data:{
+        numbers: [ 1, 2, 3, 4, 5 ],
+        num:Math.random(),
+        loginType:"username",
+        name:{
+            baba:"xiaoming",
+            mama:"xiaohong",
+            haizi:"dahei"
+        }
+    },
+    methods:{
+        change(){
+            if(this.loginType === "username"){
+                this.loginType = ""
+            }else{
+                this.loginType = "username"
+            }
+        },
+        // <!-- event事件按钮 -->
+        bian(n){
+            // 有形参和实参使用才能打印出e
+             var event = window.event || arguments.callee.caller.arguments[0],
+            //target 就是这个对象
+             target = event.srcElement||event.target,
+            //这个对象的值
+             targetValue = target.value;
+            // console.log("打印"+val);
+            console.log(n)
+            console.log(event.target.innerHTML)
+        }
+    },
+    mounted(){
+
+    },
+    created(){
+       this.name.age = 27
+    },
+    computed: {
+        evenNumbers: function () {
+            return this.numbers.filter(function (number) {
+            return number % 2 === 0
+            })
+        }
+    }
+
+})    
+</script>
+        
+</body>
+</html>

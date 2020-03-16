@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 单选框 -->
+        <div>
+            <input type="checkbox" value="jack" v-model="name">
+            <label for="jack">jack</label>
+            <input type="checkbox" value="jac" v-model="name">
+            <label for="jac">jack</label>
+            <input type="checkbox" value="ja" v-model="name">
+            <label for="ja">jack</label>
+            <br>
+            <br>
+            <span>checked names:{{name}}</span>
+        </div>
+        <hr>
+        <!-- 下拉选 -->
+        <select v-model="selected">
+                <option disabled value="">请选择</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+        <hr>
+        <!-- 动态组件 -->
+        <button v-for="(tab,index) of tabs" @click="templateStr1(tab.value)">{{tab.name}}</button>
+        <component v-bind:is="templateStr"></component>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    // 子组件
+    Vue.component('zhuye',{
+        template:'<div>这是子组件--主页</div>'
+    });
+    Vue.component('xiangqing',{
+        template:'<div>这是子组件--详情</div>'
+    });
+    Vue.component('shangchuan',{
+        template:'<div>这是子组件--上传</div>'
+    });
+new Vue({
+    el:"#app",
+    data:{
+        // 标签
+        tabs:[{value:'zhuye',name:'主页'},{value:'xiangqing',name:'详情'},{value:'shangchuan',name:'上传'}],
+        templateStr:'zhuye',
+        // 复选框
+        name:[],
+        // 下拉选
+        selected:""
+    },
+    methods:{
+        templateStr1(val){
+            this.templateStr = val;
+        }
+    },
+    created(){
+
+    }
+
+})    
+</script>
+        
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jq弹出框</title>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+</head>
+<style type="text/css">
+	/*提示框*/
+.errortip{
+    position:fixed;
+    /*top:-200px;*/
+    /*margin-top:-200px;*/
+    top:186px;
+    left:50%;
+    margin-left:-200px;
+    border:2px solid #d2d2d2;
+    height:120px;
+    width:400px;
+    background-color:#fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    z-index:3333;
+    display:none;
+    animation: tanceng .4s forwards;
+}
+.pup{
+    text-align:center;
+    line-height:72px;
+    color:#00232d;
+    font-size:18px;
+}
+.errorbtn{
+    position:absolute;
+    right:20px;
+    border:0;
+    cursor: pointer;
+    color:#fff;
+    text-align:center;
+    line-height:35px;
+    font-size:18px;
+    /*border-top:1px solid #dde;*/
+    height:35px;
+    width:60px;
+    background-color:#c62f38;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+/* @keyframes tanceng {
+    from {top:-200px;}
+    to {top:200px;}
+} */
+</style>
+<body>
+	<button onclick="testTip()">
+		点击弹出
+	</button>
+<!--        提示框-->
+<div class="errortip">
+    <div class="pup">
+        <span class="text">账号或密码错误</span>dianji
+    </div>
+    <button onclick="dispearentbtn()" class="errorbtn">
+        确定
+    </button>
+</div>
+</body>
+
+<script type="text/javascript">
+function showtips(texttips){//提示框
+    $(".errortip").show(500);
+    $(".pup").text(texttips);
+    $(".errortip").show();
+}
+function dispearentbtn(){//点击提示框消失
+		$(".errortip").hide(500);
+}
+
+function testTip(){
+	showtips("账号或密码错误");//调用提示框
+}
+
+// 调用  showtips("账号或密码错误");
+</script>
+<script language ="javaScript">  
+    // <!--关闭浏览器 -->  
+    var flag = true;  
+    window.onbeforeunload = function () {  
+        if (flag) {  
+           var evt = window.event || arguments[0];  
+           var userAgent = navigator.userAgent;  
+           if (userAgent.indexOf("MSIE") > 0) {  
+               var n = window.event.screenX - window.screenLeft;  
+               var b = n > document.documentElement.scrollWidth - 20;  
+               if (b && window.event.clientY < 0 || window.event.altKey) {  
+                   window.event.returnValue = ("该操作将会导致非正常退出系统(正确退出系统方式：点击退出系统按钮)，您是否确认?");  
+               }else {  
+                   return ("该操作将会导致非正常退出系统(正确退出系统方式：点击退出系统按钮)，您是否确认?");  
+               }  
+           }else if (userAgent.indexOf("Firefox") > 0) {  
+                   return ("该操作将会导致非正常退出系统(正确退出系统方式：点击退出系统按钮)，您是否确认?");  
+           }  
+        }  
+    }  
+    </script>  
+</html>

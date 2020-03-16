@@ -1,0 +1,28 @@
+/*==========首页 begin==========*/
+/*banner*/
+.banner{background: url(../images/index/banner.jpg) no-repeat center top;height: 480px;min-width: 1200px;position: relative;}
+.databox{width:100%; overflow:hidden;box-shadow:0px -3px 3px rgba(0, 0, 0, 0.1); position: absolute;left: 0;bottom: 0;padding: 10px 0;}
+.databox ul{width: 1200px;margin: 0 auto;}
+.databox ul li{float: left;width: 33%;}
+.databox ul li p{text-align: center;}
+.databox ul li p i{display: inline-block;margin-right: 10px;}
+.databox ul li p span{display: inline-block;font-size: 18px;color: #fff;vertical-align: middle;margin-top: -55px;}
+.databox ul li p span b{font-weight: normal;font-size: 32px;color: #fff;padding: 0 5px;}
+.databox ul li p em{display: inline-block;height: 55px;float: right;margin-top: 4px;border-right: 1px dashed #fff;opacity: .6;}
+/*入口*/
+.main_box1{min-width: 1200px;margin: 0 auto;background: #fff;}
+.main_center{width: 1200px;margin: 0 auto;padding: 50px 0;}
+.cont_rk{margin: 0px auto;}
+.cont_rk ul{overflow: hidden;padding: 5px;}
+.cont_rk ul li{float: left;margin-right: 22px;margin-bottom: 20px;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;}
+.cont_rk ul li:nth-child(4n){margin-right: 0px;}
+/*.cont_rk ul li:hover{transform: translateY(-3px);-webkit-transform: translateY(-3px);-moz-transform: translateY(-3px);box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);-moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;-o-transition: all 0.3s ease;transition: all 0.3s ease;border-radius: 5px;}*/
+.box_rk{width: 280px;height: 250px;border-radius: 5px;}
+.box_rk .img_rk{text-align: center;padding-top: 30px;}
+.box_rk .info_rk .tit_rk{font-size: 22px;color: #fff;text-align: center;line-height: 50px;margin-bottom: 10px;}
+.box_rk .info_rk .ms_rk{font-size: 14px;color: #fff;line-height: 20px;padding: 0 14px;opacity: .7;}
+.bg1{background: #e6700d;}
+.bg2{background: #02a9d0;}
+.bg3{background: #2dbe68;}
+.bg4{background: #3e78f2;}
+/*==========首页 end==========*/

@@ -1,0 +1,366 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <!-- 方祥 CSS -->
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+
+        <!-- 页头  页脚样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+    /* layui改写 */
+    .layui-form-select dl dd.layui-this {
+    background-color: #1E9FFF!important;
+    }
+    .layui-input, .layui-textarea {
+    display: inline!important;
+    }
+    .moRen{display: none;}
+
+    </style>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 页头 -->
+    <script src="../js/public/header.js"></script>
+
+    <!-- 导航栏 -->
+    <script src="../js/public/nav.js"></script>
+    <!-- 试卷title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>工业互联网平台建设自评估信息
+                <span>（共7步,当前第
+                    <span>5</span>步）
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 试卷内容区域 -->
+    <div class="container">
+        <!-- 步骤 -->
+        <div class="myShijuan">
+            <div class="myShijuanBuzhou">
+                <img src="../images/Industrial/1_2.png" alt="">
+            </div>
+            <div>
+                <hr class="myHrClass">
+            </div>
+            <!-- 正文 -->
+            <div class="myShijuanZhengwen">
+                <div>请选择企业自评估项</div>
+                <div>
+                    <img src="../images/Industrial/gantanhao.png">
+                    企业自评估结果将作为职能部门进行推荐/遴选依据。若遴选不通过，则需要等待下次申报时，才能重新申报。为了避免遴选不通过，请正确填写企业自评估信息
+                </div>
+                <div><span>*</span>平台服务能力-设备接入能力 </div>
+            </div>
+            <!-- 考试试题部分 -->
+            <form id="form1" class="layui-form" action="" lay-filter="example">
+                <div class="myShijuanNeirong oneClass01">
+                    <!-- 第一行 -->
+                    <div  class="layui-form-item myBtnClass">
+                      <input type="hidden" name="enterpriseId" id="enterpriseId" />
+                      <div class="myDivClass03">
+                        可连接的工业设备种类：
+                        <input type="text" name="d1" lay-verify="required|zichan" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类,
+                        <input type="text" name="d2" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">个
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">类,
+                        <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">个  -->
+                      </div>
+                      <div class="myDivClass04">提示：包括设备、装置、产品等各类终端，将设备型号作为设备类型的统计标准，工业设备需可连 接开关量或可连接运行参数
+                      </div>
+                      <!-- 第二行 -->
+                      <div class="myDivClass03">
+                        设备数据采集点总数：
+                        <input type="text" name="d3" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">个
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">个 -->
+                      </div>
+                      <!-- 第三行 -->
+                      <div class="myDivClass03">
+                        可管理的工业设备：
+                        <input type="text" name="d4" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类，合计
+                        <input type="text" name="d5" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">台
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">类，合计
+                        <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">台 -->
+                      </div>
+                    </div>
+                    <!-- 第四行 -->
+                    <div class="layui-form-item">
+                      <div class="myDivClass01 myDivClass01Four">
+                          <label class="layui-form-label myLabelClass">是否具备工业设备数据边缘计算功能：</label>
+                      </div>
+                      <div class="layui-input-inline myDivClass02 myDivClass02Four">
+                          <select name="d6" id='enterpriseType' lay-verType="tips" lay-verify="required"
+                            lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="1">是</option>
+                            <option value="0">否</option>
+                          </select>
+                          <!-- 选择隐藏 默认隐藏 -->
+                            <div>
+                                <div class="myDivClass03">
+                                其他：
+                                <input type="text" name="d7" lay-verType="tips" lay-verify="required" class="layui-input myInputClass" maxlength="20" style="height: 20px;width: 300px;">
+
+                                <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')"> -->
+                                </div>
+                            <!-- 文本域 -->
+                                <div class="layui-input-inline myTextareaClass">
+                                <textarea maxlength="1000" lay-verType="tips" lay-verify="required" placeholder="补充说明和分类详细介绍（具体接入及管理的设备类型、运行参数、边缘计算功能，以及面向 的工业场景）（1~1000位字符）" lay-verType="tips" class="layui-textarea"
+                                    required name="d8"></textarea>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                    <!-- 第二块 -->
+                    <!-- 正文 -->
+                    <div class="myShijuanZhengwen">
+                      <div style="font-weight: normal;"><span>*</span>平台服务能力-行业软件部署能力 </div>
+                    </div>
+                    <div  class="layui-form-item myBtnClass">
+                      <!-- 第一行 -->
+                      <div class="myDivClass03">
+                        云化工业软件数量：
+                        <input type="text" name="e1" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类,
+                        <input type="text" name="e2" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">个
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">类,
+                        <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">个  -->
+                      </div>
+                      <div class="myDivClass04">提示：软件类型：运营管理类（ERP、SCM、CRM 等）、研发设计类（CAD、CAE、CAM 等）、生产管 理类（MES、APS 等）、其他
+                      </div>
+                      <!-- 第二行 -->
+                      <div class="myDivClass03">
+                        工业 APP 数量：
+                        <input type="text" name="e3" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类,
+                        <input type="text" name="e4" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">个
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">类,
+                        <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">个  -->
+                      </div>
+                      <div class="myDivClass04">提示：基于平台资源自主研发或由第三方研发的封装了工业知识、方法和技术的应用软件，如建模 仿真优化、工艺和质量优化、供应链协同优化、远程故障诊断等，提供名称并简要说明工业 APP 功能
+                      </div>
+                      <!-- 第三行 -->
+                      <div class="myDivClass03">
+                        工业软件和 APP 订阅企业数量：
+                        <input type="text" name="e5" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类,
+                        <input type="text" name="e6" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">个
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">类,
+                        <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">个  -->
+                      </div>
+                      <!-- 第四行 -->
+                      <div class="myDivClass03">
+                        工业软件和 APP 订阅用户数量：
+                        <input type="text" name="e7" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类,
+                        <input type="text" name="e8" lay-verify="zichan|required" autocomplete="off" class="layui-input myInputClass" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">个
+
+                        <!-- <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">类,
+                        <input class="myInputClass" type="text" maxlength="5" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">个  -->
+                        <!-- 文本域 要更换e8-->
+                        <div class="layui-input-inline myTextareaClass">
+                          <textarea maxlength="1000" placeholder="补充说明和分类详细介绍(介绍平台新技术的应用情况，其他)（1~1000位字符）" lay-verType="tips" class="layui-textarea"
+                          required lay-verify="required" name="e9"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 按钮 -->
+                    <div  class="layui-form-item myBtnClass">
+                        <div>
+                            <button style="width: 110px;height: 40px;" type="button" class="layui-btn layui-btn-normal backFour">上一步</button>
+                            <button style="width: 110px;height: 40px;" type="button" lay-submit  lay-filter="btnSubmit" class="layui-btn layui-btn-normal">下一步</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 页脚 -->
+	<script src="../js/public/foot.js"></script>
+
+<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+
+<script language="JavaScript">
+    javascript:window.history.forward(1);
+</script>
+
+<script type="text/javascript">
+// 监听浏览器关闭
+// window.onbeforeunload = onbeforeunload_handler;
+//     function onbeforeunload_handler(){
+//         var warning="确认退出?";
+//         return warning;
+//     }
+    //返回按钮
+    $('.backFour').click(function(){
+      window.location.href = './industrialFour.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1'
+    })
+
+
+    layui.use(['form'], function () {
+        var form = layui.form
+        ,layer = layui.layer
+
+        $('#enterpriseId').val(getUrlParams('enterpriseId'))
+
+        //  初始化查询
+        $.ajax({
+            type : 'get',
+            url : ajaxUrl + "report/searchPaperInfo?paperid=" + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId'),
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success : function(res) {
+                if (res.code == 200) {
+                    form.val("example", res.data);
+                    // if(res.data.d6 == 1){
+                    //     $('.moRen001').show()
+                    // }
+                } else {
+                    layer.msg('请求错误');
+                }
+            },
+            error : function(err) {
+                layer.msg('请求错误');
+            }
+        })
+
+        // 下拉规则为空 定位
+        form.verify({
+          required:function (value,item) {
+            var msg="必填项不能为空";
+            value= $.trim(value);
+            var isEmpty =! value || value.length < 1;
+          // 当前验证元素是select且为空时,将页面定位至layui渲染的select处，或自定义想定位的位置
+            if(item.tagName=='SELECT' && isEmpty){
+                $("html").animate({
+                    scrollTop:$(item).siblings(".layui-form-select").offset().top-74
+                },50);
+            }
+            if(isEmpty){
+                return msg;
+            }
+          }
+        })
+
+        // 输入框规则
+        form.verify({
+            zichan: [
+					/^[1-9]\d*$/
+					, '请输入正整数'
+				],
+        });
+
+
+        //下拉影藏
+        // form.on('select(aihao)', function (data) {
+        //     if(data.value == 1){
+        //         // 修改
+        //         $('.moRen001').show()
+        //         $('#moRen01').attr("lay-verify","required")
+        //         $('#moRen02').attr("lay-verify","required")
+        //     }else{
+        //         $('.moRen001').hide()
+        //         $('#moRen01').removeAttr("lay-verify")
+        //         $('#moRen02').removeAttr("lay-verify")
+        //         $('#moRen01').val("")
+        //         $('#moRen02').val("")
+        //     }
+        // })
+        //监听提交
+        form.on('submit(btnSubmit)', function(data){
+            $.ajax({
+                type : 'post',
+                url : ajaxUrl + "report/updateMaturityInfo",
+                data : data.field,
+                dataType: 'json',
+                xhrFields: {
+                withCredentials: true
+                },
+                crossDomain: true,
+                success : function(res) {
+                    if (res.code == 200) {
+                        window.location.replace('./industrialSix.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1')
+                    } else {
+                        layer.msg('请求错误');
+                    }
+                },
+                error : function(err) {
+                    layer.msg('请求错误');
+                }
+            })
+            return false;
+        });
+    })
+</script>
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/*==========相关政策 begin==========*/
+/*标题*/
+.cont_tit{width: 1200px;margin: 0 auto;}
+.cont_tit p{font-size: 14px;color: #666;line-height: 65px;}
+.cont_tit p i{background: url(../images/policy/ico1.png) no-repeat center top;width: 20px;height: 16px;display: inline-block;vertical-align: middle;margin-right: 8px;margin-top: -5px;}
+/*banner*/
+.banner_xgzc{background: url(../images/policy/banner.jpg) no-repeat center top;height: 125px;width: 1200px;margin:20px auto 0px;}
+/*container*/
+.cont_type{width: 1200px;margin: 30px auto;overflow: hidden;}
+.switchCont{display: none;}
+.tabBox .active{display: block;}
+.tabType{float: left;width: 290px;}
+.tabType li{width: 100%;height: 62px;margin-bottom: 20px;}
+.tabType li a{font-size:16px; color:#444; line-height:62px; padding:0; padding-left:10px;display: block;background: #f0f0f0;}
+.tabType li.active a,.tabType li a:hover{color:#fff;background: #0c519b;}
+.tabType li i{background: url(../images/policy/ico_zc.png) no-repeat;display: inline-block;vertical-align: middle;margin-right: 10px;margin-top: -3px;width: 22px;height: 24px;}
+.tabType li.active i,.tabType li:hover i{background: url(../images/policy/ico_zc_hover.png) no-repeat;}
+.boxType{float: right;width: 870px;}
+.zc_box{}
+.zc_box p{font-size: 16px;color: #444;line-height: 30px;margin-bottom: 40px;text-indent: 2em;}
+.zc_box .tit{font-size: 24px;color: #333;text-align: center;line-height: 30px;margin-bottom: 40px;text-indent: 0;}
+.zc_box .t1{font-size: 18px;font-weight: bold;margin-bottom: 15px;margin-top: 30px;text-indent: 0;}
+.zc_box .t2{font-size: 16px;font-weight: bold;margin-bottom: 10px;}
+.zc_box .t3{font-size: 16px;font-weight: bold;margin-bottom: 15px;padding-left: 2em;}
+.zc_box .p1{margin-bottom: 15px;}
+.zc_box .p2{padding-left: 2em;margin-bottom: 15px;}
+.zc_box .p3{padding-left: 4em;margin-bottom: 15px;}
+.zc_box .p3_num{padding-left: 4em;margin-bottom: 15px;text-indent: 0;}
+.zc_box .p3_li{padding-left: 4em;margin-bottom: 20px;text-indent: 0;overflow: hidden;color: #666;}
+.zc_box .p3_li i{display: block;float: left;width: 5px;height: 5px;border-radius: 100%;background: #7a7a7a;vertical-align: middle;margin-right: 8px;margin-top: 12px;}
+.zc_box .p3_li span{display: block;float: left;width: 790px;}
+.zc_box .p4{padding-left: 4em;margin-bottom: 20px;}
+.zc_box .table_zc{width: 100%;margin: 0 auto 20px;border-right: 1px solid #dcdcdc;border-top: 1px solid #dcdcdc;}
+.zc_box .table_zc tr{border-left: 1px solid #dcdcdc;border-bottom: 1px solid #dcdcdc;}
+.zc_box .table_zc tr th{border-left: 1px solid #dcdcdc;border-bottom: 1px solid #dcdcdc;line-height: 40px;text-align: center;font-size: 16px;color: #222;font-weight: normal;background: #f0f0f0;}
+.zc_box .table_zc tr td{border-left: 1px solid #dcdcdc;border-bottom: 1px solid #dcdcdc;text-align: center;font-size: 14px;color: #444;line-height: 25px;padding: 5px 25px;}
+/*==========相关政策 end==========*/

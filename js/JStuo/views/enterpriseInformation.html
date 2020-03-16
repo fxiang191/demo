@@ -1,0 +1,525 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--禁止缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+    <meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+    <meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/enroll.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/declare.css"> -->
+    <link rel="stylesheet" href="../css/enterpriseInformation.css">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+</head>
+<style>
+    #pageTwo {
+        display: none;
+    }
+
+    .layui-upload-choose {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+    }
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+<body>
+
+    <script src="../js/public/header.js"></script>
+    <script src="../js/public/nav.js"></script>
+    <!-- banner -->
+    <!-- <div class="toptable">
+        <div class="main">
+            <div class="onetable">
+                <div class="active">企业报名</div>
+                <div>企业自评估</div>
+                <div>职能部门推荐/遴选</div>
+                <div>在线诊断服务</div>
+                <div>查看诊断报告</div>
+            </div>
+            <div class="userback">
+                <div class="header_img"></div>
+                <div class="username">1111111</div>
+                <div class="closeback">退出登录</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="qysb">
+        <div class="main_qycx">
+            <div class="line_blue"></div>
+            <div>企业报名</div>
+        </div>
+    </div>
+
+    <!-- container begin -->
+    <div class="container">
+        <div class="cont_box">
+            <div class="srjbxx">
+                <img id="imgsrc" src="../images/enroll/0_1.png" alt="">
+            </div>
+            <div class="qsrqyxx0">
+                <div class="input_line0"></div>
+            </div>
+            <div class="jbinformatin">企业基本信息</div>
+            <div class="jbinformatin_one">
+
+                <div class="height_90 dis_flex">
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业名称：</div>
+                        <div id="qymc" class="width_40 change_line textOVerThree"></div>
+                    </div>
+                    <div class="width_50_line_l">
+                        <div class="height_50 dis_flex">
+                            <div class="width_40 color_blue line_h_45">统一社会信用代码：</div>
+                            <div id='tyshxxydm' class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">企业成立时间：</div>
+                            <div id='qyclsj' class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue .line_h_45 line_h_45">企业总资产（万元）：</div>
+                        <div id='qyzzc' class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业所属行业：</div>
+                        <div id="qysshy" class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue .line_h_45 line_h_45">企业负债率（%）：</div>
+                        <div id='qyfzl' class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">业务类型：</div>
+                        <div id='ywlx' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+
+                <div class="height_90 dis_flex border_top">
+                    <div class="width_50">
+                        <div class="height_50 dis_flex">
+                            <div class="width_60 color_blue line_h_45">企业总人数：</div>
+                            <div id="qyzrs" class="width_40 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_60 color_blue line_h_45">企业类型：</div>
+                            <div id='qylx' class="width_40 line_h_45_black"></div>
+                        </div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业主要产品：</div>
+                        <div id="qyzycp" class="width_60 change_line textOVerThree"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业信用等级：</div>
+                        <div id="qyxydj" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业是否是上市公司：</div>
+                        <div id="sex1" class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业是否在近三年连续保持盈利：</div>
+                        <div id="sex3" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业制造类型：</div>
+                        <div id="sex2" class="width_60 line_h_45_black "></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业营业收入位列江苏省同行业中的站位水平（%）：</div>
+                        <div id="qythysp" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业年营业额：</div>
+                        <div id='qynyye' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业是否有明确的企业发展战略：</div>
+                        <div id="sex5" class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业上年税金（万元）：</div>
+                        <div id='qysnsj' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_45 dis_flex'>
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">企业研发创新费用占到总体收入的百分比（%）：</div>
+                        <div id='qyyfzb' class="width_40 line_h_45_black"></div>
+                    </div>
+                    <div class="width_50_line_l dis_flex">
+                        <div class="width_40 color_blue line_h_45">企业上年利润（万元）：</div>
+                        <div id='qysnlr' class="width_60 line_h_45_black"></div>
+                    </div>
+                </div>
+
+                <div class='height_135 dis_flex border_top'>
+                    <div class="width_30 color_blue line_h_45">企业营业执照：</div>
+                    <div class="width_70" style="padding:10px;box-sizing:border-box ">
+                        <img id="imgurl" src="" style="height: 110px;max-width:700px;" alt="营业执照">
+                    </div>
+
+                </div>
+
+                <div class='height_135 dis_flex border_top'>
+                    <div class="width_30 color_blue line_h_45">企业财务报告：</div>
+                    <!-- img -->
+                    <div id="other_file" class="width_70" style="padding: 20px; box-sizing: border-box; display: none">
+                        <span id="bgfile" style="color: blue ;cursor: pointer; "></span>
+                    </div>
+                    <!-- file -->
+
+                    <div id="img_file" class="width_70" style="padding:10px;box-sizing:border-box;display: none">
+                        <img id="imgurl_0" src="" style="height: 110px;max-width:700px; " alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="jbinformatin">企业联系信息</div>
+            <div class="jbinformatin_two">
+
+                <div class='height_180 '>
+                    <div class="width_50" style="float: left">
+                        <div class="height_50 dis_flex">
+                            <div class="width_60 color_blue line_h_45">法人代表：</div>
+                            <div id="frdb" class="width_40 change_line textOVerThree"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_60 color_blue line_h_45">联系人姓名：</div>
+                            <div id="lxrxm" class="width_40 change_line textOVerThree"></div>
+                        </div>
+
+                    </div>
+                    <div class="width_50_line_l" style="float: right">
+                        <div class="height_25 dis_flex">
+                            <div class="width_40 color_blue line_h_45">所属辖区：</div>
+                            <div id="ssxq" class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50 border_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">企业详细地址：</div>
+                            <div id="qyxxdz" class="width_60 change_line textOVerThree"></div>
+                        </div>
+                        <div class="height_25 border_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">法人代表联系电话：</div>
+                            <div id="dblxdh" class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="height_90 dis_flex border_top">
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">部门：</div>
+                        <div id="bm" class="width_40 change_line textOVerThree"></div>
+                    </div>
+                    <div class="width_50_line_l ">
+                        <div class="height_50 dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人手机号码：</div>
+                            <div id="lxrsjhm" class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人固定电话：</div>
+                            <div id="lxrgddh" class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="height_90 dis_flex border_top">
+                    <div class="width_50 dis_flex">
+                        <div class="width_60 color_blue line_h_45">职务：</div>
+                        <div id="zw" class="width_40 change_line textOVerThree"></div>
+                    </div>
+                    <div class="width_50_line_l">
+                        <div class="height_50 dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人电子邮箱：</div>
+                            <div id="lxrdzyx" class="width_60 line_h_45_black"></div>
+                        </div>
+                        <div class="height_50_top dis_flex">
+                            <div class="width_40 color_blue line_h_45">联系人传真：</div>
+                            <div id="lxrcz" class="width_60 line_h_45_black"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <div style="width:100% ;display: flex;justify-content: center;padding: 40px 0 0 0">
+                <button class="layui-btn layui-btn-normal"><a href="./../index.html"><span
+                            style="color: white">返回首页</span></a> </button>
+            </div> -->
+        </div>
+    </div>
+    <!-- container end -->
+    <script src="../js/public/foot.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/layui/layui.all.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script>
+
+
+        base.requestJson({ type: "GET", url: base.interfaceObj.changeAdress.changeZpg, data: {} },
+            function (res) {
+                var adress = res.auth
+                // console.log(adress)
+                if (adress == "0") {
+                    $("#imgsrc").attr("src", "../images/enroll/0_2.png")
+                } else if (adress == "1") {
+                    $("#imgsrc").attr("src", "../images/enroll/0_1.png")
+                } else if (adress == "2") {
+                    $("#imgsrc").attr("src", "../images/enroll/0_3.png")
+                } else {
+                    $("#imgsrc").attr("src", "../images/enroll/0_2.png")
+                }
+
+
+            }
+        )
+
+
+        var lastimg;
+        var lastfile;
+        var img_url;
+        var img_url0;
+
+        // ajax获取填写数据
+        base.requestJson({ type: "post", url: base.interfaceObj.finishInformation.getFinishData, data: {} },
+            function (res) {
+                // console.log( JSON.stringify(res))
+                var lastList = res.data.enterpriseBaseinfo;
+                var lastList1 = res.data.enterpriseContactinfo;
+                var lastList2 = res.data.applyFile;
+                lastimg = lastList2.licenseFilepath
+                lastfile = lastList2.financeFilepath
+                // console.log(lastList2)
+                // console.log(lastList)
+                if (lastList != null & lastList != "") {
+                    // 企业基本信息
+                    // 企业名称
+                    $("#qymc").text(lastList.enterpriseName)
+
+                    $("#qymc").attr("title", lastList.enterpriseName)
+                    // 信用代码
+                    $("#tyshxxydm").text(lastList.creditCode)
+
+                    $("#qyclsj").text(lastList.establishTime)
+
+                    $("#qyzzc").text(lastList.totalAssets + "万元")
+
+                    $("#qysshy").text(lastList.enterpriseIndustry)
+
+                    $("#qyfzl").text(lastList.debtratio + "%")
+
+                    lastList.businessType == "0" ? lastList.businessType = '离散行业' : lastList.businessType = '流程行业'
+                    $("#ywlx").text(lastList.businessType)
+
+                    $("#qyzrs").text(lastList.totalNumber)
+
+                    $("#qylx").text(lastList.enterpriseType)
+
+                    $("#qyzycp").text(lastList.enterpriseProduct)
+
+                    $("#qyzycp").attr("title", lastList.enterpriseProduct)
+                    $("#qyxydj").text(lastList.creditrating)
+
+                    lastList.isListed == "0" ? lastList.isListed = '是' : lastList.isListed = '否'
+                    $("#sex1").text(lastList.isListed)
+
+                    lastList.isnearlythreeyearsprofit == "0" ? lastList.isnearlythreeyearsprofit = '是' : lastList.isnearlythreeyearsprofit = '否'
+                    $("#sex3").text(lastList.isnearlythreeyearsprofit)
+
+                    lastList.enterpriseMake == "1" ? lastList.enterpriseMake = 'OEM贴牌生产' : (lastList.enterpriseMake == "2" ? lastList.enterpriseMake = 'ODM产品自研自制' : lastList.enterpriseMake = 'OBM不做研发，仅制造销售')
+                    $("#sex2").text(lastList.enterpriseMake)
+
+                    lastList.istopten == "0" ? lastList.istopten = '是前十强' : lastList.istopten = '不是前十强'
+                    $("#qythysp").text(lastList.occupancylevel + "%" + ',' + lastList.istopten)
+
+                    if (lastList.enterpriseTurnover == "0") {
+                        lastList.enterpriseTurnover = '2000万以下'
+                    } else if (lastList.enterpriseTurnover == "1") {
+                        lastList.enterpriseTurnover = '2000万至5000万'
+                    } else if (lastList.enterpriseTurnover == "2") {
+                        lastList.enterpriseTurnover = '5000万至1个亿'
+                    } else if (lastList.enterpriseTurnover == "3") {
+                        lastList.enterpriseTurnover = '1个亿至5个亿'
+                    } else if (lastList.enterpriseTurnover == "4") {
+                        lastList.enterpriseTurnover = '5个亿至10个亿'
+                    } else if (lastList.enterpriseTurnover == "5") {
+                        lastList.enterpriseTurnover = '10个亿以上'
+                    } else {
+                        lastList.enterpriseTurnover = '100个亿以上'
+                    }
+                    $("#qynyye").text(lastList.enterpriseTurnover)
+
+                    lastList.iscleardevstrategy == "0" ? lastList.iscleardevstrategy = '是' : lastList.iscleardevstrategy = '否'
+                    $("#sex5").text(lastList.iscleardevstrategy)
+
+                    $("#qysnsj").text(lastList.lastyeartaxes + "万元")
+
+                    $("#qyyfzb").text(lastList.rdratio + "%")
+
+                    $("#qysnlr").text(lastList.lastyearprofit + "万元")
+
+                    if (lastfile != "" & lastfile != null) {
+                        var reallyname = lastfile.substring(36)
+                        $("#bgfile").text(reallyname)
+                    }
+
+                    // 企业联系信息
+                    $("#frdb").text(lastList1.corporaterepresentative)
+                    $("#lxrxm").text(lastList1.contactname)
+                    $("#ssxq").text(lastList1.belongprovince + lastList1.belongcity + lastList1.belongarea)
+                    $("#qyxxdz").text(lastList1.detailadress)
+                    $("#qyxxdz").attr("title", lastList1.detailadress)
+                    $("#dblxdh").text(lastList1.corporaterepresentativephone)
+                    $("#bm").text(lastList1.department)
+                    $("#lxrsjhm").text(lastList1.contactphone)
+                    $("#lxrgddh").text(lastList1.contacttelephone)
+                    $("#zw").text(lastList1.position)
+                    $("#lxrdzyx").text(lastList1.contactemail)
+                    $("#lxrcz").text(lastList1.contactfax)
+
+                }
+            })
+        // var lastfile = "1581081670060.png"
+        if (lastfile != null) {
+            var index = lastfile.lastIndexOf(".");
+            var isimage = lastfile.substring(index + 1, lastfile.length)
+
+            // function showorhide() {
+            if (isimage == "jpg" || isimage == "png" || isimage == "gif" || isimage == 'jpeg') {
+                $("#img_file").show()
+                // 获取图片url  
+                $.ajax({
+                    type: 'GET',
+                    async: false,
+                    url: base.remotePath + 'files/urldown',
+                    // data: { fileName: '1581081670060.png' },
+                    data: { fileName: lastfile },
+                    success: function (data) {
+                        img_url0 = data
+                        $("#imgurl_0").attr("src", data)
+                        // console.log(data)
+                    }
+                });
+
+            } else {
+                $("#other_file").show()
+                $("#bgfile").click(function () {
+                    $.ajax({
+                        type: 'GET',
+                        async: true,
+                        url: base.remotePath + "files/urldown",
+                        data: { fileName: lastfile },
+                        // data: { fileName: "1581081670060.png" },
+                        success: function (data) {
+                            window.location.href = data
+                        }
+                    });
+                })
+            }
+            // }
+        }
+
+
+
+
+
+
+        // 获取图片url
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: base.remotePath + 'files/urldown',
+            // data: { fileName: '1581081670060.png' },
+            data: { fileName: lastimg },
+            success: function (data) {
+                img_url = data
+                $("#imgurl").attr("src", data)
+            }
+        });
+
+        //   营业执照图片放大预览
+        $("#imgurl").click(function () {
+            //弹出层
+            layer.open({
+                type: 1,
+                shade: 0.2,
+                offset: 'auto',
+                // area: [500 + 'px',800 + 'px'],
+                shadeClose: true,
+                content: "<img src='" + img_url + "' width='100%' height='100%'/>",
+                scrollbar: false,
+                title: false, //不显示标题  
+                cancel: function () {
+                    //layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', { time: 5000, icon: 6 });  
+                }
+            });
+
+        })
+
+
+
+
+
+        // 企业财务图片放大预览
+        $("#imgurl_0").click(function () {
+            //弹出层
+            layer.open({
+                type: 1,
+                shade: 0.2,
+                offset: 'auto',
+                // area: [500 + 'px',800 + 'px'],
+                shadeClose: true,
+                content: "<img src='" + img_url0 + "' width='100%' height='100%'/>",
+                scrollbar: false,
+                title: false, //不显示标题  
+                cancel: function () {
+                    //layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', { time: 5000, icon: 6 });  
+                }
+            });
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

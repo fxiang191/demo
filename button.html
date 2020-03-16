@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI 特效 - .removeClass() 演示</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+  <!-- <style>
+  .toggler { width: 500px; height: 200px; position: relative; }
+  #button { padding: .5em 1em; text-decoration: none; }
+  /* #effect { position: relative;  width: 240px;  padding: 1em;  letter-spacing: 0; font-size: 1.2em; border: 1px solid #000; background: #eee; color: #333; } */
+  #effect {width: 240px;width: 240px;  background: #eee; }
+  /* .newClass { text-indent: 40px; letter-spacing: .4em; width: 410px;width: 240px; padding: 30px; margin: 10px; font-size: 1.6em; } */
+  .newClass { display: none; }
+  </style>
+  <script>
+function btn() {
+    $( "#button" ).click(function() {
+      $( "#effect" ).removeClass( "newClass", 1000, callback );
+    });
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).addClass( "newClass");
+      }, 1500 )}
+  };
+
+
+
+  $(function(){
+    $( "#button" ).click(function() {
+
+    var id = "123456"
+    var url = `"https://www.baidu.com?id="${id}`
+    window.open(url,"_self")
+    })
+  }) -->
+
+  </script>
+</head>
+<body>
+    <button id="button">dianwo </button>
+    <!-- <button id="btn">点击</button> -->
+    <script type="text/javascript">
+    //     $("#btn").click(function() {
+    //         var aa = []; 
+    //         var as = {};
+    //         as.s = 'ssss';
+    //         aa.push(as);    
+    //         var aaS = JSON.stringify(aa);
+    //         var twoUrl = encodeURI("two.html?ownText=" + JSON.stringify(aaS)); //使用encodeURI编码  
+    //             window.location.href = twoUrl;
+
+    // })
+    $( "#button" ).click(function() {
+      var id = "123456"
+      var url = `https://www.baidu.com?id=${id}`
+      window.open(url,"_self")
+      // var id = window.location.href.toString().split("=")
+      console.log(window.location.href)
+    })
+</script> 
+ 
+</body>
+</html>

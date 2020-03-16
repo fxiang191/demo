@@ -1,0 +1,213 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <!-- 方祥 CSS -->
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+
+        <!-- 页头  页脚样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+    /* layui改写 */
+    .layui-form-select dl dd.layui-this {
+    background-color: #1E9FFF!important;
+    }
+    /* ONE 样式改动 */
+    .oneClass01{
+      margin-top: 0;
+    }
+    /* 文本域高度  */
+    .layui-textarea {
+    min-height: 300px;
+    }
+    </style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 页头 -->
+    <script src="../js/public/header.js"></script>
+
+    <!-- 导航栏 -->
+    <script src="../js/public/nav.js"></script>
+
+    <!-- 试卷title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>企业上云自评估信息
+                <span>（共6步,当前第
+                    <span>1</span>步）
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 试卷内容区域 -->
+    <div class="container">
+        <!-- 步骤 -->
+        <div class="myShijuan">
+            <div class="myShijuanBuzhou">
+                <img src="../images/Industrial/1_2.png" alt="">
+            </div>
+            <div>
+                <hr class="myHrClass">
+            </div>
+            <!-- 正文 -->
+            <div class="myShijuanZhengwen">
+                <div>请选择企业自评估项</div>
+                <div>
+                    <img src="../images/Industrial/gantanhao.png">
+                    企业自评估结果将作为职能部门进行推荐/遴选依据。若遴选不通过，则需要等待下次申报时，才能重新申报。为了避免遴选不通过，请正确填写企业自评估信息
+                </div>
+                <div><span>*</span>企业上云描述</div>
+            </div>
+            <!-- 考试试题部分 -->
+            <form id="form1" class="layui-form" action="" lay-filter="example">
+              <div class="myShijuanNeirong oneClass01">
+                    <div class="layui-form-item">
+                        <input type="hidden" name="enterpriseId" id="enterpriseId" />
+                    <!-- 第一行 -->
+                        <div class="layui-input-inline myTextareaClass">
+                            <textarea maxlength="1000" placeholder="说明企业上云的范围、内容、时间、部署模型等， 通过定性和定量相结合的方式，简要说明企业上云后的应用成效（1~1000位字符）" lay-verType="tips" class="layui-textarea"
+                            lay-verify="required" name="j1"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 按钮 -->
+                    <div  class="layui-form-item myBtnClass">
+                        <div>
+                            <!-- <a href="./xuanzeShijuan.html?nav=1"> -->
+                                <button id="backShi" style="width: 110px;height: 40px;" type="button" class="layui-btn layui-btn-normal">上一步</button>
+                            <!-- </a> -->
+                            <button style="width: 110px;height: 40px;" type="button" lay-submit lay-filter="btnSubmit" class="layui-btn layui-btn-normal">下一步</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 页脚 -->
+	<script src="../js/public/foot.js"></script>
+
+<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+
+<script type="text/javascript">
+    layui.use(['form'], function () {
+        var form = layui.form
+        ,layer = layui.layer
+
+        $('#enterpriseId').val(getUrlParams('enterpriseId'))
+
+        //  初始化查询
+        $.ajax({
+            type : 'get',
+            url : ajaxUrl + "report/searchPaperInfo?paperid=" + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId'),
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success : function(res) {
+                console.log(res)
+                if (res.code == 200) {
+                    form.val("example", res.data);
+                } else {
+                    layer.msg('请求错误');
+                }
+            },
+            error : function(err) {
+                layer.msg('请求错误');
+            }
+        })
+
+        //监听提交
+        form.on('submit(btnSubmit)', function(data){
+            $.ajax({
+                type : 'post',
+                url : ajaxUrl + "report/updateCloudInfo",
+                data : data.field,
+                dataType: 'json',
+                xhrFields: {
+                withCredentials: true
+                },
+                crossDomain: true,
+                success : function(res) {
+                    if (res.code == 200) {
+                        window.location.replace('./qiyeYunTwo.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1')
+                    } else {
+                        layer.msg('请求错误');
+                    }
+                },
+                error : function(err) {
+                    layer.msg('请求错误');
+                }
+            })
+            return false;
+        });
+    })
+    $('#backShi').click(function(){
+        window.open('./zipingWeikaishi.html?nav=1','_self')
+    })
+</script>
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

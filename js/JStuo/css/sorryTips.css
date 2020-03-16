@@ -1,0 +1,25 @@
+.submitCompleted{
+    width:100%;
+   }
+
+.content_main{
+    width:1150px;
+    height: 300px;
+    margin: 0 auto;
+}
+  
+   .line_grey{
+       width:1150px;
+       height:1px;
+       background: #e0e0e0;
+       margin: 0 auto;
+   }
+   .word_01{
+      text-align: center;
+      margin: 40px 0;
+       font-size: 20px;
+   }
+ .content_img{
+     margin-top:40px;
+      text-align: center;
+   }

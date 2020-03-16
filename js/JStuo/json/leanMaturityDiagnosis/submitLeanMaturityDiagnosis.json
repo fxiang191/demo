@@ -1,0 +1,14 @@
+{
+  "msg":"试卷未全部完成，继续填写自评信息按钮",
+  "data":[
+    {
+      "papername":"企业上云成熟度诊断",
+      "enterpriseid":"4",
+      "paperid":"3",
+      "status":0
+    }
+  ],
+  "auth":"1",
+  "success":true,
+  "code":200
+}

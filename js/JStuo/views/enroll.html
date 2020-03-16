@@ -1,0 +1,1195 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+	<title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/enroll.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/declare.css"> -->
+	<link rel="stylesheet" href="../js/layui/css/layui.css">
+	<link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+</head>
+<style>
+	#pageTwo {
+		display: none;
+	}
+
+	.layui-upload-choose {
+		position: absolute;
+		top: 50px;
+		left: 0px;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+<body>
+
+	<script src="../js/public/header.js"></script>
+	<script src="../js/public/nav.js"></script>
+	<!-- banner -->
+	<!-- <div class="toptable">
+		<div class="main">
+			<div class="onetable">
+				<div class="active">企业报名</div>
+				<div><a href="./sorryTips.html"><span style="color:white">企业自评估</span></a></div>
+				<div>职能部门推荐/遴选</div>
+				<div>在线诊断服务</div>
+				<div>查看诊断报告</div>
+			</div>
+			<div class="userback">
+				<div class="header_img"></div>
+				<div class="username">1111111</div>
+				<div class="closeback">退出登录</div>
+			</div>
+		</div>
+	</div> -->
+
+
+	<div class="qysb">
+		<div class="main_qycx">
+			<div class="line_blue"></div>
+			<div>企业报名</div>
+		</div>
+	</div>
+
+	<!-- container begin -->
+	<div class="container" id="pageOne">
+		<div class="cont_box">
+			<div class="srjbxx">
+				<img src="../images/enroll/0_1.png" alt="">
+			</div>
+			<div class="qsrqyxx">
+				<div class="input_jbxx">请输入企业基本信息</div>
+				<div class="input_line"></div>
+			</div>
+			<form id="form1" class="layui-form" action="" lay-filter="example">
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业名称：</label>
+					<div class="layui-input-inline aaaa">
+						<input readonly id="companyName" type="text" name="qymc" lay-verType="tips"
+							lay-verify="companyname" style="border:0px;background: #f1f1f1" autocomplete="off"
+							placeholder="请输入企业全称，1~100位字符" class="layui-input qymc">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>统一社会信用代码：</label>
+					<div class="layui-input-inline">
+						<input readonly type="text" id="creditCode" name="tyshxxydm" lay-verType="tips"
+							lay-verify="daima|daima1" style="border:0px;background: #f1f1f1" autocomplete="off"
+							placeholder="统一社会信用代码,18位数字/大写字母" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业营业执照：</label>
+					<div class="layui-input-inline" style="height:100px;">
+						<img id="imgurl" style="height:100px;" src="" alt="">
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业成立时间：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qyclsj" lay-verify="qyclsj|qyclsj1" lay-verType="tips"
+							class="layui-input" id="test1" placeholder="请选择企业成立时间">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业财务报告：</label>
+					<div class="layui-input-inline">
+						<div style="display:flex;">
+							<div id='license'
+								style="width:180px;height:100px;background:#f1f1f1;border-radius: 3px; ;cursor: pointer">
+								<div
+									style="width:32px;height:32px;background:#1f8dfc;border-radius: 50%;text-align: center;line-height: 32px;font-size: 30px;color: white;margin:25px auto 0px">
+									+</div>
+								<div style="text-align: center;color:grey;line-height: 30px;">点击上传文件</div>
+							</div>
+							<div>
+								<div style="margin:10px;width:400px">
+									<div id="filedown"></div>
+								</div>
+								<div id='jindu' style="width:300px;margin-top:60px;margin-left:10px;display: none;"
+									lay-filter="progress" class="layui-progress">
+									<div class="layui-progress-bar layui-bg-blue"></div>
+								</div>
+							</div>
+						</div>
+						<div style="color: red">请上传最近一年企业财务报告，只能上传1个文件，支持上传图片、PDF、.zip等压缩文件，文件大小不超过10M</div>
+					</div>
+				</div>
+
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业总资产（万元）：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qyzzc" lay-verType="tips" lay-verify="zichan|numberxz"
+							autocomplete="off" placeholder="请输入企业总资产，正整数" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业负债率（%）：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qyfzl" lay-verType="tips" lay-verify="fuzhai|numberxz"
+							autocomplete="off" placeholder="请输入企业负债率，仅支持小数点后两位" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业总人数：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qyzrs" lay-verType="tips" lay-verify="renshu|numberxz"
+							autocomplete="off" placeholder="企业总人数，正整数" class="layui-input">
+					</div>
+				</div>
+
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业是否是上市公司：</label>
+					<div class="layui-input-inline">
+						<select name="sex1" lay-verType="tips" lay-verify="qysfss" lay-filter="">
+							<option value=""></option>
+							<option value="0">是</option>
+							<option value="1">否</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业类型：</label>
+					<div class="layui-input-inline">
+						<select name="qylx" id='enterpriseType' lay-verType="tips" lay-verify="qylx" lay-filter="aihao">
+							<option value=""></option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业所属行业：</label>
+					<div class="layui-input-inline">
+						<select id="enterpriseIndustry" name="qysshy" lay-verType="tips" lay-verify="qysshy"
+							lay-filter="aihao">
+							<option value=""></option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>业务类型：</label>
+					<div class="layui-input-inline">
+						<select name="ywlx" lay-verType="tips" lay-verify="ywlx" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0">离散行业</option>
+							<option value="1">流程行业</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业主要产品：</label>
+					<div class="layui-input-inline">
+						<textarea placeholder="请输入企业主要产品，以“、”分开（1~512位字符）" lay-verType="tips" class="layui-textarea"
+							lay-verify="qycp" name="qyzycp"></textarea>
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业制造类型：</label>
+					<div class="layui-input-inline">
+						<select name="sex2" lay-verType="tips" lay-verify="ywms" lay-filter="">
+							<option value=""></option>
+							<option value="1">OEM贴牌生产</option>
+							<option value="2">ODM产品自研自制</option>
+							<option value="3">OBM不做研发，仅制造销售</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业年营业额：</label>
+					<div class="layui-input-inline">
+						<select name="qynyye" lay-verType="tips" lay-verify="qynyye" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0">2000万以下</option>
+							<option value="1">2000万至5000万</option>
+							<option value="2">5000万至1个亿</option>
+							<option value="3">1个亿至5个亿</option>
+							<option value="4">5个亿至10个亿</option>
+							<option value="5">10个亿以上</option>
+							<option value="6">100个亿以上</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业上年税金（万元）：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qysnsj" lay-verType="tips" autocomplete="off"
+							lay-verify="snsj|numberxz" placeholder="请输入企业上年税金，正整数" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业上年利润（万元）：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qysnlr" lay-verType="tips" autocomplete="off"
+							lay-verify="snlr|numberxz" placeholder="请输入企业上年利润，正整数" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业信用等级：</label>
+					<div class="layui-input-inline">
+						<select name="qyxydj" lay-verType="tips" lay-verify="qyxydj" lay-filter="aihao">
+							<option value=""></option>
+							<option value="未评级">未评级</option>
+							<option value="AAA">AAA</option>
+							<option value="AA">AA</option>
+							<option value="A">A</option>
+							<option value="BBB">BBB</option>
+							<option value="BB">BB</option>
+							<option value="B">B</option>
+							<option value="CCC">CCC</option>
+							<option value="CC">CC</option>
+							<option value="C">C</option>
+							<option value="D">D</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业是否在近三年连续保持盈利：</label>
+					<div class="layui-input-inline">
+						<select name="sex3" lay-verType="tips" lay-verify="qysfyl" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0">是</option>
+							<option value="1">否</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业营业收入位列江苏省同行业中的站位水平（%）：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qythysp" lay-verType="tips" lay-verify="fuzhai|zwsp|zwsp1"
+							autocomplete="off" placeholder="请输入企业站位水平，支持小数点后两位" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>是否为前十强：</label>
+					<div class="layui-input-inline">
+						<select name="sex4" lay-verType="tips" lay-verify="sfqsq" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0">是</option>
+							<option value="1">否</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业是否有明确的发展战略：</label>
+					<div class="layui-input-inline">
+						<select name="sex5" lay-verType="tips" lay-verify="qymqzl" lay-filter="aihao">
+							<option value=""></option>
+							<option value="0">是</option>
+							<option value="1">否</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业研发创新费用占到总体收入的百分比（%）：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="qyyfzb" lay-verType="tips" lay-verify="fuzhai|numberxz"
+							autocomplete="off" placeholder="请输入企业收入占比，支持小数点后两位" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item btn_top">
+					<div class="layui-input-block">
+						<button type="button" class="layui-btn layui-btn-primary center_bnt fanhui"
+							id="LAY-component-form-getval">取消</button>
+						<button type="button" class="layui-btn layui-btn-normal center_bnt two_btn" lay-submit=""
+							lay-filter="demo1">下一步</button>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<!-- container end -->
+
+	<!-- container begin -->
+	<div class="container" id="pageTwo">
+		<div class="cont_box">
+			<div class="srjbxx">
+				<img src="../images/enroll/0_1.png" alt="">
+			</div>
+			<div class="qsrqyxx">
+				<div class="input_jbxx">请输入企业联系信息</div>
+				<div class="input_line"></div>
+			</div>
+			<form id="form1" class="layui-form" action="" lay-filter="example">
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>所属辖区（市、区、县）：</label>
+					<div class="layui-input-inline" style="display: flex;">
+						<select name="sheng" id="province" class="width_210" lay-verType="tips" lay-verify="sheng"
+							lay-filter="sheng_0">
+							<option value="">省/直辖市</option>
+							<option value="320000">江苏省</option>
+
+						</select>
+						<div style="width:10px;height:30px;"></div>
+						<select name="shiqu" id="city" class="width_210" lay-verType="tips" lay-verify="shi"
+							lay-filter="shi_0">
+							<option value="">市/区</option>
+						</select>
+						<div style="width:10px;height:30px;"></div>
+						<select name="quxian" id="county" class="width_210" lay-verType="tips" lay-verify="xian"
+							lay-filter="xian_0">
+							<option value="">区/县</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="layui-form-item layui-form-text">
+					<label class="layui-form-label"><span class="bt_red">*</span>企业详细地址：</label>
+					<div class="layui-input-inline">
+						<textarea placeholder="请输入有效地址(1~512位字符)" lay-verType="tips" class="layui-textarea"
+							lay-verify="address" name="qyxxdz"></textarea>
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>法人代表：</label>
+					<div class="layui-input-inline">
+						<input type="text" id="creditCode" name="frdb" lay-verType="tips" lay-verify="repaire"
+							autocomplete="off" placeholder="请输入法人代表真实姓名，1-40位字符" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>法人代表手机号码：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="frdbdh" lay-verify="phone0|phone1" lay-verType="tips"
+							class="layui-input" id="test-limit3" placeholder="请输入法人代表手机号">
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>联系人姓名：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="lxrxm" lay-verType="tips" lay-verify="repaire" autocomplete="off"
+							placeholder="请输入您的真实姓名，1-40位字符" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>部门：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="bumen" lay-verType="tips" lay-verify="bumen" autocomplete="off"
+							placeholder="请输入您的部门，1-40位字符" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>职位：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="zhiwei" lay-verType="tips" lay-verify="zhiwei" autocomplete="off"
+							placeholder="请输入您的职位，1-40位字符" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>联系人手机号码：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="lxrsjhm" lay-verType="tips" lay-verify="phone0|phone1"
+							autocomplete="off" placeholder="请输入正确的手机号码" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>联系人固定电话：</label>
+					<div class="layui-input-inline" style="display: flex;">
+						<input type="text" name="gdqh" lay-verType="tips" lay-verify="phone2|phone2_1|phone2_2"
+							autocomplete="off" style="width:180px" placeholder="请输入电话区号" class="layui-input">
+						<div style="width:30px;height:1px;background: grey;margin: 20px 10px 0 10px;"></div>
+						<input type="text" name="gdhm" lay-verType="tips" lay-verify="phone3|phone3_1"
+							autocomplete="off" placeholder="请输入电话号码" class="layui-input">
+					</div>
+				</div>
+
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>联系人电子邮箱：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="lxryx" lay-verType="tips" lay-verify="phone4|email" autocomplete="off"
+							placeholder="请输入正确的电子邮箱，格式类似：xxx@xxx.com" class="layui-input">
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label"><span class="bt_red">*</span>联系人传真：</label>
+					<div class="layui-input-inline" style="display: flex;">
+						<input type="text" name="czqh" lay-verType="tips" lay-verify="czqh" autocomplete="off"
+							style="width:180px" placeholder="请输入传真区号" class="layui-input">
+						<div style="width:30px;height:1px;background: grey;margin: 20px 10px 0 10px;"></div>
+						<input type="text" name="czhm" lay-verType="tips" lay-verify="cz" autocomplete="off"
+							placeholder="请输入传真号码" class="layui-input">
+					</div>
+				</div>
+
+
+				<div class="layui-form-item btn_top">
+					<div class="layui-input-block">
+						<button id="return_pageOne" type="button"
+							class="layui-btn layui-btn-primary center_bnt">上一步</button>
+						<button type="button" class="layui-btn layui-btn-normal two_btn" lay-submit=""
+							lay-filter="demo2">提交</button>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<!-- container end -->
+	<script src="../js/public/foot.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<script type="text/javascript">
+		// 回到顶部
+		function back2Top() {
+			document.documentElement.scrollTop = 0;
+			return false;
+		}
+		// 获取登录名称
+		ourtoken = localStorage.getItem("userName")
+		$("#userName").html(ourtoken)
+		// 退出登录页
+		$(".closeback").click(function () {
+			window.open('./../index.html')
+			window.location.href = "";
+			window.close();
+		})
+
+	</script>
+
+	<script type="text/javascript">
+
+		// base.requestJson({ type: "POST", url: base.remotePath + "auth/login?username=industrycd&password=123456&type=0", data: {} },
+		// 	function (res) {
+
+
+		layui.use(['form', 'layedit', 'upload', 'laydate', 'element', 'layer'], function () {
+			var form = layui.form
+				, layer = layui.layer
+				, layedit = layui.layedit
+				, laydate = layui.laydate
+				, upload = layui.upload
+				, element = layui.element;
+
+			// ajax获取企业类型
+
+			base.requestJson({ type: "POST", url: base.interfaceObj.pageOne.enterpriseType, data: {} },
+				function (res) {
+					var res = res.data
+					var select = $("#enterpriseType");
+					for (var i = 0; i < res.length; i++) {
+						select.append("<option value=" + res[i].typeid + ">" + res[i].typename + "</option>")
+					}
+					form.render()
+				}
+			)
+
+			// ajax获取企业所属行业
+			base.requestJson({ type: "POST", url: base.interfaceObj.pageOne.getEnterpriseIndustry, data: {}, parent: true },
+				function (res) {
+					var res = res.data
+					var select = $("#enterpriseIndustry");
+					for (var i = 0; i < res.length; i++) {
+						select.append("<option value=" + res[i].enterpriseindustryid + ">" + res[i].industryname + "</option>")
+					}
+					form.render()
+				}
+			)
+
+			//时选择限制
+			laydate.render({
+				elem: '#test1' //指定元素
+				, max: 0
+				, zIndex: 1
+				, theme: '#1E9FFF'
+			});
+
+
+			//创建一个编辑器
+			var editIndex = layedit.build('LAY_demo_editor');
+			//自定义验证规则
+			form.verify({
+				// companyname: function (value) {
+				// 	if (value.length < 1 || value.length > 100) {
+				// 		return '企业名称字数为1~100位字符';
+				// 	}
+				// },
+				numberxz: function (value) {
+					if (value.length > 10) {
+						return '输入数值与实际情况不符';
+					}
+				},
+				clsj: function (value) {
+					if (value.length < 1) {
+						return '必填项不能为空';
+					}
+				},
+				qyclsj: function (value) {
+					if (value.length < 1) {
+						return '输入时间不能为空';
+					}
+				},
+				qyclsj1: function (value) {
+					var timeNew = Date.parse(new Date());
+					var timeDate = Date.parse(value)
+					if (timeDate > timeNew) {
+						return '企业成立日期不能大于当前日期';
+					}
+				},
+
+				qylx: function (value) {
+					if (value.length < 1) {
+						return '企业类型不能为空';
+					}
+				},
+				qysshy: function (value) {
+					if (value.length < 1) {
+						return '企业所属行业不能为空';
+					}
+				},
+				ywlx: function (value) {
+					if (value.length < 1) {
+						return '业务类型不能为空';
+					}
+				},
+				qynyye: function (value) {
+					if (value.length < 1) {
+						return '企业年营业额不能为空';
+					}
+				},
+				qyxydj: function (value) {
+					if (value.length < 1) {
+						return '企业信用等级不能为空';
+					}
+				},
+				daima1: function (value) {
+					if (value.length != 18) {
+						return '统一社会信用代码为18位数字/大写字母';
+					}
+				},
+				qysfss: function (value) {
+					if (value.length < 1) {
+						return '企业是否是上市公司不能为空';
+					}
+				},
+				ywms: function (value) {
+					if (value.length < 1) {
+						return '业务模式不能为空';
+					}
+				},
+				qysfyl: function (value) {
+					if (value.length < 1) {
+						return '企业是否在近三年连续保持盈利不能为空';
+					}
+				},
+				sfqsq: function (value) {
+					if (value.length < 1) {
+						return '是否为前十强不能为空';
+					}
+				},
+				qymqzl: function (value) {
+					if (value.length < 1) {
+						return '企业是否有明确的发展战略不能为空';
+					}
+				},
+
+				// daima: [
+				// 	/[0-9A-HJ-NPQRTUWXY]{2}\d{6}[0-9A-HJ-NPQRTUWXY]{10}/
+				// 	, '统一社会信用代码为18位数字/大写字母'
+				// ]
+				// ,
+				fuzhai: [
+					/^\d+(\.\d{1,2})?$/
+					, '请输入数字，仅支持小数点后两位'
+				],
+				renshu: [
+					/^[1-9]\d*$/
+					, '企业总人数为正整数'
+				],
+				zichan: [
+					/^[1-9]\d*$/
+					, '企业总资产为正整数'
+				],
+				snsj: [
+					/^[1-9]\d*$/
+					, '企业上年税金为正整数'
+				],
+				snlr: [
+					/^[1-9]\d*$/
+					, '企业上年利润为正整数'
+				],
+				zwsp: function (value) {
+					if (value > 100) {
+						return '站位水平不能超过100%';
+					}
+				},
+				zwsp1: function (value) {
+					if (value < 0) {
+						return '站位水平不能低于0%';
+					}
+				},
+				qycp: function (value) {
+					if (value.length < 1) {
+						return '企业主要产品不能为空';
+					} else if (value.length > 512) {
+						return '字数不能超过512';
+					}
+				},
+
+				content: function (value) {
+					layedit.sync(editIndex);
+				}
+			});
+
+
+
+
+
+
+
+			// 下载企业财务报告
+			var lastfile
+
+			// $("#filedown").click(function () {
+			// 	$.ajax({
+			// 		type: 'GET',
+			// 		async: false,
+			// 		url: base.remotePath+"files/urldown",
+			// 		data: { fileName: lastfile },
+			// 		// data: { fileName: "1581163265550.png" },
+			// 		success: function (data) {
+			// 			window.location.href=data
+			// 		}
+			// 	});
+			// })
+			// ajax获取上一次第一页填写数据
+
+			base.requestJson({ type: "POST", url: base.interfaceObj.pageExhibition.getTotalData, data: {} },
+				function (res) {
+					var lastList = res.data.enterpriseBaseinfo;
+					lastfile = res.data.applyFile.financeFilepath;
+					lastimg = res.data.applyFile.licenseFilepath;
+					if (lastfile != "" & lastfile != null){
+						var strfile=lastfile.substring(36)
+						$("#filedown").text(strfile)
+					}
+						
+					// console.log(res)
+					if (lastList != null & lastList != "") {
+						form.val('example', {
+							"qymc": lastList.enterpriseName,
+							"tyshxxydm": lastList.creditCode,
+							"qyclsj": lastList.establishTime,
+							"qyzzc": lastList.totalAssets,
+							"sex1": lastList.isListed,
+							"sex2": lastList.enterpriseMake,
+							"sex3": lastList.isnearlythreeyearsprofit,
+							"sex4": lastList.istopten,
+							"sex5": lastList.iscleardevstrategy,
+							"qyfzl": lastList.debtratio,
+							"qyzrs": lastList.totalNumber,
+							"qylx": lastList.enterpriseType,
+							"qysshy": lastList.enterpriseIndustry,
+							"ywlx": lastList.businessType,
+							"qyzycp": lastList.enterpriseProduct,
+							"qynyye": lastList.enterpriseTurnover,
+							"qysnsj": lastList.lastyeartaxes,
+							"qysnlr": lastList.lastyearprofit,
+							"qyxydj": lastList.creditrating,
+							"qythysp": lastList.occupancylevel,
+							"qyyfzb": lastList.rdratio
+						});
+					}
+				}
+			)
+
+
+
+			// 文件上传
+			var uploadInst = upload.render({
+				elem: '#license' //绑定元素
+				, url: base.remotePath + 'files/huawei/7' //上传接口
+				, size: 10 * 1024
+				, data: {
+					// diagnosisInfoId: "11111"
+				}
+				, field: 'file'
+				, accept: 'file'
+				, exts: 'pdf|jpg|png|gif|bmp|jpeg|tiff|rar|zip|tar|cab|7z'
+				, choose: function (obj) {
+					//将每次选择的文件追加到文件队列
+					// var files = obj.pushFile();
+					// console.log(files)
+					obj.preview(function (index, file, result) {
+						$("#filedown").text(file.name)
+					});
+				}
+				, progress: function (n, elem) {
+					if (n > 1) {
+						$("#jindu").show()
+					}
+					var percent = n + '%' //获取进度百分比
+					element.progress('progress', percent); //可配合 layui 进度条元素使用
+					if (n === 100) {
+						$("#jindu").hide()
+					}
+				}
+				, done: function (res) {
+					if (res.code == "200") {
+						layer.msg('文件上传成功！')	
+					} else if (res.code == "5001107") {
+						layer.msg(res.msg)
+						$("#filedown").text("")
+					}
+				}
+				, error: function () {
+					//请求异常回调
+					layer.msg('上传失败请重新上传！')
+				}
+			});
+
+
+			// 获取图片url
+			var img_url
+			var lastimg
+			// console.log(lastimg)
+			$.ajax({
+				type: 'GET',
+				async: false,
+				url: base.remotePath + 'files/urldown',
+				data: { fileName: lastimg },
+				// data: { fileName: "1581081670060.png" },
+				success: function (data) {
+					img_url = data
+					$("#imgurl").attr("src", data)
+				}
+			});
+
+			//   图片放大预览
+			$("#imgurl").click(function () {
+				//弹出层
+				layer.open({
+					type: 1,
+					shade: 0.2,
+					offset: 'auto',
+					// area: [500 + 'px',800 + 'px'],
+					shadeClose: true,
+					content: "<img src='" + img_url + "' width='100%' height='100%'/>",
+					scrollbar: false,
+					title: false, //不显示标题  
+					cancel: function () {
+						//layer.msg('捕获就是从页面已经存在的元素上，包裹layer的结构', { time: 5000, icon: 6 });  
+					}
+				});
+
+			})
+
+
+
+
+			//监听提交
+			form.on('submit(demo1)', function (data) {
+				var list = data.field
+				back2Top()
+				if ($("#filedown").text() == "") {
+					layer.msg("企业财务报告不能为空！")
+					return false;
+				}
+				$("#pageOne").css("display", "none")
+				$("#pageTwo").css("display", "block")
+
+				// console.log(sex_2)
+				var parmas = {
+					enterpriseBaseinfo: {
+						// "enterpriseName": list.qymc,
+						// "creditCode": list.tyshxxydm,
+						"establishTime": list.qyclsj,
+						"totalAssets": list.qyzzc,
+						"debtratio": list.qyfzl,
+						"totalNumber": list.qyzrs,
+						"isListed": list.sex1,
+						"enterpriseType": list.qylx,
+						"enterpriseIndustry": list.qysshy,
+						"businessType": list.ywlx,
+						"enterpriseProduct": list.qyzycp,
+						"enterpriseMake": list.sex2,
+						"enterpriseTurnover": list.qynyye,
+						"lastyeartaxes": list.qysnsj,
+						"lastyearprofit": list.qysnlr,
+						"creditrating": list.qyxydj,
+						"isnearlythreeyearsprofit": list.sex3,
+						"occupancylevel": list.qythysp,
+						"istopten": list.sex4,
+						"iscleardevstrategy": list.sex5,
+						"rdratio": list.qyyfzb,
+						"stepNo": "1"
+					},
+					"applyFile": {
+						// "financeFilepath": ""
+					}
+				}
+
+				// console.log(parmas)
+				base.requestJson({ type: "POST", url: base.interfaceObj.pageOne.postList, data: JSON.stringify(parmas) },
+					function (res) {
+						// layer.msg(res.msg)
+					}
+				)
+				return false;
+			});
+		});
+
+		$(".fanhui").click(function () {
+			window.location.replace('./../index.html')
+
+		})
+
+
+
+
+
+
+
+
+
+
+
+			// })
+
+
+
+
+
+	</script>
+
+	<script type="text/javascript">
+
+		// base.requestJson({ type: "POST", url: base.remotePath + "auth/login?username=industrycd&password=123456&type=0", data: {} },
+		// 	function (res) {
+
+
+
+
+		layui.use(['form', 'layedit', 'laydate'], function () {
+			var form = layui.form
+				, layer = layui.layer
+				, layedit = layui.layedit
+
+			// ajax获取上一次第二页填写数据
+			base.requestJson({ type: "POST", url: base.interfaceObj.pageExhibition.getTotalData, data: {} },
+				function (res) {
+
+					var lastListTwo = res.data.enterpriseContactinfo;
+					// console.log(lastListTwo)
+					if (lastListTwo != null & lastListTwo != "") {
+
+						base.requestJson({ type: "POST", url: (base.remotePath + "apply/enterprise/getArea?pid=") + lastListTwo.belongprovince, data: {} },
+							function (res) {
+								var select = $("#city");
+								for (var i = 0; i < res.data.length; i++) {
+									select.append("<option value=" + res.data[i].id + ">" + res.data[i].name + "</option>")
+								}
+								form.render()
+								form.on('select(shi_0)', function (data) {
+									$("#county").empty()
+									var city_0 = data.value
+									// 	// ajax获取县
+									base.requestJson({ type: "POST", url: (base.remotePath + "apply/enterprise/getArea?pid=") + city_0, data: {}, parent: true },
+										function (res) {
+											// console.log(res)
+											var select = $("#county");
+											select.append(new Option("请选择", ""))
+											for (var i = 0; i < res.data.length; i++) {
+												select.append("<option value=" + res.data[i].id + ">" + res.data[i].name + "</option>")
+											}
+											form.render()
+										}
+									)
+								});
+
+							}
+						)
+
+
+
+						base.requestJson({ type: "post", url: (base.remotePath + "apply/enterprise/getArea?pid=") + lastListTwo.belongcity, data: {} },
+
+							function (res) {
+								var select = $("#county");
+								for (var i = 0; i < res.data.length; i++) {
+									select.append("<option value=" + res.data[i].id + ">" + res.data[i].name + "</option>")
+								}
+								form.render()
+							}
+						)
+
+
+
+						var gdqh = lastListTwo.contacttelephone.split("-")[0]
+						var gdhm = lastListTwo.contacttelephone.split("-")[1]
+						var czqh = lastListTwo.contactfax.split("-")[0]
+						var czhm = lastListTwo.contactfax.split("-")[1]
+						form.val('example', {
+							"sheng": lastListTwo.belongprovince,
+							"shiqu": lastListTwo.belongcity,
+							"quxian": lastListTwo.belongarea,
+							"qyxxdz": lastListTwo.detailadress,
+							"frdb": lastListTwo.corporaterepresentative,
+							"frdbdh": lastListTwo.corporaterepresentativephone,
+							"lxrxm": lastListTwo.contactname,
+							"bumen": lastListTwo.department,
+							"zhiwei": lastListTwo.position,
+							"lxrsjhm": lastListTwo.contactphone,
+							"gdqh": gdqh,
+							"gdhm": gdhm,
+							"lxryx": lastListTwo.contactemail,
+							"czqh": czqh,
+							"czhm": czhm,
+						});
+
+					}
+				}
+			)
+
+			//监听提交
+			form.on('submit(demo2)', function (data) {
+
+				var list = data.field
+				var lxrgddh = list.gdqh + "-" + list.gdhm
+				var lxrcz = list.czqh + "-" + list.czhm
+
+
+				var parmas = {
+					enterpriseBaseinfo: {
+						"stepNo": "2"
+					},
+					enterpriseContactinfo: {
+						"belongprovince": list.sheng,
+						"belongcity": list.shiqu,
+						"belongarea": list.quxian,
+						"detailadress": list.qyxxdz,
+						"corporaterepresentative": list.frdb,
+						"corporaterepresentativephone": list.frdbdh,
+						"contactname": list.lxrxm,
+						"department": list.bumen,
+						"position": list.zhiwei,
+						"contactphone": list.lxrsjhm,
+						"contacttelephone": lxrgddh,
+						"contactemail": list.lxryx,
+						"contactfax": lxrcz,
+					}
+				}
+
+				base.requestJson({ type: "POST", url: base.interfaceObj.pageOne.postList, data: JSON.stringify(parmas) },
+					function (res) {
+						if (res.code == "200") {
+							window.location.replace('./submitCompleted.html')
+						} else {
+							layer.msg(res.msg)
+						}
+					}
+				)
+				return false;
+			});
+			base.requestJson({ type: "POST", url: base.interfaceObj.pageTwo.province, data: { pid: "0" } },
+				function (res) {
+					var select = $("#province");
+					// console.log(res)
+					form.on('select(sheng_0)', function (data) {
+						// console.log(data.value);
+						$("#city").empty()
+						$("#county").empty()
+						var province_0 = data.value //得到被选中的值
+						// ajax获取市
+						base.requestJson({ type: "POST", url: (base.remotePath + "apply/enterprise/getArea?pid=") + province_0, data: {}, parent: true },
+							function (res) {
+								// console.log(res)
+								var select = $("#city");
+								select.append(new Option("市/区", ""))
+								for (var i = 0; i < res.data.length; i++) {
+									select.append("<option value=" + res.data[i].id + ">" + res.data[i].name + "</option>")
+								}
+								form.render()
+								form.on('select(shi_0)', function (data) {
+									$("#county").empty()
+									var city_0 = data.value
+									// 	// ajax获取县
+									base.requestJson({ type: "POST", url: (base.remotePath + "apply/enterprise/getArea?pid=") + city_0, data: {}, parent: true },
+										function (res) {
+											var select = $("#county");
+											select.append(new Option("请选择", ""))
+											for (var i = 0; i < res.data.length; i++) {
+												select.append("<option value=" + res.data[i].id + ">" + res.data[i].name + "</option>")
+											}
+											form.render()
+										}
+									)
+								});
+							}
+						)
+					});
+				}
+			)
+
+
+			//创建一个编辑器
+			var editIndex = layedit.build('LAY_demo_editor');
+			//自定义验证规则
+			form.verify({
+				sheng: function (value) {
+					if (value.length < 1) {
+						return '请选择省/直辖市';
+					}
+				},
+				shi: function (value) {
+					if (value.length < 1) {
+						return '请选择市/区';
+					}
+				},
+				xian: function (value) {
+					if (value.length < 1) {
+						return '请选择区/县';
+					}
+				},
+				address: function (value) {
+					if (value.length < 1 || value.length > 512) {
+						return '请输入有效地址,1~512位字符';
+					}
+				},
+				repaire: function (value) {
+					if (value.length < 1 || value.length > 40) {
+						return '请输入真实姓名，1~40位字符';
+					}
+				},
+				bumen: function (value) {
+					if (value.length < 1 || value.length > 40) {
+						return '请输入您的部门，1~40位字符';
+					}
+				},
+				zhiwei: function (value) {
+					if (value.length < 1 || value.length > 40) {
+						return '请输入您的职位，1~40位字符';
+					}
+				},
+				phone0: function (value) {
+					if (value.length < 1) {
+						return '手机号码不能为空，请输入！';
+					}
+				},
+				phone1: function (value) {
+					if (!(/^1[3456789]\d{9}$/.test(value))) {
+						return '手机号码有误，请重新输入！';
+					}
+				},
+				phone2: [
+					/^[0-9]\d*$/
+					, '请输入正确区号！'
+				],
+				phone2_1: function (value) {
+					if (value.length > 4) {
+						return '请输入正确区号！';
+					}
+				},
+				phone2_2: function (value) {
+					if (value.length < 3) {
+						return '请输入正确区号！';
+					}
+				},
+				phone3: function (value) {
+					if (value.length > 8) {
+						return '请输入正确的固定电话号码！';
+					}
+				},
+				phone3_1: function (value) {
+					if (!(/^[1-9]{1}[0-9]{5,8}$/.test(value))) {
+						return '请输入正确的固定电话号码！';
+					}
+				},
+				phone4: function (value) {
+					if (value.length < 1) {
+						return '电子邮箱不能为空，请输入！';
+					}
+				},
+				czqh: function (value) {
+					if (!(/^([0-9]\d{0,3}|10000)$/.test(value))) {
+						return '请输入正确的传真区号！';
+					}
+				},
+				cz: function (value) {
+					if (!(/^[1-9]{1}[0-9]{5,8}$/.test(value))) {
+						return '请输入正确的传真号码！';
+					}
+				},
+
+				content: function (value) {
+					layedit.sync(editIndex);
+				}
+			});
+
+
+
+			$("#return_pageOne").click(function () {
+				back2Top()
+				$("#pageOne").css("display", "block")
+				$("#pageTwo").css("display", "none")
+			})
+
+		});
+
+
+
+
+
+			// });
+
+
+
+
+	</script>
+</body>
+
+</html>

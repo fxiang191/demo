@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            width:100px;
+            height: 100px;
+            background:red;
+        }
+        .active1{
+            width:200px;height: 200px;
+            background:yellowgreen;
+            margin-left:200px;
+            opacity: 1;
+            transition:all 3s linear;
+        }
+        .active1:hover{
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <div id=app>
+        <div v-for="(task,i) of name" :key="i" style="margin-top:10px;background:#222233">
+            <button @click="chang(i)">{{task}}</button>
+            <div :class="{active : active , 'active1' : hasError}">{{i+1}}</div>
+            <!-- <div :class="[isActive ? active : hasError]">{{i+1}}</div> -->
+        </div>
+    </div >
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+new Vue({
+    el:"#app",
+    data:{
+        name:["小明","小红","李雷"],
+        // isActive:true,
+        // active:'active',
+        // hasError:'active1',
+        active:true,
+        hasError:false
+    },
+    methods:{
+        chang(e){
+            // this.active = false
+            // this.hasError = true
+            // this.isActive = false;
+            console.log(e++)
+            // alert(e)
+        }
+    }
+})    
+</script>
+</body>
+</html>

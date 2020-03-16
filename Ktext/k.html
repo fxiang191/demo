@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <textarea id="editor_id" name="content" style="width:700px;height:300px;">
+                &lt;strong&gt;HTML内容&lt;/strong&gt;
+        </textarea>
+    </div>
+<script charset="utf-8" src="./kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="./kindeditor/lang/zh-CN.js"></script>
+<script>
+    KindEditor.ready(function(K) {
+            window.editor = K.create('#editor_id');
+    });
+</script>
+<script>
+    var options = {
+        cssPath : '/css/index.css',
+        filterMode : true
+    };
+    var editor = K.create('textarea[name="content"]', options);
+    // 取得HTML内容
+    html = editor.html();
+
+    // 同步数据后可以直接取得textarea的value
+    editor.sync();
+    html = document.getElementById('editor_id').value; // 原生API
+    html = K('#editor_id').val(); // KindEditor Node API
+    html = $('#editor_id').val(); // jQuery
+
+    // 设置HTML内容
+    editor.html('HTML内容');
+    // 关闭过滤模式，保留所有标签
+    KindEditor.options.filterMode = false;
+
+    KindEditor.ready(function(K) {
+            K.create('#editor_id');
+    })
+
+// 提交
+    var uploadbutton = K.uploadbutton({
+        button : K('#ke-upload-button')[0],
+        fieldName : 'imgFile',
+        url : '../php/upload_json.php',
+        afterUpload : function(data) {
+                if (data.error === 0) {
+                        alert(data.url);
+                } else {
+                        alert(data.message);
+                }
+        }
+});
+uploadbutton.fileBox.change(function(e) {
+        uploadbutton.submit();
+});
+</script>    
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+    "msg": "查询成功",
+    "data": {
+        "enterpriseName": "上海艾菲信息科技有限公司",
+        "creditCode": "91310116MA1JC2TT9L",
+        "establishTime": "2019-05-02",
+        "totalAssets": "100",
+        "debtratio": "0",
+        "totalNumber": "500",
+        "isListed": 1,
+        "enterpriseType": 2,
+        "enterpriseIndustry": 1,
+        "businessType": 0,
+        "enterpriseProduct": "如何利用人力外包赚钱",
+        "enterpriseMake": 2,
+        "enterpriseTurnover": "5000万至1个亿",
+        "lastYearTaxes": 10,
+        "lastYearProfit": 20,
+        "creditRating": "AAA",
+        "isNearlyThreeYearsProfit": 1,
+        "occupancyLevel": 90,
+        "isTopTen": 1,
+        "isClearDevStrategy": 0,
+        "rdratio": 50
+    },
+    "auth": null,
+    "success": true,
+    "status": 200
+}

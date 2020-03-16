@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hidd01{
+            display: none;
+        }
+        .hidd{
+            margin: 0 auto;
+            margin-top:20px;
+            translate: -50%;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="codeBtn">1111111111</div>
+    <div class="codeBt">dianwo</div> -->
+
+    <div id="d1">222</div>
+    <div class="hidd hidd01">
+        文字
+    </div>
+    <button id="diandian">来啊！宝贝</button>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.js"></script>
+<link href="https://cdn.bootcss.com/jquery-toast-plugin/1.3.2/jquery.toast.css" rel="stylesheet">
+<!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+<script>
+    // $('#diandian').click(function(){
+        // https://blog.csdn.net/qq_42324086/article/details/99702035?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+        // $.toast("打你丫的，鸡毛！"); 
+    // })
+    // $("#diandian").click(function(){
+    //     showMsg("成功样式！", "success", 2000);
+    // })
+    $("#diandian").click(function(){
+    	showMsg("提示样式！", "info", 2000);
+    });
+
+    // $("#warning").click(function(){
+    // 	showMsg("警告样式！", "warning", 2000);
+    // })
+    // $("#error").click(function(){
+    // 	showMsg("错误样式！", "error", 2000);
+    // })
+    function showMsg(text, icon, hideAfter) {
+        if (heading == undefined) {
+            var heading = "提示";
+        }
+        $.toast({
+            text: text,//消息提示框的内容。
+            heading: heading,//消息提示框的标题。
+            icon: icon,//消息提示框的图标样式。
+            showHideTransition: 'fade',//消息提示框的动画效果。可取值：plain，fade，slide。
+            allowToastClose: true,//是否显示关闭按钮。(true 显示，false 不显示)
+            hideAfter: hideAfter,//设置为false则消息提示框不自动关闭.设置为一个数值则在指定的毫秒之后自动关闭消息提框
+            stack: 1,//消息栈。同时允许的提示框数量
+            position: 'top-center',//消息提示框的位置：bottom-left, bottom-right,bottom-center,top-left,top-right,top-center,mid-center。
+            textAlign: 'left',//文本对齐：left, right, center。
+            loader: true,//是否显示加载条
+			//bgColor: '#FF1356',//背景颜色。
+			//textColor: '#eee',//文字颜色。
+            loaderBg: '#ffffff',//加载条的背景颜色。
+ 
+			beforeShow: function(){
+				alert('The toast is about to appear');
+			},
+ 
+			afterShown: function () {
+				alert('Toast has appeared.');
+			},
+ 
+			beforeHide: function () {
+				alert('Toast is about to hide.');
+			},
+ 
+			afterHidden: function () {
+				alert('Toast has been hidden.');
+			}
+ 
+			/*toast事件
+			beforeShow 会在toast即将出现之前触发
+			afterShown 会在toast出现后触发
+			beforeHide 会在toast藏起来之前触发
+			afterHidden 会在toast藏起来后被触发
+			*/
+        });
+    }
+    
+
+
+
+
+//     var count = 60
+//     function codeInterval(){
+//     // debugger
+//         var timer =  setInterval(() => {
+//             if(count === 0 ) {
+//                clearInterval(timer);
+//                     // timer = null
+//                 $('.codeBtn').html('获取短信验证码')
+//                 }else {
+//                     $('.codeBtn').html(count + '秒后可重发')
+//                     count --;
+//                 }
+//             }, 1000);
+//         }
+//        $('.codeBt').click(function(){
+//             codeInterval()
+//         })
+//        $('.codeBtn').click(function(){
+//             count = 0;
+//             codeInterval()
+//         })
+    $('#d1').click(
+        function () {
+            $('.hidd').removeClass('hidd01')
+            // $('.hidd').addClass('hidd1');
+            setTimeout(()=>{
+                $('.hidd').addClass('hidd01');
+            },2000)
+        }
+    )
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.lean-maturity-diagnosis-done-content{
+    width: 1032px;
+    margin: 0 auto;
+    margin-top: 115px;
+}
+.lean-maturity-diagnosis-done-content .lean-maturity-diagnosis-done-message {
+     width: 100%;
+     text-align: center;
+     font-size: 20px;
+     position: relative;
+ }
+.lean-maturity-diagnosis-done-content .lean-maturity-diagnosis-done-message  img{
+    margin-right: 15px;
+    position: absolute;
+    top: 0px;
+}
+.lean-maturity-diagnosis-done-content .lean-maturity-diagnosis-done-message .lean-maturity-diagnosis-done-message-text {
+    display: inline-block;
+    max-width: 900px;
+    height: 100px;
+    margin-left: 60px;
+    margin-top: 7px;
+}
+.lean-maturity-diagnosis-done-content .lean-maturity-diagnosis-done-btn {
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+.lean-maturity-diagnosis-done-content .lean-maturity-diagnosis-done-btn button{
+    width: 160px;
+    height: 45px;
+    background: inherit;
+    background-color: rgba(0, 153, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

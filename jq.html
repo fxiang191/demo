@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .new{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 600px;height: 21px;background: #888;">
+        <a id="a01">顺利打开平时都开发破损的开发拍摄的扣分婆阿松大快跑发票收到开发票扫地僧的佛教【炮弹发射 说法都反馈IP骚的疯狂飒飒判断覅看撒地方跑啊的飞洒飞洒发阿斯顿覅撒地方i【撒泼的覅飞洒【判断浮框撒【发答复后的丰厚的山东i发烧i的发送哦萨芬活动i发货撒大风沙粉底哦是发送i方式偶发</a>
+    </div>
+    <ul id="d1" style="list-style: none;">
+
+    </ul>
+    <select class="selected" name="a1" id="">
+        <option value="1"></option>
+        <option value="2"></option>
+    </select>
+    <select class="selected" name="a2" id="">
+        <!-- <option value="">请选择</option> -->
+        <option value="1"></option>
+        <option value="2"></option>
+    </select>
+    <select class="selected" name="a3" id="">
+        <!-- <option value="">请选择</option> -->
+        <option value="1"></option>
+        <option value="2"></option>
+    </select>
+     <div class="weui-cell__bd">
+                    <select class="weui-select" style="font-size: 16px;padding-left:10px" onchange="changeSelectInfo({{index}},{{photo}},'{{standValue}}',{{dCount}})" id="resultSelect{{index}}">
+                    {{{resultInfo}}}
+                    <!-- <option value=" " style='text-align: center' disabled selected hidden>请选择</option> -->
+                    </select>
+<!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/superslide.2.1.js"></script> -->
+
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.js"></script>
+<script>
+    var num = 0;
+function getWorkRecodeInfo() {
+    // 消息提示框
+    _publicLoadingToast("存储中");
+                // 循环数组
+    for (var i = 0; i < globalPageparam.checkDataInfo.length; i++) {
+                // 给每一个数组的成员添加一个属性
+            if(num < 3){
+                globalPageparam.checkDataInfo[i].resultInfo = $("#resultSelect" + i).find("option:selected").text();
+                        // 判断下拉框的值
+                if ($("#resultSelect" + i).find("option:selected").text() == '后续检查') {
+                    // 消息提示框   
+                    _publicLoadingToastRemove();
+                    num+=1;
+                }
+            }else{
+                _pulicErrorTips("存在未选择内容，请先选择");
+                return;
+
+            }
+        }
+    }
+// 提价按钮点击调用
+    
+    // function add(){
+    //     for(let i = 0;i< $('.selected').length;i++){
+    //         if(num < 3){
+    //             if($('.selected').eq(i).val() == 1){
+    //                 num+=1
+    //             }
+    //         }else{
+    //             return;
+    //         }
+    //     }
+    // }
+    // add()
+    // console.log(num)
+
+    $('.selected').each(function(index,element){
+        console.log($('.selected').eq(1).val())
+    })
+    //文字溢出
+$(function(){
+    $("#a01").each(function(){
+        var maxwidth =30;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'...');
+        }
+    })
+})
+
+
+
+$(function () {
+    // debuggers
+    var html = '';
+    for (let i=0;i<5;i++) {
+        html += '<li class="new" myIndex="' + i + '">sdasdsd</li>'
+            // $('#d1').append('<li class="new" myIndex="' + i + '">sdasdsd<li>')
+    }
+        $('#d1').append(html)
+        $('.new').click(function(){
+            // 拿到下标
+            alert($(this).index('li.new'));
+            // 拿到属性值
+            //alert($(this).attr('myIndex'));
+            // 只拿对应下标的一个值 
+            //alert($('li.new').eq(2).attr('myIndex'));
+        })
+    // $('#d1').append("<li class='new'>i<li>").bind("click",{index:i},change) click="change(i)"
+    // $('#d1').on("click",".new",function(){
+    //     alert(e.i)
+    // })
+    // function change(i){
+    //     var i=i.data.index;
+    //     alert(i)
+    // }
+})
+</script>
+
+<!-- <script language="javascript" type="text/javascript">
+    function cleanWhitespace(oEelement)//定义一个删除空白节点的函数
+        {
+            for(var i=0;i<oEelement.childNodes.length;i++){
+            var node=oEelement.childNodes[i];
+            if(node.nodeType==3 && /^\s+/.test(node.nodeValue)){ 
+            
+            node.parentNode.removeChild(node)//删除节点
+            }
+        }
+    }
+</script> -->
+
+</body>
+</html>
+
+    <li>
+        <a href="javascript:;">
+            <div class="box_qyzt">
+                <div class="img_qyzt"><img src="images/img_qyzt05.jpg"></div>
+                <div class="info_qyzt">
+                    <p class="tit_qyzt">江苏宝锐汽车部件有限公司</p>
+                    <p class="ms_qyzt">主营产品：汽车零部件、摩托车、灯具、模具研发、制造,钢材、塑料粒子销售。</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+        <li>
+            <a href="http://chanpin.3dsource.cn/chshchl/index.html?i=0" target="_blank">
+                <div class="box_zhanting">
+                    <div class="img_zhanting"><img src="images/zhanting/chanpin/img_01.jpg"></div>
+                    <div class="info_zhanting">
+                        <p class="tit_zhanting">常熟市常力紧固件有限公司</p>
+                        <p class="ms_zhanting">主营产品：紧固件、汽车零件、机械设备、金属制品的制造、加工、销售；冷镦钢线材加工、产品涂覆加工等。</p>
+                    </div>
+                    <div class="logo_zhanting"><img src="images/zhanting/logo/logo_01.jpg"></div>
+                </div>
+            </a>
+        </li>

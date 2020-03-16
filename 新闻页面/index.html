@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <link rel="shortcut icon" th:href="@{/images/headlogo.png}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--禁止缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-storsse, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+
+    <title>制造云新闻资讯 | 蜂巢制造云平台 | 线上诊断与线下服务相结合，助力工业企业数字化转型</title>
+    <meta name="keywords" content="工业诊断,蜂巢互联,制造云,企业信息化,数字化,精益,生产自动化,智能制造,供应链">
+    <meta name="description"
+          content="针对精益生产体系、精益供应链、精益研发、精益运营、自动化、精益信息化、智能制造能力、工业互联网八大科目实施线上诊断与线下服务。线上诊断，对标行业先进的智能制造模式，识别被诊断企业从研发、接单、计划、下料、生产到发货运输全制造过程的体系差距，给出适合企业的精益之路；专家现场诊断服务，通过价值流分析，找出生产瓶颈，分析根源，给出改善方案。">
+    <!--必须引用  才能跨越请求资源-->
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <link rel="stylesheet" th:href="@{/css/common.css?t=0917}" href="../css/common.css?t=0917"/>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../css/style.css"/>
+
+    <link rel="stylesheet" th:href="@{/css/zcj/news.css}" href="../css/zcj/news.css"/>
+
+    <script th:src="@{/js/jquery-1.10.2.min.js}" src="../js/jquery-1.10.2.min.js"></script>
+
+    <script th:src="@{/js/common.js?t=0917}" src="../js/common.js?t=0917"></script>
+
+    <!-- 公共调用头尾 -->
+    <script type="text/javascript" src="http://frame.zhizaoyun.wang/html-Content/js/Frame.ZhiZaoYun.Common.js"></script>
+    <link href="http://frame.zhizaoyun.com/html-Content/css/frame-zhizaoyun.css" rel="stylesheet" type="text/css">
+    <script src="http://frame.zhizaoyun.com/html-Content/js/jquery.base64.js" type="text/javascript"></script>
+    <script src="http://frame.zhizaoyun.com/html-Content/js/Frame.ZhiZaoYun.Business.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function() {
+            var headerContainerId = "divHeader"; //加载头部html代码的容器ID
+            var footerContainerId = "divFooter"; //加载尾部html代码的容器ID
+            var centerContainerId = "divContent"; //中间显示详细信息代码的容器ID
+            var leftContainerId = "divLeft"; //加载左侧导航栏的容器ID
+            var searchContainerId = "divSearch"; //加载搜索框的容器ID
+            var appId = ""; //选填。暂无作用
+            var appType = ""; //选填。搜索框事件，左侧目前默认选中项。注：3:资源工具应用;4:模型;5:图纸;6:视频;12:产品样本;0:标准件库
+            var getHeaderCallBack = function () {
+                //公共头加载完成，回调函数。可选
+            };
+            var getFooterCallBack = function () {
+                //公共尾加载完成，回调函数。可选
+            };
+            var getLeftNavigationCallBack = function () {
+                //左侧菜单加载完成，回调函数。可选
+            };
+            var getSearchCallBack = function () {
+                //搜索框加载完成，回调函数。可选
+            };
+            Frame.ZhiZaoYun.Interface.Init(headerContainerId, footerContainerId, leftContainerId, centerContainerId, searchContainerId, appType, appId, getHeaderCallBack, getFooterCallBack, getLeftNavigationCallBack, getSearchCallBack);
+        }
+
+    </script>
+</head>
+<body>
+<!-- header begin -->
+<script type="text/javascript">
+    if (checkObjExist()==true){
+        document.write("<div style=\"display:none;\">");
+    }
+    else{
+        document.write("<div>")
+    }
+</script>
+<div id="divHeader" style="display:block;height:27px;"></div>
+</div>
+<!-- header end -->
+<!-- header_main begin -->
+<div class="header_main">
+    <!-- pc端头部 begin -->
+    <script type="text/javascript">
+        if (checkObjExist()==true){
+            document.write("<div style=\"display:none;\">");
+        }
+        else{
+            document.write("<div>")
+        }
+    </script>
+    <div class="header_cont">
+        <div class="header_box">
+            <div class="header_logo">
+                <a href="http://www.zhizaoyun.wang/" target="_blank" class="logo_pc"></a>
+            </div>
+            <div class="header_ewm"></div>
+        </div>
+    </div>
+</div>
+<!-- pc端头部 end -->
+<!-- 客户端头部 begin -->
+<script type="text/javascript">
+    if (checkObjExist()==true){
+        document.write("<div style=\"display:block;\">");
+    }
+    else{
+        document.write("<div>")
+    }
+</script>
+<div class="header_cont_khd">
+    <div class="header_box">
+        <div class="header_logo_khd">
+            <div class="logo_khd"></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- 客户端头部 end -->
+<div class="nav_cont">
+    <div class="nav_box">
+        <ul class="nav_ul">
+            <li><a href="http://www.zhizaoyun.wang/" target="_blank">首页</a></li>
+            <li><a href="http://www.zhizaoyun.wang/diagnosis/diagnosis.html" target="_blank">工业诊断</a></li>
+            <li><a href="http://www.zhizaoyun.wang/education/education.html">工业教育培训</a></li>
+            <li><a href="http://www.zhizaoyun.wang/solution/solution.html" target="_blank">普惠解决方案</a></li>
+            <li class="nav-dl nav-dl2">
+                <a class="nav-dt" href="http://app.zhizaoyun.wang/index.html" target="_blank">工业APP软件<b></b></a>
+                <div class="sub-zy2">
+                    <div class="nav_hover_app">
+                        <span class="icon_sj"></span>
+                        <div class="app_box">
+                            <ul>
+                                <li>
+                                    <a href="http://app.zhizaoyun.wang/soft/index.html" target="_blank">云软件<i></i></a>
+                                </li>
+                                <li>
+                                    <a href="http://app.zhizaoyun.wang/index.html#pc" target="_blank">电脑软件<i></i></a>
+                                </li>
+                                <li>
+                                    <a href="http://app.zhizaoyun.wang/index.html#app" target="_blank">手机APP<i></i></a>
+                                </li>
+                                <li class="on">
+                                    <a href="http://app.zhizaoyun.wang/index.html" target="_blank">全部<i></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="app_tit"><i></i>热门APP推荐</p>
+                        <div class="soft_box">
+                            <ul>
+                                <li>
+                                    <div class="nav_soft_box">
+                                        <a href="http://www.3dsource.cn/index.html" target="_blank">
+                                            <img src="https://www.zhizaoyun.wang/index-images/soft/app_img4.jpg">
+                                        </a>
+                                        <p>
+                                            <a href="http://www.3dsource.cn/index.html" target="_blank">零件库</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav_soft_box">
+                                        <a href="https://www.tuzhitong.com/" target="_blank">
+                                            <img src="https://www.zhizaoyun.wang/index-images/soft/app_img2.jpg">
+                                        </a>
+                                        <p>
+                                            <a href="https://www.tuzhitong.com/" target="_blank">图纸通</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nav_soft_box">
+                                        <a href="http://www.zhizaoyun.wang/download1.html" target="_blank">
+                                            <img src="https://www.zhizaoyun.wang/index-images/soft/app_img5.jpg">
+                                        </a>
+                                        <p>
+                                            <a href="http://www.zhizaoyun.wang/download1.html" target="_blank">技术资源库</a>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="http://www.zhizaoyun.wang/resource/index.html" target="_blank">技术资源库</a></li>
+            <li><a href="http://www.zhizaoyun.wang/rencai/index.html" target="_blank">专业人才库</a></li>
+            <li class="nav-dl">
+                <a class="nav-dt">合作伙伴<b></b></a>
+                <div class="sub-zy">
+                    <div class="nav_hover_partner">
+                        <span class="icon_sj"></span>
+                        <ul>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://www.newdimchina.com.cn/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic50.jpg"></a>
+                                    <p><a href="http://www.newdimchina.com.cn/" target="_blank">新迪工业软件</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://www.yonyou.com/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic44.jpg"></a>
+                                    <p><a href="http://www.yonyou.com/" target="_blank">用友</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://autodesk.zhizaoyun.wang/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic01.jpg" class="img2"></a>
+                                    <p><a href="http://autodesk.zhizaoyun.wang/" target="_blank">Autodesk</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://www.zhizaoyun.wang/3ds/index.html" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic36.jpg"></a>
+                                    <p><a href="http://www.zhizaoyun.wang/3ds/index.html" target="_blank">达索系统</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="https://www.cisco.com/c/zh_cn/index.html" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic37.jpg"></a>
+                                    <p><a href="https://www.cisco.com/c/zh_cn/index.html" target="_blank">思科</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://www.indapps.com.cn/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic38.jpg"></a>
+                                    <p><a href="http://www.indapps.com.cn/" target="_blank">索为众工业</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://easycae.zhizaoyun.wang/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic03.jpg" class="img2"></a>
+                                    <p><a href="http://easycae.zhizaoyun.wang/" target="_blank">北京蓝威</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://simright.zhizaoyun.wang/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic31.jpg"></a>
+                                    <p><a href="http://simright.zhizaoyun.wang/" target="_blank">上海数巧</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://3dthx.zhizaoyun.wang/view/homepage.html" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic13.jpg"></a>
+                                    <p><a href="http://3dthx.zhizaoyun.wang/view/homepage.html" target="_blank">杉帝科技</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://zykj.zhizaoyun.wang/" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic32.jpg"></a>
+                                    <p><a href="http://zykj.zhizaoyun.wang/" target="_blank">智云科技</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="parner_list">
+                                    <a href="http://www.zhizaoyun.wang/akb/index.html" target="_blank"><img src="http://www.zhizaoyun.wang/index-images/partner/parner-pic42.jpg"></a>
+                                    <p><a href="http://www.zhizaoyun.wang/akb/index.html" target="_blank">爱咖邦智造学院</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="http://www.zhizaoyun.wang/partner.html" target="_blank" style="display:block;padding:0;margin:0;border: 1px solid #e5e5e5;width:145px;">
+                                    <img src="http://www.zhizaoyun.wang/index-images/partner/parner-more.jpg" style="width:100%;">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+<!-- header_main end -->
+
+
+<div class="box">
+    <div class="head_img"><img th:src="@{/img/news/news.png}" src="../img/news/news.png" style="width: 100%; height: 400px"></div>
+    <div class="content_box">
+        <div class="content_type">
+            <div class="news_type">
+                <div class="type_span" id="type_msg">平台信息</div>
+                <div class="type_span" id="type_trade">行业资讯</div>
+                <div class="type_span" id="type_view">专家视点</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content_info">
+
+            </div>
+            <div id="control" class="show_more" style="margin: auto; width: 100px; background-color: dodgerblue">
+                <button type="button" class="more" style="width: 100px ; background-color: dodgerblue">
+                    <div class="more">更多+</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script th:src="@{/js/jquery-3.2.1.min.js}" src="../js/jquery-3.2.1.min.js"></script>
+
+<script th:src="@{/js/com.js}" src="../js/com.js"></script>
+<script type="text/javascript" th:inline="javascript">
+
+    /*分页加载更多*/
+    $(function(){
+        /*初始化*/
+        let counter = 0; /*计数器*/
+        let pageStart = 0; /*offset*/
+        let pageSize = 6; /*size*/
+        /*首次加载*/
+        getData(pageStart, pageSize,"1");
+        $("#type_msg").attr("style","border-bottom: #1f8dfb 2px solid;color:#1f8dfb;");
+
+        /*点击3个分类按钮，分别显示不同的类别新闻*/
+        $("#type_msg").click(function () {
+            let type="1";
+            counter = 0;
+            pageStart = 0;
+            //$('.content_info').html("");
+            $("#type_trade").attr("style","display:block;");
+            $("#type_view").attr("style","display:block;");
+            $("#type_msg").attr("style","border-bottom: #1f8dfb 2px solid; color:#1f8dfb;");
+
+            getData(pageStart, pageSize,"1");
+
+        });
+
+        $("#type_trade").click(function () {
+            let type="2";
+            counter = 0;
+            pageStart = 0;
+            //$('.content_info').html("");
+            $("#type_msg").attr("style","display:block;");
+            $("#type_view").attr("style","display:block;");
+            $("#type_trade").attr("style","border-bottom: #1f8dfb 2px solid;color:#1f8dfb;");
+
+            getData(pageStart, pageSize,"2");
+
+        });
+        $("#type_view").click(function () {
+            let type="3";
+            counter = 0;
+            pageStart = 0;
+            //$('.content_info').html("");
+            $("#type_msg").attr("style","display:block;");
+            $("#type_trade").attr("style","display:block;");
+            $("#type_view").attr("style","border-bottom: #1f8dfb 2px solid;color:#1f8dfb;");
+
+            getData(pageStart, pageSize,"3");
+        });
+
+        /*监听加载更多*/
+        $(".more").click(function () {
+            counter ++;
+            pageStart = counter * pageSize;
+            getData1(pageStart, pageSize);
+        })
+
+    });
+    let Data;
+
+    function getData(offset,size,type){
+
+        $.axcall("news/news_news.do/",$.method.F,{type:type},function (dataAll){
+            $('.content_info').html("");
+            Data = dataAll;
+            let sum = dataAll.length;
+            if(sum - offset < size ){
+                size = sum - offset;
+            }
+            let result = '';
+            for(let i=offset; i< (offset+size); i++){
+                /*<![CDATA[*/
+                var $contextPath =/*[[@{/}]]*/;
+                /*]]>*/
+                let time =  timestampToTime(dataAll[i].createTime);
+                let tempImg = dataAll[i].image ? dataAll[i].image : $contextPath+'images/default.png';
+                result += "<div class='content_show'>"+
+                    "<input id='newsId' class='newsId' type='hidden' value='"+dataAll[i].id +"'>"+
+                    "<input id='type' class='type' type='hidden' value='"+dataAll[i].type +"'>"+
+                    "<div class='aside'>"+
+                    "<img src='"+tempImg+"' style='width: 255px; height: 175px; margin-top: 10px;' alt='新闻' title='新闻资讯'>"+
+                    "</div>"+
+                    "<div class='article' style='cursor: pointer; transform: scale(1,1);'>"+
+                    "<div class='title'>"+dataAll[i].title +"</div>"+
+                    "<div class='date'>"+time+"</div>"+
+                    "<div class='content_detail'>"+dataAll[i].introduce +"</div>"+
+                    "</div>"+
+                    "</div>";
+            }
+
+            $(".content_info").append(result);
+
+            if ( (offset + size) >= sum){
+                $(".more").hide();
+            }else{
+                $(".more").show();
+            }
+        });
+    }
+
+    function getData1(offset,size){
+        let data = Data;
+        let sum = data.length;
+        let result = '';
+
+        if(sum - offset < size ){
+            size = sum - offset;
+        }
+
+        for(let i=offset; i< (offset+size); i++){
+            /*<![CDATA[*/
+            var $contextPath =/*[[@{/}]]*/;
+            /*]]>*/
+            let time =  timestampToTime(data[i].updateTime);
+            let tempImg = data[i].image ? data[i].image : $contextPath+'images/default.png';
+            result += "<div class='content_show'>"+
+                "<input id='newsId' class='newsId' type='hidden' value='"+data[i].id +"'>"+
+                "<input id='type' class='type' type='hidden' value='"+data[i].type +"'>"+
+                "<div class='aside'>"+
+                "<img src='"+tempImg+"' style='width: 255px; height: 175px; margin-top: 10px;' alt='新闻' title='新闻资讯'>"+
+                "</div>"+
+                "<div class='article'>"+
+                "<div class='title'>"+data[i].title +"</div>"+
+                "<div class='date'>"+time +"</div>"+
+                "<div class='content_detail'>"+data[i].introduce +"</div>"+
+                "</div>"+
+                "</div>";
+        }
+        $('.content_info').append(result);
+        if ( (offset + size) >= sum){
+            $(".more").hide();
+        }else{
+            $(".more").show();
+        }
+    }
+
+
+
+
+    /*点击传需要看详情的id到后台*/
+    $(document).on("click",".content_show",function () {
+        /*<![CDATA[*/
+        var $contextPath =/*[[@{/}]]*/;
+        /*]]>*/
+        let newsId = $(this).find(".newsId").attr("value");
+        let type = $(this).find(".type").attr("value");
+        if($contextPath=="/"){
+            window.location.href="/news/news_detail.do?id="+newsId+'&type='+type;
+        }else{
+            window.location.href=$contextPath+"news/news_detail.do?id="+newsId+'&type='+type;
+        }
+
+    });
+
+
+    //处理时间戳的方法
+    function timestampToTime(timestamp) {
+        let date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        Y = date.getFullYear() + '-';
+        M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        D = (date.getDate() + 1 < 10 ? '0' + (date.getDate() + ' '): date.getDate())+'';
+//        D = date.getDate() + ' ';
+        return Y + M + D;
+    }
+
+
+</script>
+
+<!-- container end -->
+<!-- 侧边悬浮窗 begin -->
+<script type="text/javascript">
+    if (checkObjExist()==true){
+        document.write("<div style=\"display:none;\">");
+    }
+    else{
+        document.write("<div>")
+    }
+</script>
+
+</div>
+<!-- 侧边悬浮窗 end -->
+<!-- footer begin -->
+<script type="text/javascript">
+    if (checkObjExist()==true){
+        document.write("<div style=\"display:none;\">");
+    }
+    else{
+        document.write("<div>")
+    }
+</script>
+<div id="divFooter"></div>
+</div>
+<!-- footer end -->
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?a0b5587b370aadd883c568f7877873cd";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?7c210001a5fc735b53f02d57c60bc415";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+    else {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?2e3c2c1b0cf1bf0bf809f6be265df4d2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

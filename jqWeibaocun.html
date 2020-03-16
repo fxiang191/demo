@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试</title>
+  <!-- <script>
+  　　window.onbeforeunload=function(e){  
+   　　var e = window.event||e; 
+   　　e.returnValue=("确定离开当前页面吗？");
+   }
+ 　</script> -->
+ </head>
+ <body>
+  测试
+    <div>nihao a </div>
+    <div><input type="text" placeholder="手机号"></div>
+    <div><label><input type="checkbox"></label></div>
+    <div><label><input type="checkbox" checked>1</label></div>
+    <div><label><input type="checkbox" checked>2</label></div>
+    <div><label><input type="checkbox" checked>3</label></div>
+  <button><a href="https://www.jb51.net/article/130010.htm">跳转</a></button>
+  <div><input type="text" value="正在查看相关出处" onfocus=this.blur()></div>
+ </body>
+ <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.js"></script>
+ <script type="text/javascript">
+//  获取 input的选中数量
+        $(function(){
+           console.log($("input[type='checkbox']:checked").length);
+           $("input[type='checkbox']:checked").each(function(index,item){
+            var str = ""
+                if ($("input[type='checkbox']:checked").length-1==index) {
+                    str += $(this).val();
+                } else {
+                    str += $(this).val() + ",";
+                }  
+           })
+        }) 
+           
+ </script>
+</html>

@@ -1,0 +1,369 @@
+.company-approval-result-content{
+    min-height: 300px;
+    width: 100%;
+}
+.company-approval-result-content .approval-no-pass, .company-approval-result-content .approval-no-recommended, .company-approval-result-content .approval-wait-recommended, .company-approval-result-content .approval-haved-recommended, .company-approval-result-content .approval-not-this-step{
+    width: 1023px;
+    margin: 0 auto;
+    min-height: 280px;
+}
+.company-approval-result-content .approval-pass{
+    width: 1150px;
+    margin: 0 auto;
+    min-height: 280px;
+}
+.approval-no-pass-title span, .approval-pass-title span,.approval-no-recommended-title span , .approval-wait-recommended-title span, .approval-haved-recommended-title span , .approval-not-this-step-title span {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+.approval-pass-message{
+    background-color: #fff5f5;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 54px;
+    line-height: 54px;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+.approval-pass-message img{
+    position: relative;
+    top: -1px;
+}
+.approval-no-pass-title span:after,.approval-pass-title span:after, .approval-no-recommended-title span:after, .approval-wait-recommended-title span:after, .approval-haved-recommended-title span:after, .approval-not-this-step-title span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: #d8d8d8;
+    width: 830px;
+    height: 1px;
+}
+.approval-no-pass-title span:after, .approval-pass-title span:after,.approval-no-recommended-title span:after, .approval-wait-recommended-title span:after , .approval-haved-recommended-title span:after, .approval-not-this-step-title span:after {
+    right: 20px;
+}
+.approval-no-pass-content,.approval-pass-content, .approval-no-recommended-content, .approval-wait-recommended-content, .approval-haved-recommended-content, .approval-not-this-step-content{
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.approval-not-this-step-content .approval-not-this-step-info .approval-not-this-step-icon{
+    float: left;
+}
+.approval-not-this-step-content .approval-not-this-step-info .approval-not-this-step-content{
+    float: left;
+    width: 375px;
+    line-height: 60px;
+    height: 60px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.approval-no-pass-content .no-pass-notice,.approval-pass-content .pass-notice, .approval-no-recommended-content .no-recommended-notice, .approval-wait-recommended-content .wait-recommended-notice, .approval-haved-recommended-content .haved-recommended-notice{
+    text-align: center;
+}
+.no-pass-notice span,.pass-notice span, .no-recommended-notice span, .wait-recommended-notice span, .haved-recommended-notice span{
+    font-size: 18px;
+    color: #333333;
+}
+.no-pass-opinion{
+    text-align: center;
+    padding: 15px 0;
+    width: 738px;
+    margin: 0 auto;
+}
+.pass-opinion{
+    text-align: center;
+    padding: 15px 0;
+    width: 430px;
+    margin: 0 auto;
+}
+.no-recommended-opinion{
+    text-align: center;
+    padding: 15px 0;
+    width: 615px;
+    margin: 0 auto;
+}
+.wait-recommended-opinion{
+    text-align: center;
+    padding: 15px 0;
+    width: 430px;
+    margin: 0 auto;
+}
+.haved-recommended-opinion{
+    text-align: center;
+    padding: 15px 0;
+    width: 575px;
+    margin: 0 auto;
+}
+.no-pass-opinion .on-line,.pass-opinion .on-line, .no-recommended-opinion .on-line, .wait-recommended-opinion .on-line, .haved-recommended-opinion .on-line{
+    display: inline-block;
+    font-size: 14px;
+}
+.no-recommended-opinion .on-line span, .wait-recommended-opinion .on-line span, .haved-recommended-opinion .on-line span{
+    display: inline-block;
+    overflow: hidden;
+}
+.no-recommended-opinion .on-line .no-recommended-tip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 355px;
+}
+.wait-recommended-opinion .on-line .wait-recommended-tip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 170px;
+}
+.haved-recommended-opinion .on-line .haved-recommended-tip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 310px;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info span, .pass-opinion .on-line .pass-opinion-info span{
+    float: left;
+    font-size: 14px;
+    color: #333333;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info .no-pass-opinion-info-title, .pass-opinion .on-line .pass-opinion-info .pass-opinion-info-title{
+  color: #2c2020ba
+}
+.no-pass-opinion .on-line .no-pass-opinion-info-bottom-left, .no-pass-opinion .on-line .no-pass-opinion-info-bottom-right,.pass-opinion .on-line .pass-opinion-info-bottom-left, .pass-opinion .on-line .pass-opinion-info-bottom-right{
+    margin-top: 15px;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info-bottom-left span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 230px;
+    line-height: 20px;
+}
+.pass-opinion .on-line .pass-opinion-info-bottom-left span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 80px;
+    line-height: 20px;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info-bottom-right span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 335px;
+    line-height: 20px;
+}
+.pass-opinion .on-line .pass-opinion-info-bottom-right span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 165px;
+    line-height: 20px;
+}
+.no-pass-opinion .on-line-width-left{
+    width: 300px;
+}
+.pass-opinion .on-line-width-left{
+      width: 150px;
+  }
+.no-pass-opinion .on-line-width-right{
+    width: 408px;
+}
+.pass-opinion .on-line-width-right{
+    width: 245px;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info-content, .pass-opinion .on-line .pass-opinion-info-content{
+    display: inline-block;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info-content-left, .pass-opinion .on-line .pass-opinion-info-content-left{
+    float: right;
+}
+.no-pass-opinion .on-line .no-pass-opinion-info-content-right, .pass-opinion .on-line .pass-opinion-info-content-right{
+    float: left;
+}
+.no-pass-opinion .verticalBar, .pass-opinion .verticalBar{
+    width: 1px;
+    height: 52px;
+    background: #d8d8d8;
+    margin: 0 10px;
+}
+
+.no-pass-approval-info,.pass-approval-info{
+    width: 500px;
+    min-height: 214px;
+    background: #f5f5f5;
+    margin: 0 auto;
+}
+.no-pass-approval-info .no-pass-approval-info-content, .pass-approval-info .pass-approval-info-content{
+    padding: 20px;
+    float: left;
+    width: 270px;
+}
+.no-pass-approval-info .no-pass-approval-info-content .no-pass-approval-info-content-item span,.pass-approval-info .pass-approval-info-content .pass-approval-info-content-item span{
+    min-height: 35px;
+    line-height: 35px;
+    display: inline-block;
+}
+.no-pass-approval-info .no-pass-approval-info-content .no-pass-approval-info-content-item .no-pass-approval-info-content-item-left,.pass-approval-info .pass-approval-info-content .pass-approval-info-content-item .pass-approval-info-content-item-left{
+    float: left;
+    color: #666666
+}
+.no-pass-approval-info .no-pass-approval-info-content .no-pass-approval-info-content-item .no-pass-approval-info-content-item-right,.pass-approval-info .pass-approval-info-content .pass-approval-info-content-item .pass-approval-info-content-item-right{
+    float: left;
+    max-width: 200px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.no-pass-approval-info .no-pass-approval-info-content .no-pass-approval-info-content-item .no-pass-approval-info-content-item-name-right,.pass-approval-info .pass-approval-info-content .pass-approval-info-content-item .pass-approval-info-content-item-name-right{
+    float: left;
+    max-width: 185px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.no-pass-approval-info .no-pass-approval-info-icon,.pass-approval-info .pass-approval-info-icon{
+    float: right;
+}
+.no-pass-approval-info .no-pass-approval-info-icon img,.pass-approval-info .pass-approval-info-icon img{
+    position: relative;
+    top: 50px;
+    right: 50px;
+}
+
+.no-recommended-approval-info{
+    width: 500px;
+    min-height: 214px;
+    background: #f5f5f5;
+    margin: 0 auto;
+}
+.no-recommended-approval-info .no-recommended-approval-info-content{
+    padding: 20px;
+    float: left;
+    width: 270px;
+}
+.no-recommended-approval-info .no-recommended-approval-info-content .no-recommended-approval-info-content-item span{
+    min-height: 35px;
+    line-height: 35px;
+    display: inline-block;
+}
+.no-recommended-approval-info .no-recommended-approval-info-content .no-recommended-approval-info-content-item .no-recommended-approval-info-content-item-left{
+    float: left;
+    color: #666666
+}
+.no-recommended-approval-info .no-recommended-approval-info-content .no-recommended-approval-info-content-item .no-recommended-approval-info-content-item-right{
+    float: left;
+    max-width: 200px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.no-recommended-approval-info .no-recommended-approval-info-content .no-recommended-approval-info-content-item .no-recommended-approval-info-content-item-name-right{
+    float: left;
+    max-width: 185px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.no-recommended-approval-info .no-recommended-approval-info-icon{
+    float: right;
+}
+.no-recommended-approval-info .no-recommended-approval-info-icon img{
+    position: relative;
+    top: 65px;
+    right: 50px;
+}
+
+.wait-recommended-approval-info{
+     width: 500px;
+     min-height: 214px;
+     background: #f5f5f5;
+     margin: 0 auto;
+ }
+.wait-recommended-approval-info .wait-recommended-approval-info-content{
+    padding: 20px;
+    float: left;
+    width: 270px;
+}
+.wait-recommended-approval-info .wait-recommended-approval-info-content .wait-recommended-approval-info-content-item span{
+    min-height: 35px;
+    line-height: 35px;
+    display: inline-block;
+}
+.wait-recommended-approval-info .wait-recommended-approval-info-content .wait-recommended-approval-info-content-item .wait-recommended-approval-info-content-item-left{
+    float: left;
+    color: #666666
+}
+.wait-recommended-approval-info .wait-recommended-approval-info-content .wait-recommended-approval-info-content-item .wait-recommended-approval-info-content-item-right{
+    float: left;
+    max-width: 200px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.wait-recommended-approval-info .wait-recommended-approval-info-content .wait-recommended-approval-info-content-item .wait-recommended-approval-info-content-item-name-right{
+    float: left;
+    max-width: 185px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.wait-recommended-approval-info .wait-recommended-approval-info-icon{
+    float: right;
+}
+.wait-recommended-approval-info .wait-recommended-approval-info-icon img{
+    position: relative;
+    top: 65px;
+    right: 50px;
+}
+
+.haved-recommended-approval-info{
+    width: 500px;
+    min-height: 214px;
+    background: #f5f5f5;
+    margin: 0 auto;
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-content{
+    padding: 20px;
+    float: left;
+    width: 270px;
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-content .haved-recommended-approval-info-content-item span{
+    min-height: 35px;
+    line-height: 35px;
+    display: inline-block;
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-content .haved-recommended-approval-info-content-item .haved-recommended-approval-info-content-item-left{
+    float: left;
+    color: #666666
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-content .haved-recommended-approval-info-content-item .haved-recommended-approval-info-content-item-right{
+    float: left;
+    max-width: 200px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-content .haved-recommended-approval-info-content-item .haved-recommended-approval-info-content-item-name-right{
+    float: left;
+    max-width: 185px;
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-icon{
+    float: right;
+}
+.haved-recommended-approval-info .haved-recommended-approval-info-icon img{
+    position: relative;
+    top: 65px;
+    right: 50px;
+}

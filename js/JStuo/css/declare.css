@@ -1,0 +1,219 @@
+/*==========企业报名申请 begin==========*/
+/*banner*/
+.banner_qybm{background: url(../images/enroll/banner.jpg) no-repeat center top;height: 125px;width: 1200px;margin: 20px auto 30px;}
+/*container*/
+.cont_box{width: 1198px;margin: 0 auto 70px;border: 1px solid #e0e0e0;padding: 50px 0px;}
+.form_box{margin-bottom: 30px;overflow: hidden;}
+.form_label{width: 205px;font-size: 14px;color: #444;text-align: right;display: inline-block;margin-right: 40px; float:left;line-height: 35px;}
+.form_label span{color: #ff0000;vertical-align: middle;margin-right: 4px;}
+.form_label2{width: 640px;}
+.form_input{display: inline-block;}
+.form_input input{width: 638px;height: 35px;border: 1px solid #dadada;padding: 0px 10px;color: #444;}
+.form_select{display: inline-block;}
+.form_select select{width: 230px;height: 37px;border: 1px solid #dadada;padding: 0px 10px;color: #444;margin-right: 30px;}
+.form_textarea{display: inline-block;width: 900px;}
+.form_textarea textarea{width: 638px;height: 75px;border: 1px solid #dadada;padding: 8px 10px;line-height: 25px;color: #444;}
+.form_right{float: left;margin-top: 10px;}
+.form_radio{display: inline-block;margin-right: 20px;}
+.form_more .form_radio{margin-bottom: 20px;}
+.form_radio input{display: none;}
+.form_radio label{display: inline-block;background: url(../images/enroll/ico_radio.png) no-repeat left top;font-size: 14px;color: #555;line-height: 18px;padding-left: 25px;}
+.form_radio input:checked + label{background: url(../images/enroll/ico_radio_checked.png) no-repeat left top;}
+.w_945{width: 945px;}
+.w_650{width: 650px;}
+.btn_next{display: block;width: 110px;height: 40px;line-height: 40px;background: #1f8dfb;font-size: 16px;color: #fff;text-align: center;border-radius: 3px;margin: 30px auto;}
+.btn_prev{display: block;width: 110px;height: 40px;line-height: 40px;background: #b1b1b1;font-size: 16px;color: #fff;text-align: center;border-radius: 3px;float: left;margin-right: 23px;}
+.btn_next2{float: left;margin: 0px;}
+.btn_box{text-align: center;overflow: hidden;margin: 30px auto;width: 250px;}
+.btn_submit{display: block;width: 110px;height: 40px;line-height: 40px;background: #1f8dfb;font-size: 16px;color: #fff;text-align: center;border-radius: 3px;float: left;}
+.form2,.form3{display: none;}
+
+.qysb{
+    width:100%;
+    height:50px;
+    line-height:50px;
+    
+}
+.main_qycx{
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 16px;
+    position: relative;
+}
+.line_blue{
+    width:3px;
+    background: #1f8dfb;
+    height:20px;
+    margin-top:15px;
+    margin-right:10px;;
+}
+#pageThree .input_jbxx{
+    font-weight: bold;
+}
+#pageThree .srjbxx{
+    width:100%;
+    height:80px;
+     display: flex;
+     justify-content: center;
+      margin-bottom:60px;
+}
+#pageThree .qsrqyxx{
+    display: flex;
+    width:1000px;
+    margin:20px 100px 40px 100px;
+}
+#pageThree .input_line{
+    margin-top: 10px;
+    height:2px;
+    width:830px;
+    background: #eee;
+   margin-left: 10px;;
+}
+.denglu_tuichu{
+    float: right;
+    height:50px;
+    position: absolute;
+    right:0;
+    display: flex;
+    font-size: 14px;
+}
+.header_img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    margin-top:10px;
+    background: url("../../images/enroll/header.png") no-repeat 0px 0px/100% 100%;
+}
+#fudong{
+    height:100%;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#fudong img{
+    width:15px;
+    height:15px;
+    margin-left: 5px;
+}
+#yincang{
+    width:100px;
+    height:40px;
+    z-index: 99999;
+    line-height: 40px;
+    background: white;
+    border:1px solid rgb(173, 172, 172);
+     position: absolute;
+     right: 0px;
+     display: none;
+     cursor: pointer;
+}
+#yincang img{
+    margin-left: 5px; 
+    width:18px;
+    height:18px;
+}
+#pageThree #form1{
+    width:900px;
+    margin: 0 auto;
+}
+#pageThree .bt_red{
+    color: red;
+}
+
+#pageThree .layui-form-label{
+    width:300px !important;
+}
+
+#pageThree .center_bnt{
+    margin-left:240px;
+    width:120px;
+}
+#pageThree .center_bnt_1{
+    width:120px;
+}
+#pageThree .layui-input-block{
+    margin-bottom: 15px;
+}
+#pageThree .layui-icon{
+    display:none!important ;
+}
+#pageThree .layui-input-inline{
+    width:650px !important ;
+}
+#pageThree .layui-form-item{
+    margin-bottom:25px!important ;
+}
+#pageThree .btn_top{
+    margin-top:40px;
+}
+#pageThree .layui-form-select dl dd.layui-this { 
+    background-color:#1E9FFF!important;
+}
+#pageThree .layui-form-select dl dd:hover{
+    background-color:rgb(42, 185, 241)  !important;
+}
+/* .layui-laydate 
+.layui-this{
+    background-color: #1E9FFF!important;
+} */
+#pageThree .border_red{
+    border:1px solid red !important;
+}
+#pageThree .width_210{
+    width:210px;
+    margin-right: 10px;
+}
+#pageThree .richradio,
+ .richcheckbox{
+width:200px;
+}
+#pageThree .bid_box{
+    width:100%;
+     display: flex;
+}
+#pageThree .bid_box_fujian{
+    width:180px;
+    text-align: right;
+}
+#pageThree .bid_box_fujian_shenqing{
+    font-size:16px;
+    line-height:30px
+}
+#pageThree .add_img{
+    width:55px;
+    height:55px;
+    border:1px dashed rgb(149, 149, 149);
+    background: url(../images/declare/add.png) no-repeat center/50% 50%;
+}
+#pageThree .font_words_01{
+    font-size: 12px;
+    text-indent: 70px;
+    line-height:30px;
+    margin-top: 10px;
+}
+#pageThree .font_words_02{
+    font-size: 12px;
+    text-indent:70px;
+    color:#1f8dfc;
+    margin-bottom: 40px;
+}
+#pageThree .show_hide{
+    display: none;
+}
+#pageThree .test_1{
+    position:relative;
+}
+#pageThree .aaaa{
+    width: 56px;
+    height:56px;
+    opacity: 0;
+}
+#pageThree .words_zs{
+    position: absolute;
+    width:400px; top:0;
+    left:60px;
+}
+
+
+/*==========企业报名申请 end==========*/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+ var arr = [1,6,2,3,4],papers = "";
+//  console.log(arr.indexOf(arr[1]))
+ var data = [
+     {para:0,type:0},
+     {para:1,type:1},
+     {para:2,type:2},
+     {para:3,type:3}
+     ]
+ var num = 5
+ function add(num){
+    for(var i = 0 ; i < arr.length ; i++){
+        if( arr[i] == num ){
+            console.log("存在")
+            arr.splice(i,1)
+            console.log(arr)
+        }else{
+            arr.push(num)
+            console.log(arr)
+            break;   
+        }
+    }
+ }
+ function getArr(arr){
+     arr.sort()
+     console.log(arr)
+    for(var i = 0 ; i < arr.length ; i++){
+        if( i > arr.length ){
+            break;
+        }else{
+            papers += arr[i]
+            papers += ","
+            // papers.substring(0,papers.length-1)
+        }
+    }
+ }
+ add(num)
+ getArr(arr)
+    console.log(papers.substring(0,papers.length-1))
+    console.log(papers)
+</script>
+</body>
+</html>

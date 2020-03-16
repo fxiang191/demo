@@ -1,0 +1,21 @@
+{
+    "msg": "查询成功",
+    "data": {
+        "belongProvince": 14,
+        "belongCity": 35,
+        "belongArea":11,
+        "detailAdress": "江苏省南京市建邺区",
+        "contactName": "麻子",
+        "department": "研发部",
+        "position": "项目主管",
+        "contactTelephone": "0514-83965668",
+        "contactPhone": "18000000000",
+        "contactEmail": "3520@163.com",
+        "contactFax": "85-83865774",
+        "corporateRepresentative": "王二",
+        "corporateRepresentativePhone": "15000000000"
+    },
+    "auth": null,
+    "success": true,
+    "status": 200
+}

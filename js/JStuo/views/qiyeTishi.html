@@ -1,0 +1,245 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <!-- 方祥 CSS -->
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+
+        <!-- 页头  页脚样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+      .tiShiClass01{align-items: center;text-align: center;height: 400px;}
+      .tiShiClass02{margin-top: 24px;}
+      .tiShiClass03{font-size: 16px;}
+      .tiShiClass04{color: #1E9FFF;}
+      .tiShiClass05{color: rgb(255,0,0);margin-top: 24px;font-size: 16px;}
+      .tiShiClass06{margin-top: 40px;}
+      .tiShiClass07{border:1px solid #ddd;border-radius: 5px;width: 144px;height: 40px;background-color: #fff;margin-right: 20px;cursor: pointer}
+      .tiShiClass08{border:1px solid #ddd;border-radius: 5px;width: 144px;height: 40px;background-color: #1E9FFF;color: #fff;cursor: pointer}
+        .tiShiClass04:hover{ color: #1E9FFF;cursor: pointer}
+    </style>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 页头 -->
+    <script src="../js/public/header.js"></script>
+
+    <!-- 导航栏 -->
+    <script src="../js/public/nav.js"></script>
+    <!-- title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>企业自评估</div>
+        </div>
+    </div>
+    <!-- 内容区域 -->
+      <div class="container">
+          <div class="myShijuan tiShiClass01">
+            <div class="tiShiClass02"><img src="../images/Industrial/weiwancheng.png"></div >
+            <div class="tiShiClass03">
+              您还有<span class="tiShiClass04 spanClass"></span>自评估项信息未填写完成，是否继续填写？
+            </div>
+            <div class="tiShiClass05">
+              若自评估项信息未填写完成，职能部门不能进行推荐/遴选。
+            </div>
+
+          <!-- 按钮 -->
+            <div class="tiShiClass06">
+                <button class="tiShiClass07">否</button>
+                <a class="myA02"><button class="tiShiClass08">继续输入自评信息</button></a>
+            </div>
+          </div>
+      </div>
+    <!-- 页脚 -->
+	<script src="../js/public/foot.js"></script>
+
+<script type="text/javascript">
+    //  初始化查询
+    var data = { } ;
+
+    $.ajax({
+        type : 'get',
+        url : ajaxUrl + "apply/chooseReport",
+        dataType: 'json',
+        async: false, //更改为同步
+        xhrFields: {
+        withCredentials: true
+        },
+        crossDomain: true,
+        success : function(res) {
+            // console.log(res)
+            if( res.code == 200 ){
+                if(res.auth == 2 ){
+                    // window.open('./zipingWeikaishi.html?nav=1','_self')
+                    window.location.href = './zipingWeikaishi.html?nav=1'
+                }
+                data.enterpriseCode = res.data[0].enterpriseCode;
+                data.userId = res.data[0].userId;
+                data.textId = res.data[0].textId;
+                data.diagnosisYear = res.data[0].diagnosisYear;
+                data.enterpriseName = res.data[0].enterpriseName;
+                data.telphone = res.data[0].telphone
+                data.province = res.data[0].province;
+                data.city = res.data[0].city;
+                data.userName = res.data[0].userName;
+
+                for(var i = 1;i < res.data.length;i++){
+                    // console.log(res.data[i].enterpriseid)
+                    if(res.data[i].paperid == 1){
+                        // console.log(res.data[i].paperid)
+                        // 用工业互联网
+                        data.enterpriseId01 = res.data[i].enterpriseid
+                    }
+
+                    if(res.data[i].paperid == 2){
+                        // console.log(res.data[i].paperid)
+                        // 用智能制造能力
+                        data.enterpriseId02 = res.data[i].enterpriseid
+                    }
+
+                    if(res.data[i].paperid == 3){
+                        // console.log(res.data[i].paperid)
+                        // 用企业上云
+                        data.enterpriseId03 = res.data[i].enterpriseid
+                    }
+                }
+
+                // 继续输入跳转
+                for(var i =0;i<res.data.length;i++){
+                    if(res.data[i].status == 0){
+                        if(res.data[i].paperid == 0 ){
+                            $('.myA02').attr('href','./leanMaturityDiagnosis.html?'+'enterpriseCode='+data.enterpriseCode+'&'+'userId='+data.userId+'&'+'textId='+data.textId+'&'+'diagnosisYear='+data.diagnosisYear+'&'+'enterpriseName='+encodeURI(data.enterpriseName)+'&'+'telphone='+data.telphone+'&'+'province='+encodeURI(data.province)+'&'+'city='+encodeURI(data.city)+'&'+'userName='+encodeURI(data.userName)+'&nav=1');
+                            break;
+                        } else if (res.data[i].paperid == 1){
+                            $('.myA02').attr('href','./industrialOne.html?paperid=1&nav=1'+'&enterpriseId='+data.enterpriseId01);
+                            break;
+                        } else if (res.data[i].paperid == 2){
+
+                            $('.myA02').attr('href','./capacityOne.html?paperid=2&nav=1'+'&enterpriseId='+data.enterpriseId02);
+                            break;
+                        } else if (res.data[i].paperid == 3){
+
+                            $('.myA02').attr('href','./qiyeYunOne.html?paperid=3&nav=1'+'&enterpriseId='+data.enterpriseId03);
+                            break;
+                        }
+                    }
+                }
+
+                // 文字未完成
+                for(var i =0;i<res.data.length;i++){
+                    // 用精益诊断的文字
+                    if(res.data[i].paperid == 0){
+                        if(res.data[i].status === 0 ){
+                            // 追加标签 追加a链接;
+                            $('.spanClass').append('<a class="tiShiClass04 myA01">'+res.data[i].papername+'、'+'</a>')
+
+                            $('.myA01').attr('href','./leanMaturityDiagnosis.html?'+'enterpriseCode='+data.enterpriseCode+'&'+'userId='+data.userId+'&'+'textId='+data.textId+'&'+'diagnosisYear='+data.diagnosisYear+'&'+'enterpriseName='+encodeURI(data.enterpriseName)+'&'+'telphone='+data.telphone+'&'+'province='+encodeURI(data.province)+'&'+'city='+encodeURI(data.city)+'&'+'userName='+encodeURI(data.userName)+'&nav=1')
+                        }
+                    }
+
+                    // 工业互联网文字
+                    if(res.data[i].paperid == 1){
+                        if(res.data[i].status === 0){
+                            $('.spanClass').append('<a class="tiShiClass04" href="./industrialOne.html?paperid=1&nav=1&enterpriseId='+data.enterpriseId01+'"'+">"+res.data[i].papername+'、'+'</a>')
+
+                        }
+                    }
+
+                    // 智能制造能力文字
+                    if(res.data[i].paperid == 2){
+                        if(res.data[i].status === 0){
+                            $('.spanClass').append('<a class="tiShiClass04" href="./capacityOne.html?paperid=2&nav=1&enterpriseId='+data.enterpriseId02+'"'+">"+res.data[i].papername+'、'+'</a>')
+
+                        }
+                    }
+
+                    // 用企业上云的文字
+                    if(res.data[i].paperid == 3){
+                        if(res.data[i].status === 0){
+                            $('.spanClass').append('<a class="tiShiClass04" href="./qiyeYunOne.html?paperid=3&nav=1&enterpriseId='+data.enterpriseId03+'"'+">"+res.data[i].papername+'、'+'</a>')
+
+                        }
+                    }
+                }
+            } else {
+                    alert('请求错误');
+                }
+        },
+        error : function(err) {
+            alert('请求错误');
+        }
+    })
+
+    $('.spanClass .tiShiClass04:last').html($('.spanClass .tiShiClass04:last').html().substring(0,$('.spanClass .tiShiClass04:last').html().length-1))
+
+    $('.tiShiClass07').click(function(){
+        // window.open('./zipingWeikaishi.html?nav=1','_self')
+        window.location.href = './zipingWeikaishi.html?nav=1'
+    })
+    // console.log(data)
+</script>
+
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

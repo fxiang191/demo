@@ -1,0 +1,22 @@
+{
+  "msg":"加载本年批次",
+  "data":{
+    "selectionUser":null,
+    "recommendTime":"2020-01-31 20:30",
+    "cityCode":"320100",
+    "contactName":"沈翔",
+    "approvalState":"3",
+    "batch":"2020",
+    "rapplyid":"6fd970d6c0b8453eacc0ca7ff7463a54",
+    "completedCount":0,
+    "selectionTime":null,
+    "selectionAdvice":"2222",
+    "recommenUser":"session推荐人",
+    "recommendAdvice":"推荐通过",
+    "createTime":"2020-01-31 14:30",
+    "enterpriseName":"深圳宜家"
+  },
+  "auth":"2",
+  "success": true,
+  "code": 200
+}

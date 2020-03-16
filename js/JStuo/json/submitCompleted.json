@@ -1,0 +1,11 @@
+{
+    "msg": "查询成功",
+    "data": {
+        "applicantName": "张三",
+        "companyName": "江苏技术信息有限公司",
+        "applicantTime": "2020-12-29 16:00:12"
+    },
+    "auth": null,
+    "success": true,
+    "status": 200
+}

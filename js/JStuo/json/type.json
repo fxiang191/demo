@@ -1,0 +1,43 @@
+
+    {
+        "code": 200,
+        "msg": null,
+        "data": [
+          {
+            "typeid": "1",
+            "typename": "国家行政企业"
+          },
+          {
+            "typeid": "2",
+            "typename": "公私合作企业"
+          },
+          {
+            "typeid": "3",
+            "typename": "中外合资企业"
+          },
+          {
+            "typeid": "4",
+            "typename": "社会组织机构"
+          },
+          {
+            "typeid": "5",
+            "typename": "国际组织机构"
+          },
+          {
+            "typeid": "6",
+            "typename": "外资企业"
+          },
+          {
+            "typeid": "7",
+            "typename": "私营企业"
+          },
+          {
+            "typeid": "8",
+            "typename": "集体企业"
+          },
+          {
+            "typeid": "9",
+            "typename": "国防军事企业"
+          }
+        ]
+      }

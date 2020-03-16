@@ -1,0 +1,565 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--禁止缓存-->
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+	<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+	<META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+	<meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+	<meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <!-- 方祥 CSS -->
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+
+        <!-- 页头  页脚样式 -->
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <style>
+    /* layui改写 */
+    .layui-form-select dl dd.layui-this {
+    background-color: #1E9FFF!important;
+    }
+    .layui-input, .layui-textarea {
+    display: inline!important;
+    }
+
+    /* 下拉多选改写  */
+    .xm-select-parent dl dd.xm-select-this div i {
+      color: #1E9FFF!important;
+    }
+    .xm-select-parent .xm-select-title div.xm-select-label>span {
+      background-color: #1E9FFF!important;
+    }
+    .xm-form-checkbox:hover > i {
+      border-color: #1E9FFF!important;
+    }
+    .xm-form-checkbox > i {
+      border: 1px solid #1E9FFF!important;
+    }
+    .xm-select-parent dd .xm-cz:hover {
+      color: #1E9FFF!important;
+    }
+
+    /* Three 样式改动 */
+      /* 文件上传按钮 */
+    .myBtn01{
+      background-color:rgb(255, 255, 255)!important;color:#999999!important;border:1px solid rgba(228, 228, 228, 1)!important;
+    }
+    .myBtn02{
+      background-color: #1f8dfb!important;
+      color: rgb(255, 245, 245)!important;
+    }
+    .myDivClass01{width: 51%;}
+    .moRen{display: none;}
+    .spanUpload{
+        display: inline-block;
+        width: 390px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        }
+    .del{
+        cursor: pointer;
+        display: none;
+        margin-right: 20px;
+    }
+</style>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+<body  style="font-family: 微软雅黑;">
+    <!-- 页头 -->
+    <script src="../js/public/header.js"></script>
+
+    <!-- 导航栏 -->
+    <script src="../js/public/nav.js"></script>
+    <!-- 试卷title -->
+    <div class="myShijuanTitle">
+        <div>
+            <div></div>
+            <div>工业互联网平台建设自评估信息
+                <span>（共7步,当前第
+                    <span>3</span>步）
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 试卷内容区域 -->
+    <div class="container">
+        <!-- 步骤 -->
+        <div class="myShijuan">
+            <div class="myShijuanBuzhou">
+                <img src="../images/Industrial/1_2.png" alt="">
+            </div>
+            <div>
+                <hr class="myHrClass">
+            </div>
+            <!-- 正文 -->
+            <div class="myShijuanZhengwen">
+                <div>请选择企业自评估项</div>
+                <div>
+                    <img src="../images/Industrial/gantanhao.png">
+                    企业自评估结果将作为职能部门进行推荐/遴选依据。若遴选不通过，则需要等待下次申报时，才能重新申报。为了避免遴选不通过，请正确填写企业自评估信息
+                </div>
+                <div><span>*</span>平台基础建设能力-基础设施服务能力</div>
+            </div>
+            <!-- 考试试题部分 -->
+            <form id="form1" class="layui-form" action="" lay-filter="example">
+                <div class="myShijuanNeirong">
+                    <input type="hidden" name="enterpriseId" id="enterpriseId" />
+                    <!-- 第一行 -->
+                    <div class="layui-form-item">
+                        <div class="myDivClass01">
+                            <label class="layui-form-label myLabelClass">是否具备稳定可靠的数据存储与计算基础设施：</label>
+                        </div>
+                        <div class="layui-input-inline myDivClass02">
+                            <select name="b1" lay-verType="tips" lay-verify="required"
+                              lay-filter="aihao">
+                              <option value=""></option>
+                              <option value="1">是</option>
+                              <option value="0">否</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 第二行 -->
+                    <div class="layui-form-item">
+                      <div class="myDivClass01">
+                          <label class="layui-form-label myLabelClass">是否具有完整的云计算架构：</label>
+                      </div>
+                      <div class="layui-input-inline myDivClass02">
+                          <select name="b2" lay-verType="tips" lay-verify="required"
+                            lay-filter="Three01" id="IsPurchased">
+                            <option value=""></option>
+                            <option value="1">是</option>
+                            <option value="0">否</option>
+                          </select>
+                      </div>
+                    </div>
+                    <!-- 第三行 -->
+                    <div class="layui-form-item">
+                        <div class="moRen01 moRen">
+                          <div class="myDivClass01">
+                              <label class="layui-form-label myLabelClass">提供具体的云计算架构图及可佐证的具备完整架构的技术方案和应用场景案例</label>
+                          </div>
+                          <div>
+                              <input class="threeCang01 wenjian01" type="hidden" name="b3" id="uploadUrl" lay-filter="b3"/>
+                              <div class="layui-upload">
+                                  <button type="button" class="layui-btn layui-btn-normal" id="chooseFile">选择文件</button>
+                                  <span class="uploadName spanUpload" style="padding: 0 10px;color: #999;"></span>
+                                  <img class="del" src="../images/Industrial/del.png">
+                                  <button type="button" class="layui-btn" id="uploadFile">开始上传</button>
+                              </div>
+                              <div lay-filter="progressBar" lay-showPercent="yes" class="layui-progress layui-progress-big" style="width: 630px;float: right;margin: 10px 80px 10px 0;display: none;">
+                                  <div class="layui-progress-bar layui-bg-blue" lay-percent="0%"></div>
+                              </div>
+                              <div style="margin-left: 43%;width: 55%;" class="myDivClass04">
+                                支持文件格式：.zip .pdf  word Excel 图片 ，只支持上传一个文件，单 个文件不能超过20M。若有多个文件，请先压缩.zip格式，再上传。
+                              </div>
+                            </div>
+                        </div>
+                        <!-- 第四行 -->
+                        <!-- <div class="layui-form-item"> -->
+                          <div class="myDivClass01" style="margin-top:16px">
+                              <label class="layui-form-label myLabelClass">具有架构类型：</label>
+                          </div>
+                          <div class="layui-input-inline myDivClass02">
+                            <select name="b4" lay-verType="tips" lay-verify="required"
+                              lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="1">公有云</option>
+                                <option value="2">私有云</option>
+                                <option value="3">混合云</option>
+                                <option value="4">其他复杂架构</option>
+                                <option value="5">全部</option>
+                              </select>
+                          </div>
+                        <!-- </div> -->
+                      <!-- 第五行 -->
+                      <!-- <div class="layui-form-item"> -->
+                        <div class="myDivClass01">
+                            <label class="layui-form-label myLabelClass" style="margin-top:16px">云架构是否能开放共享：</label>
+                        </div>
+                        <div class="layui-input-inline myDivClass02" style="margin-top:16px">
+                            <select name="b5" lay-verType="tips" lay-verify="required"
+                              lay-filter="Three02">
+                              <option value=""></option>
+                              <option value="1">是</option>
+                              <option value="0">否</option>
+                            </select>
+                            <div class="myDivClass03 moRen02">
+                              提供的数据库类型:
+                              <input type="text" lay-verType="tips" lay-verify="zichan|required" name="b6" autocomplete="off" class="layui-input myInputClass moReninput02" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" maxlength="5" style="height: 20px;">类
+
+                            </div>
+                          <!-- 文本域 -->
+                            <div class="layui-input-inline myTextareaClass moRen002">
+                                <textarea maxlength="200" lay-verType="tips" lay-verify="required" placeholder="简要说明部署的系统可提供何种能力，如计算、存储、服务、扩容等（1~200位字符）" lay-verType="tips" class="layui-textarea moReninput002"
+                                 name="b11"></textarea>
+                            </div>
+                        </div>
+                      <!-- </div> -->
+
+                    </div>
+                  <!-- 第六行 -->
+                  <div class="layui-form-item">
+                    <div class="myDivClass01">
+                        <label class="layui-form-label myLabelClass">是否能对计算、存储、网络资源状态进行管控：</label>
+                    </div>
+                    <div class="layui-input-inline myDivClass02">
+                        <select name="b7" lay-verType="tips" lay-verify="required"
+                          lay-filter="Three03">
+                          <option value=""></option>
+                          <option value="1">是</option>
+                          <option value="0">否</option>
+                        </select>
+                      <!-- 文本域 -->
+                      <div class="layui-input-inline myTextareaClass moRen03 moRen">
+                          <textarea maxlength="200" placeholder="提供应用场景的实际案例（1~200位字符）" lay-verType="tips" class="layui-textarea moRen003"
+                          name="b8"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 第七行 -->
+                  <div class="layui-form-item">
+                    <div class="myDivClass01">
+                        <label class="layui-form-label myLabelClass">是否对异常状态进行故障告警：</label>
+                    </div>
+                    <div class="layui-input-inline myDivClass02">
+                        <select name="b9" id='enterpriseType' lay-verType="tips" lay-verify="required"
+                          lay-filter="Three04">
+                          <option value=""></option>
+                          <option value="1">是</option>
+                          <option value="0">否</option>
+                        </select>
+                      <!-- 文本域 -->
+                      <div class="layui-input-inline myTextareaClass moRen04 moRen">
+                          <textarea maxlength="200" placeholder="提供故障警告的实际案例（1~200位字符）" lay-verType="tips" class="layui-textarea moRen004"
+                          name="b10"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- 第七行 -->
+                    <!-- 按钮 -->
+                    <div  class="layui-form-item myBtnClass">
+                        <div>
+                            <button style="width: 110px;height: 40px;" type="button" class="layui-btn layui-btn-normal backTwo">上一步</button>
+                            <button style="width: 110px;height: 40px;" type="button" lay-submit  lay-filter="btnSubmit" class="layui-btn layui-btn-normal">下一步</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <input type="text" class="">
+                <button class="layui-btn test" lay-data="{url: '/b/', accept: 'file'}">上传文件</button> -->
+            </form>
+        </div>
+    </div>
+    <!-- 页脚 -->
+	<script src="../js/public/foot.js"></script>
+
+<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+
+<script language="JavaScript">
+    javascript:window.history.forward(1);
+</script>
+<script type="text/javascript">
+// 监听浏览器关闭
+// window.onbeforeunload = onbeforeunload_handler;
+//     function onbeforeunload_handler(){
+//         var warning="确认退出?";
+//         return warning;
+//     }
+    //防止页面后退
+    // history.pushState(null, null, document.URL);
+    // window.addEventListener('popstate', function () {
+    //     history.pushState(null, null, document.URL);
+    // });
+
+    //返回按钮
+    $('.backTwo').click(function(){
+      window.location.href = './industrialTwo.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1'
+    })
+
+
+    layui.use(['form', 'upload'], function () {
+        var form = layui.form
+        , layer = layui.layer
+        ,upload = layui.upload
+        ,element = layui.element
+        element.init();
+
+         var isUpload = false
+        $('#enterpriseId').val(getUrlParams('enterpriseId'))
+
+        // 输入框规则
+        form.verify({
+            zichan: [
+					/^[1-9]\d*$/
+					, '请输入正整数'
+                ],
+        });
+
+
+        // 下拉规则为空 定位
+        form.verify({
+          required:function (value,item) {
+            var msg="必填项不能为空";
+            value= $.trim(value);
+            var isEmpty =! value || value.length < 1;
+          // 当前验证元素是select且为空时,将页面定位至layui渲染的select处，或自定义想定位的位置
+            if(item.tagName=='SELECT' && isEmpty){
+                $("html").animate({
+                    scrollTop:$(item).siblings(".layui-form-select").offset().top-74
+                },50);
+            }
+            if(isEmpty){
+                return msg;
+            }
+          }
+        })
+
+        //下拉隐藏
+        form.on('select(Three01)', function (data) {
+            if(data.value == 1){
+                // 修改
+                $('.moRen01').show()
+                isUpload = false
+            }else{
+                isUpload = true
+                $('.moRen01').hide()
+                $('#uploadUrl').val('')
+                $('.uploadName').html('')
+                element.progress('progressBar', '0%');
+                $('.layui-progress-big').hide()
+                $('.del').hide()
+
+                $('#uploadFile').attr('disabled', 'disabled')
+            }
+        })
+        form.on('select(Three03)', function (data) {
+            if(data.value == 1){
+                // 修改
+                $('.moRen03').show()
+                $('.moRen003').attr("lay-verify","required")
+            }else{
+                $('.moRen03').hide()
+                $('.moRen003').removeAttr("lay-verify")
+                $('.moRen003').val("")
+            }
+        })
+        //4
+        form.on('select(Three04)', function (data) {
+            if(data.value == 1){
+                // 修改
+                $('.moRen04').show()
+                $('.moRen004').attr("lay-verify","required")
+            }else{
+                $('.moRen04').hide()
+                $('.moRen004').removeAttr("lay-verify")
+                $('.moRen004').val("")
+            }
+        })
+
+        // 文件删除
+        $('.del').click(function(){
+            var myDel = $('.del').attr('dele')
+            $.ajax({
+            type : 'get',
+            url : ajaxUrl + "/files/huawei/deleteFile?fileNames=" + myDel,
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success : function(res) {
+                if (res.code == 200) {
+                        layer.msg('删除成功');
+                        isUpload = false;
+                        $('.del').hide()
+                        $('.del').removeAttr('dele')
+                        $('#uploadUrl').val('')
+                        $('.uploadName').html('')
+                        element.progress('progressBar', '0%');
+                        $('.layui-progress-big').hide()
+                } else {
+                        layer.msg(res.msg);
+                        isUpload = true;
+                    }
+                },
+                error : function(err) {
+                    layer.msg('请求错误');
+                    isUpload = true;
+                }
+            })
+        })
+        //  初始化查询
+        $.ajax({
+            type : 'get',
+            url : ajaxUrl + "report/searchPaperInfo?paperid=" + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId'),
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true,
+            success : function(res) {
+                if (res.code == 200) {
+                    form.val("example", res.data);
+                    // 回显设置
+                    // if(res.data.b3){
+                        isUpload = true;
+                        // }
+                        if(res.data.b2 == 1){
+                            $('.moRen01').show()
+                            console.log(res.data.b3)
+                            $('.uploadName').html(res.data.b3.substring(36))
+                            // $('.uploadName').html(res.data.b3)
+                            $('.uploadName').attr('title',res.data.b3.substring(36))
+                            $('.del').show()
+                            $('.del').attr('dele',res.data.b3)
+                    }
+                    // if(res.data.b5 == 0){
+                    // $('.moRen02').hide()
+                    // $('.moRen002').hide()
+                    // }
+                    if(res.data.b7 == 1){
+                        $('.moRen03').show()
+                        $('.moRen003').attr("lay-verify","required")
+
+                    }
+                    if(res.data.b9 == 1){
+                        $('.moRen04').show()
+                        $('.moRen004').attr("lay-verify","required")
+                    }
+                } else {
+                    layer.msg('请求错误');
+                }
+            },
+            error : function(err) {
+                layer.msg('请求错误');
+            }
+        })
+
+        // 文件上传
+        upload.render({
+            elem: '#chooseFile'
+            ,url: ajaxUrl + 'files/huawei/4'
+            ,auto: false
+            ,size: 20 * 1024
+            ,accept: 'file'
+            ,exts: 'zip|jpg|png|jpeg|PDF|doc|docx|xls|xlsx'
+            ,bindAction: '#uploadFile'
+            ,progress: function (n, percent) {
+                element.progress('progressBar',n  + '%');
+            }
+            ,choose: function(obj){
+                $('.layui-upload-file').attr('type', 'hidden');
+                $('.layui-upload-file').attr('type', 'file');
+                element.progress('progressBar', '0%');
+                isUpload = false
+                obj.preview(function(index, file, result){
+                    $('.uploadName').html(file.name)
+                    $('.layui-progress-big').show()
+                    $('#uploadFile').attr('disabled', false)
+                });
+            }
+            ,done: function(res){
+                if(res.code == 200){
+                    layer.msg('上传成功');
+                    isUpload = true;
+                    $('#uploadUrl').val(res.data)
+                    $('.uploadName').html(res.data.substring(36))
+                    $('.del').show()
+                    $('.del').attr('dele',res.data)
+                }else{
+                    layer.msg(res.msg);
+                    element.progress('progressBar', '0%');
+                }
+            }
+        });
+
+        //监听提交
+        form.on('submit(btnSubmit)', function(data){
+            if(isUpload ){
+                var newData = data.field
+                delete newData.file
+                $.ajax({
+                    type : 'post',
+                    url : ajaxUrl + "report/updateMaturityInfo",
+                    data : newData,
+                    dataType: 'json',
+                    xhrFields: {
+                    withCredentials: true
+                    },
+                    crossDomain: true,
+                    success : function(res) {
+                        if (res.code == 200) {
+                            window.location.replace('./industrialFour.html?paperid=' + getUrlParams('paperid') + "&enterpriseId=" + getUrlParams('enterpriseId')+'&nav=1')
+                        } else {
+                            layer.msg('请求错误');
+                        }
+                    },
+                    error : function(err) {
+                        layer.msg('请求错误');
+                    }
+                })
+            } else {
+                isUpload  = false;
+                layer.msg('请选择上传文件')
+            }
+            return false;
+        });
+    })
+</script>
+<!-- 百度统计代码 -->
+<script>
+    /*制造云全站*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6d0c6f3521dfad65307b120c3dbc89bc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*江苏诊断平台*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?23626bd15d8ecf521e03ba03b0f2eca0";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    /*判断入口*/
+    function checkIsIEView() {
+        try {
+            var status = window.external.isIEViewer();
+            if (status == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    }
+    /*PC客户端/PC网页端*/
+    var isOn = checkIsIEView();
+    if (isOn) {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4830e1584feb0161d16abb6d4938a601";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    } else {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ac5827d87107aa017ca84a83ac6bd1a1";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+.view-service-index  .layui-tab .last-panel{
+    width: calc(100% / 1 - 20px);
+    height: 100%;
+    background-color: white;
+    margin: 10px 0 0 10px;
+    padding-top: 24px;
+}
+.view-service-index .main-content-list{
+    width: 100%;
+    height: 100%;
+}
+.view-service-index .main-content-list .main-content-all{
+    float: left;
+    width: calc(100% / 5 - 28.8px);
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+.view-service-index .main-content-list .main-content-all .main-content-pic{
+    width:100%;
+}
+
+.view-service-index .main-content-list .main-content-txt{
+    font-family: MicrosoftYaHei;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #333333;
+    cursor: pointer;
+    height: 60px;
+}
+.view-service-index .main-content-list .main-content-txt:hover{
+    color: #1f8dfb;
+}
+.view-service-index .main-content-list .main-content-pic img{
+   /* border-radius: 20px 20px 0 0;*/
+    width: 100%;
+}
+.view-service-index .main-content-list .main-content-info{
+    background-color: #ffffff;
+    border-radius: 0 0 20px 20px;
+    border: solid 1px #e8eef1;
+    text-align: center;
+    padding: 16px 0;
+}
+.view-service-index .main-content-list .main-content-info:hover{
+    box-shadow: 0 4px 9px 0 rgba(3, 39, 66, 0.1);
+}
+.view-service-index .main-content-list .main-content-btn {
+    padding:5px 0 15px 0;
+}
+.view-service-index .main-content-list .main-content-btn .layui-btn{
+    width: 88px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #1f8dfb;
+    border-radius: 4px;
+}
+.view-service-index .layui-tab-content .layui-tab-item{
+    padding:0;
+}

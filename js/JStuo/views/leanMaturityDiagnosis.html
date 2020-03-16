@@ -1,0 +1,333 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--禁止缓存-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>江苏省两化深度融合诊断服务平台 | 推进两化深度融合，助力江苏制造业高质量发展</title>
+    <meta name="keywords" content="两化融合,工业诊断,数字化,企业信息化,江苏制造业,制造业转型,智能制造,工业互联网,企业上云,精益生产">
+    <meta name="description" content="江苏省两化深度融合诊断服务平台：实施线上诊断与线下服务，给出适合企业的精益之路，推进两化深度融合，助力江苏制造业高质量发展。">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/enroll.css">
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/submitCompleted.css">
+    <link rel="stylesheet" href="../css/leanMaturityDiagnosis.css">
+    <link rel="stylesheet" href="../css/fangCss/shiJuan.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+</head>
+<style>
+    #pageTwo {
+
+        display: none;
+    }
+
+    .layui-upload-choose {
+        position: absolute;
+        top: 50px;
+        left: 0px;
+    }
+</style>
+
+<body>
+<script src="../js/public/header.js"></script>
+<script src="../js/public/nav.js"></script>
+<!-- banner -->
+<!--<div class="toptable">
+    <div class="main">
+        <div class="onetable">
+            <div>企业报名</div>
+            <div class="active">企业自评估</div>
+            <div>职能部门推荐/遴选</div>
+            <div>在线诊断服务</div>
+            <div>查看诊断报告</div>
+        </div>
+        <div class="userback">
+            <div class="header_img"></div>
+            <div class="username">1111111</div>
+            <div class="closeback">退出登录</div>
+        </div>
+    </div>
+</div>-->
+<div class="qysb">
+    <div class="main_qycx">
+        <div class="line_blue"></div>
+        <div>请输入精益生产成熟度自评估信息</div>
+    </div>
+</div>
+<!-- container begin -->
+<div class="container">
+    <div class="cont_box" style="width: 1400px;">
+        <div class="srjbxx">
+            <img src="../images/enroll/0_2.png" alt="">
+        </div>
+        <div class="lean-maturity-diagnosis-content">
+            <div class="lean-maturity-diagnosis-message">
+                <img src="../images/companyApprovalResult/approval-pass-tip.png" alt="">
+                <span>提示：精益生产成熟度诊断提交完成后，请单击确定，才能查看精益生产成熟度诊断报告。</span>
+            </div>
+            <div class="lean-maturity-diagnosis-paper" id="paperframe-content">
+                <iframe width='100%' id="paperframe" height='100%' frameborder='0'></iframe>
+            </div>
+            <div class="lean-maturity-diagnosis-btn-content" id="lean-maturity-diagnosis-btn-content-info">
+                <div class="lean-maturity-diagnosis-btn-content-info">
+                    <button id="leanMaturityDiagnosisSubmit">确定</button>
+                    <div id="lean-maturity-diagnosis-btn-content-info-mouse-show">
+                        <img src="../images/leanMaturityDiagnosis/leanMaturityDiagnosisWarning.png">
+                        <span>精益生产成熟度诊断提交完成后，请单击确定，才能查看精益生产成熟度诊断报告。</span>
+                        <div style="clear: both"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- container end -->
+<script src="../js/public/foot.js"></script>
+<script type="text/javascript" src="../js/layui/layui.all.js"></script>
+
+<script>
+/*    window.onbeforeunload = function () {
+        console.log("刷新页面")
+    };*/
+    // 退出登录页
+    $(".closeback").click(function () {
+        window.open('./../index.html')
+        window.location.href = "";
+        window.close();
+    });
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if(r != null) return decodeURI(r[2]); //decodeURI参数内容。
+        return null; //返回参数值
+    }
+    var userArr = {};
+    userArr.enterpriseCode = getUrlParam("enterpriseCode");
+    userArr.userId = getUrlParam("userId");
+    userArr.textId = getUrlParam("textId");
+    userArr.diagnosisYear = getUrlParam("diagnosisYear");
+    userArr.enterpriseName = getUrlParam("enterpriseName");
+     userArr.telphone = getUrlParam("telphone");
+    userArr.province = getUrlParam("province");
+    userArr.city = getUrlParam("city");
+    userArr.userName = getUrlParam("userName");
+/*    {
+        "userId":"DD7FE8ED64F6B5E01",
+        "userName":"颜彦",
+        "telphone":"13113111324",
+        "enterpriseCode":"123",
+        "enterpriseName":"南京蜂巢",
+        "province":"南京",
+        "city":"江苏",
+        "textId":"da5970c4-046e-4cdf-ba25-3dc0765a9b64",
+        "papername":"",
+        "diagnosisYear":"2020"
+    }*/
+/*    var userArr = {
+        "userId":"123222",
+        "userName":"诊断个人测试用户",
+        "telphone":"13113111324",
+        "enterpriseCode":"123456",
+        "enterpriseName":"诊断企业测试用户",
+        "province":"江苏省",
+        "city":"南京市",
+        "textId":"0de9e2bd-ff8e-43e1-9adb-265bc95d45dc",
+        "diagnosisYear":"2020"
+    };*/
+    base.requestJson({ type: "POST", url: 'https://nanjingtesting.zhizaoyun.com/tpi/openTheTestPaper', data: JSON.stringify(userArr) },
+        function (result) {
+            if (result.success === true) {
+                document.getElementById("paperframe").src = result.msg;
+            } else {
+                // 失败，展示原因
+                layui.use('layer', function () {
+                    let layer = layui.layer;
+                    layer.open({
+                        type: 1,
+                        id: 'layerDemo' + Math.random(), //防止重复弹出,
+                        content: '<div style="padding: 20px 100px;">' + result.msg + '</div>',
+                        offset: '200px',
+                        btn: '关闭',
+                        btnAlign: 'c', //按钮居中
+                        shade: 0,  //不显示遮罩,
+                        yes: function () {
+                            layer.closeAll();
+                        }
+                    });
+                });
+            }
+        }
+        );
+
+    // 精益生产成熟度自评估信息提交
+    $("#leanMaturityDiagnosisSubmit").click(function () {
+        base.requestJson({ type: "POST", url: base.interfaceObj.leanMaturityDiagnosis.submitLeanMaturityDiagnosis, data: {} },
+            function (res) {
+                if(res.code === 200) {
+                  /*  if (res.auth !== '3') {
+                        window.location.href = "leanMaturityDiagnosisDone.html?nav=1";
+                    } else if (res.auth == '2') {
+                        window.location.href = "leanMaturityDiagnosisDone.html?nav=1";
+                    } else*/
+                  if (res.auth == '3') {
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            layer.open({
+                                type: 1
+                                , id: 'layerDemo' + Math.random()
+                                , offset: '100px'
+                                , content: '<div style="padding: 20px 100px;">请勿重复提交</div>'
+                                , btn: '关闭全部'
+                                , btnAlign: 'c' //按钮居中
+                                , shade: 0 //不显示遮罩
+                                , yes: function () {
+                                    layer.closeAll();
+                                }
+                            });
+                        });
+                    } else {
+                      if (res.auth == '1') {
+                          if ((res.data) && (res.data.length > 0)) {
+                              var continueEvaluationData = JSON.stringify(res.data);
+                              window.location.href = "leanMaturityDiagnosisDone.html?nav=1&paperAuth="+res.auth+"&continueEvaluationData="+encodeURI(continueEvaluationData);
+                          } else {
+                              layui.use('layer', function () {
+                                  var layer = layui.layer;
+                                  layer.open({
+                                      type: 1
+                                      , id: 'layerDemo' + Math.random()
+                                      , offset: '100px'
+                                      , content: '<div style="padding: 20px 100px;">获取诊断结果信息失败，请稍后再试</div>'
+                                      , btn: '关闭全部'
+                                      , btnAlign: 'c' //按钮居中
+                                      , shade: 0 //不显示遮罩
+                                      , yes: function () {
+                                          layer.closeAll();
+                                      }
+                                  });
+                              });
+                          }
+                      } else if (res.auth == '2') {
+                          window.location.href = "leanMaturityDiagnosisDone.html?nav=1&paperAuth="+res.auth
+                      }
+                  }
+                } else if (res.code === 501){
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.open({
+                            type: 1
+                            , id: 'layerDemo' + Math.random()
+                            , offset: '100px'
+                            , content: '<div style="padding: 20px 100px;">报告没有生成或生成失败，请检查报告是否填完或者刷新页面重新完成试卷</div>'
+                            , btn: '关闭全部'
+                            , btnAlign: 'c' //按钮居中
+                            , shade: 0 //不显示遮罩
+                            , yes: function () {
+                                layer.closeAll();
+                            }
+                        });
+                    });
+                } else if (res.code === 502) {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.open({
+                            type: 1
+                            , id: 'layerDemo' + Math.random()
+                            , offset: '100px'
+                            , content: '<div style="padding: 20px 100px;">请勿重复提交</div>'
+                            , btn: '关闭全部'
+                            , btnAlign: 'c' //按钮居中
+                            , shade: 0 //不显示遮罩
+                            , yes: function () {
+                                layer.closeAll();
+                            }
+                        });
+                    });
+                } else if (res.code === 5001001) {
+                    window.location.href = "jqLogin.html"
+                } else {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.open({
+                            type: 1
+                            , id: 'layerDemo' + Math.random()
+                            , offset: '100px'
+                            , content: '<div style="padding: 20px 100px;">获取诊断结果信息功能异常，请稍后再试</div>'
+                            , btn: '关闭全部'
+                            , btnAlign: 'c' //按钮居中
+                            , shade: 0 //不显示遮罩
+                            , yes: function () {
+                                layer.closeAll();
+                            }
+                        });
+                    });
+                }
+            }
+        );
+    });
+
+    // "确定"按钮鼠标移入移出事件
+    $("#leanMaturityDiagnosisSubmit").mouseover(
+        function(){
+            $("#lean-maturity-diagnosis-btn-content-info-mouse-show").css("display","block");
+        }
+    );
+    $("#leanMaturityDiagnosisSubmit").mouseout(
+        function(){
+            $("#lean-maturity-diagnosis-btn-content-info-mouse-show").css("display","none");
+        }
+    );
+
+   // 监听页面滚动条滚动事件
+    $(document).scroll(function() {
+       /* console.log("1---"+$("#lean-maturity-diagnosis-btn-content-info").offset().top);
+        console.log("2---"+$("#paperframe-content").offset().top);*/
+       /* console.log("3---"+($("#lean-maturity-diagnosis-btn-content-info").offset().top -$("#paperframe-content").offset().top));*/
+        var t2 = document.body.scrollHeight;
+        var t1 = document.documentElement.scrollTop || document.body.scrollTop;
+        var t = t2 - t1;
+        var oBox = document.getElementById("lean-maturity-diagnosis-btn-content-info");
+        if (t <= 950) {
+            oBox.className = 'lean-maturity-diagnosis-btn-content box-b';
+        } else {
+            oBox.className = 'lean-maturity-diagnosis-btn-content box-t';
+        }
+        var bbb = document.getElementById("paperframe-content")
+        var aaa =$("#lean-maturity-diagnosis-btn-content-info").offset().top -$("#paperframe-content").offset().top;
+        if ( aaa < bbb.offsetHeight) {
+            oBox.className = 'lean-maturity-diagnosis-btn-content box-t';
+        } else {
+            oBox.className = 'lean-maturity-diagnosis-btn-content box-b';
+        }
+    });
+
+window.onload = function(){
+    var t4 = document.body.scrollHeight;
+    var t3 = document.documentElement.scrollTop || document.body.scrollTop;
+    var t0 = t4 - t3;
+    var oBox = document.getElementById("lean-maturity-diagnosis-btn-content-info");
+    if (t0 <= 950) {
+        oBox.className = 'lean-maturity-diagnosis-btn-content box-b';
+    } else {
+        oBox.className = 'lean-maturity-diagnosis-btn-content box-t';
+    }
+    var bbb = document.getElementById("paperframe-content");
+    var aaa =$("#lean-maturity-diagnosis-btn-content-info").offset().top -$("#paperframe-content").offset().top;
+    if ( aaa < bbb.offsetHeight) {
+        oBox.className = 'lean-maturity-diagnosis-btn-content box-t';
+    } else {
+        oBox.className = 'lean-maturity-diagnosis-btn-content box-b';
+    }
+}
+
+</script>
+</body>
+</html>
+
+
